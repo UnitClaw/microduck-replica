@@ -363,7 +363,7 @@ parts list with LCSC numbers.
 
 The old `print/` parts and `cad/` assembly STLs came from upstream simulation geometry and did not include the physical CAD changes. Those files have been removed; the directories now contain download pointers. **Do not mix the two servo versions or print simulation/web-viewer meshes from this repository.**
 
-The CAD repository's older 09-15 3MF does not include the v2.1 combined wheel. Check the attachment version; see [printing notes](print/README.en.md). CAD modelling and assembly documentation are by **WWNT Robotics**, with attribution and licensing in the CAD repository. The [assembly videos](#-assembly-videos) walk through the build.
+The CAD repository's older 09-15 3MF does not include the v2.1 combined wheel. Check the attachment version; see [printing notes](print/README.en.md). CAD modelling and assembly documentation are by **机械行者Robo**, with attribution and licensing in the CAD repository. The [assembly videos](#-assembly-videos) walk through the build.
 
 ---
 

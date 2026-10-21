@@ -18,4 +18,4 @@
 
 主仓 `software/training/` 和网页调试台中保留的网格用于仿真及显示，**不是打印来源**。本次调整没有把这些模型、质量或惯量同步为最新实物 CAD。
 
-图纸由 **WWNT Robotics** 建模整理，依据上游模型采用 **CC BY-NC-SA 4.0**；作者、许可及后续版本以 [CAD 仓库](https://github.com/UnitClaw/microduck-replica-cad) 为准。
+图纸由 **机械行者Robo** 建模整理，依据上游模型采用 **CC BY-NC-SA 4.0**；作者、许可及后续版本以 [CAD 仓库](https://github.com/UnitClaw/microduck-replica-cad) 为准。

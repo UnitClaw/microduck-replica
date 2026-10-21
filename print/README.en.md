@@ -16,4 +16,4 @@ At the time of this check, the CAD repository's **09-15 3MF does not include the
 
 Meshes retained in `software/training/` and the web servo console are for simulation/display, **not manufacturing**. Their geometry, mass and inertia have not been updated to match the latest physical CAD in this change.
 
-CAD modelling and documentation are by **WWNT Robotics**, under **CC BY-NC-SA 4.0** as derivatives of the upstream models. See the CAD repository for attribution, licensing and later versions.
+CAD modelling and documentation are by **机械行者Robo**, under **CC BY-NC-SA 4.0** as derivatives of the upstream models. See the CAD repository for attribution, licensing and later versions.
