@@ -4,7 +4,7 @@
 
 > **模型与打印文件统一入口：[microduck-replica-cad](https://github.com/UnitClaw/microduck-replica-cad)。** 飞特 / XL330 请选对应版本；本仓旧打印 STL 已移除，避免误打。
 
-> **装配视频教程：[B 站合集《MicroDuck 从零安装教程》](https://space.bilibili.com/312747174/lists/9279084?type=season)**，图纸作者「WWNT Robotics」一集装一个部件，共 8 集，已更新 6 集 → [分集目录](#-装配视频教程)
+> **装配视频教程：[B 站合集《MicroDuck 从零安装教程》](https://space.bilibili.com/312747174/lists/9279084?type=season)**，一集装一个部件，共 8 集，已更新 6 集 → [分集目录](#-装配视频教程)
 
 > 对 [Pollen Robotics Microduck](https://pollen-robotics.com/microduck/) 的第三方复刻研究。
 > 从官方公开的 MJCF 仿真模型反推出**装配图、爆炸图和可直接导入 CAD 的装配体**。
@@ -48,7 +48,7 @@ MJCF 里包含了完整的运动学树：每个零件挂在谁身上、相对位
 
 ## 📺 装配视频教程
 
-**[B 站合集《MicroDuck 从零安装教程》](https://space.bilibili.com/312747174/lists/9279084?type=season)** —— CAD 图纸和装配 BOM 的作者 **WWNT Robotics** 录的，从零件清单讲起，一集装一个部件。共 8 集，截至 2026-10-12 已更新 6 集：
+**[B 站合集《MicroDuck 从零安装教程》](https://space.bilibili.com/312747174/lists/9279084?type=season)** —— 从零件清单讲起，一集装一个部件。共 8 集，截至 2026-10-12 已更新 6 集：
 
 | 集 | 内容 | 时长 |
 |---|---|---|
@@ -266,7 +266,7 @@ HUB 和 IMU 板的脚序对得上，同向线直连。
 
 **2026-10-12 · 主控配置勘误**：此前建议买 Radxa Zero 3W「2G / 16G eMMC」，**没必要，让大家多花了钱**。官方资料只写了 1 GB 内存、32 GB 存储；我们第一台就是 2G、无 eMMC、插 microSD 卡，跑 kissqy 整套实测只用了 175 MB 内存、3.3 GB 存储。复刻买 **1G 或 2G 的无 eMMC 版 + 32 GB microSD 卡**即可，只走官方渠道（安联新创淘宝店、瑞莎官方淘宝 / 京东店），别去小店多花几倍的钱。已经买了 2G/16G 的照样能用。[买哪个配置、去哪买](docs/电控采购清单.md#该买哪个配置)。
 
-**2026-10-12 · 装配视频教程**：WWNT Robotics 在 B 站更新《MicroDuck 从零安装教程》，已出零件清单、小腿、大腿、躯干、颈部、头部 6 集（共 8 集），小红书、抖音也能找到。[分集目录与关注方式](#-装配视频教程)。
+**2026-10-12 · 装配视频教程**：B 站更新《MicroDuck 从零安装教程》，已出零件清单、小腿、大腿、躯干、颈部、头部 6 集（共 8 集）。[分集目录](#-装配视频教程)。
 
 **2026-09-29 · 镜像登录勘误**：旧公开镜像第一次用 **`root / 1234`** 登录；完成 Armbian 向导后才创建 `duck / duck1234` 并更换 root 密码，请随即修改默认密码。旧卡仍需补 `wlan0` DHCP。[使用说明](tools/radxa/镜像使用说明.md)已更正；当时另出过一版 DHCP 修复候选镜像。（10-21：9 月这两个底包镜像已从 Releases 撤下，现成的卡请用[复刻镜像](https://github.com/UnitClaw/microduck-replica/releases/latest)。）基础镜像不含机器人运行时或网页调试台。
 
