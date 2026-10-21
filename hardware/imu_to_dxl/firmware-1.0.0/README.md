@@ -3,7 +3,7 @@
 > 这一版是从 0.1.0（Dynamixel 2.0）另起改成飞特协议的，跟旁边 [`../firmware/`](../firmware/) 的 0.2.0 是两套独立实现：15 字节块、型号 0x4D44 一样，诊断区不一样（这一版在 90..185，0.2.0 在 124..247）。在 Microduck 上用，主程序要是 fork 4734cbb 起（复刻镜像 20261021b 起），它会把这块板排在舵机后面。两版怎么选见 [`../README.md`](../README.md)。
 
 Microduck 用 **STM32G031F8P6 + LSM6DSV16X** IMU 板的固件。硬件基线
-`fanhao375/microduck-replica` @ `a1f4979c`（含 J4/J5、RX_EN）。
+`UnitClaw/microduck-replica` @ `a1f4979c`（含 J4/J5、RX_EN）。
 
 固件说 **飞特 FT-SCS 协议**（已从 Dynamixel 2.0 迁移）：IMU 板固定 **ID=200、1Mbps、8N1**，
 与飞特 SCS/STS 舵机共用同一根单线半双工总线，一条 SYNC READ 同时读取 IMU 与全部舵机。
@@ -71,7 +71,7 @@ Build/               构建产物（git 忽略；hex/bin/axf/map）
 
 ## 资料
 
-- [本板硬件](https://github.com/fanhao375/microduck-replica/tree/a1f4979c425bd9228622be89f2bfa4d1de7fbde3/hardware/imu_to_dxl)
+- [本板硬件](https://github.com/UnitClaw/microduck-replica/tree/a1f4979c425bd9228622be89f2bfa4d1de7fbde3/hardware/imu_to_dxl)
 - [STM32G031 数据手册](https://www.st.com/resource/en/datasheet/stm32g031f8.pdf)
 - [LSM6DSV16X 数据手册](https://www.st.com/resource/en/datasheet/lsm6dsv16x.pdf)
 - [上游主控接口 duck-control](https://github.com/pollen-robotics/microduck/blob/5984efb770855432b03dafd3d879e9929981e45b/duck-control/src/bus.rs)

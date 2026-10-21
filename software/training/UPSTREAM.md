@@ -1,13 +1,13 @@
 # 训练工程来源与维护位置
 
 本目录是普通源码目录，随 `microduck-replica` 一起克隆和下载，不是 Git 子模块。
-后续 HD1910 训练工作维护在这里；原 `fanhao375/microduck_rl` 的 HD1910 分支保留作历史来源。
+后续 HD1910 训练工作维护在这里；原 `UnitClaw/microduck_rl` 的 HD1910 分支保留作历史来源。
 
 ## 导入版本
 
 2026-09-24 从以下固定版本导入已跟踪的完整源码快照：
 
-- 来源：[fanhao375/microduck_rl @ d9e1926](https://github.com/fanhao375/microduck_rl/tree/d9e1926c5220a0eb79fa5aab9df7b336f8e9a226)
+- 来源：[UnitClaw/microduck_rl @ d9e1926](https://github.com/UnitClaw/microduck_rl/tree/d9e1926c5220a0eb79fa5aab9df7b336f8e9a226)
 - 完整提交：`d9e1926c5220a0eb79fa5aab9df7b336f8e9a226`
 - Pollen Robotics 上游基线：`d424a0c899f6b33cbd3daeb279913134349c0b63`；在其上增加 HD1910 任务、M6 参数引用、初始化适配和测试。
 - 导入方式：该提交的 `git archive` 源码快照；不包含 `.git`、虚拟环境、训练日志或检查点。

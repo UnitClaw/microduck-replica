@@ -34,7 +34,7 @@ Microduck 是 Pollen Robotics 的商业产品，硬件**部分开源**：
 | `software/studio/web/model/` | Studio 网页里的 3D 鸭子 | 从上游仿真模型转换，只留外形，非最新实物 CAD |
 | `docs/hole_analysis.json` | 孔位几何分析数据 | 由上游 STL 计算得出 |
 
-> **模型下载迁移（2026-09-28）**：`print/` 和 `cad/` 已改为指向 [CAD 仓库](https://github.com/fanhao375/microduck-replica-cad) 的入口说明，旧单件 STL、装配 STL 与对照表已从当前版本移除，避免误作最新打印件。Git 历史中的旧模型仍为上游 STL 的重命名、分类或装配变换衍生作品，继续遵循 CC BY-NC-SA；移除下载副本不改变历史文件的作者与许可。
+> **模型下载迁移（2026-09-28）**：`print/` 和 `cad/` 已改为指向 [CAD 仓库](https://github.com/UnitClaw/microduck-replica-cad) 的入口说明，旧单件 STL、装配 STL 与对照表已从当前版本移除，避免误作最新打印件。Git 历史中的旧模型仍为上游 STL 的重命名、分类或装配变换衍生作品，继续遵循 CC BY-NC-SA；移除下载副本不改变历史文件的作者与许可。
 
 **本项目原创内容：**
 
@@ -79,12 +79,12 @@ Microduck 是 Pollen Robotics 的商业产品，硬件**部分开源**：
 
 ## 配套仓库：SolidWorks 三维图纸
 
-[**fanhao375/microduck-replica-cad**](https://github.com/fanhao375/microduck-replica-cad)
+[**UnitClaw/microduck-replica-cad**](https://github.com/UnitClaw/microduck-replica-cad)
 统一维护可编辑的 SolidWorks / STEP、打印文件与 21 页装配安装说明书。飞特与 XL330 分版本提供，文件清单以该仓库对应发布为准；主仓不再维护一套独立的打印模型副本。
 
 | 内容 | 作者 | 许可证 |
 |---|---|---|
-| SolidWorks 图纸、装配安装说明书、组件图 | **机械行者Robo**（小红书 270594280 / 抖音 1852366168） | **CC BY-NC-SA 4.0** |
+| SolidWorks 图纸、装配安装说明书、组件图 | **WWNT Robotics** | **CC BY-NC-SA 4.0** |
 
 那套图纸是**依据上游公开的 STL 网格重建的可编辑参数模型**，属于 CC BY-NC-SA 的衍生作品，
 因此以相同许可证发布。**著作权归作者本人**，转载与二次分发请保留署名。

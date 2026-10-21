@@ -1,7 +1,7 @@
 # imu_to_dxl 固件 0.2.0
 
 用于队友自制的 **STM32G031F8P6 + LSM6DSV16X** 板。硬件基线为
-`fanhao375/microduck-replica` 的 `a1f4979c425bd9228622be89f2bfa4d1de7fbde3`
+`UnitClaw/microduck-replica` 的 `a1f4979c425bd9228622be89f2bfa4d1de7fbde3`
 （2026-09-08，含 J4/J5 和 RX_EN）。2026-09-20 已完成首次实板启动：J-Link SWD 连接、
 固件烧录读回校验、Keil 停在 `main`、64MHz 时钟及 IMU 采样均已验证。
 短测中 IMU 标识为 `0x70`、ready=1、SPI/FIFO 错误为0；外部总线和舵机尚未实测。
@@ -221,7 +221,7 @@ FIFO实际更新率、SFLP初始收敛和坐标方向、温漂、看门狗恢复
 
 ## 8. 资料依据
 
-- [本板硬件](https://github.com/fanhao375/microduck-replica/tree/a1f4979c425bd9228622be89f2bfa4d1de7fbde3/hardware/imu_to_dxl)
+- [本板硬件](https://github.com/UnitClaw/microduck-replica/tree/a1f4979c425bd9228622be89f2bfa4d1de7fbde3/hardware/imu_to_dxl)
 - [STM32G031数据手册](https://www.st.com/resource/en/datasheet/stm32g031f8.pdf)
 - [LSM6DSV16X数据手册](https://www.st.com/resource/en/datasheet/lsm6dsv16x.pdf)
 - [ST IMU驱动](https://github.com/STMicroelectronics/lsm6dsv16x-pid)

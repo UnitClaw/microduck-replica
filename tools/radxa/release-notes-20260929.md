@@ -1,4 +1,4 @@
-> **这个 Release 已于 2026-10-21 撤下**（太旧了）。现成的卡请用[复刻镜像](https://github.com/fanhao375/microduck-replica/releases/latest)。下面是当时的发布说明，留作记录。
+> **这个 Release 已于 2026-10-21 撤下**（太旧了）。现成的卡请用[复刻镜像](https://github.com/UnitClaw/microduck-replica/releases/latest)。下面是当时的发布说明，留作记录。
 
 > **候选镜像（Pre-release）：已完成离线核验，尚未对这份新产物烧卡、启动和联网实测。** 本版从 20260920 原公开镜像制作，只补无线 DHCP、修正卡内登录/联网说明、移除预生成 SSH 主机密钥。旧版文件仍保留在原 Release。已有旧卡可按指南修复，不必只为这次更新重刷。
 
@@ -42,6 +42,6 @@ d7a4dc60a0c622786ae3eb03ebea2d5316d4cff44373945f4a61f44ac7019f63
 
 ### 项目进度与来源
 
-主板上另行部署的调试台 0.15.4，曾在保持既有姿势的约 64 秒窗口中读到 14 颗各 3000/3000 有效状态，目标 50 Hz、实际约 46.87 Hz，窗口内无 timeout/checksum/ID 错误。其他时段仍有偶发缺应答；这不代表完整控制循环、IMU、带载动作或步态验收。摄像头目前仅官方 B1 确认出图。见[测试摘要](https://github.com/fanhao375/microduck-replica/blob/master/tools/radxa/50Hz%E4%BF%9D%E6%8C%81%E5%A7%BF%E5%8A%BF%E8%AF%BB%E7%8A%B6%E6%80%81-20260928.md)。
+主板上另行部署的调试台 0.15.4，曾在保持既有姿势的约 64 秒窗口中读到 14 颗各 3000/3000 有效状态，目标 50 Hz、实际约 46.87 Hz，窗口内无 timeout/checksum/ID 错误。其他时段仍有偶发缺应答；这不代表完整控制循环、IMU、带载动作或步态验收。摄像头目前仅官方 B1 确认出图。见[测试摘要](https://github.com/UnitClaw/microduck-replica/blob/master/tools/radxa/50Hz%E4%BF%9D%E6%8C%81%E5%A7%BF%E5%8A%BF%E8%AF%BB%E7%8A%B6%E6%80%81-20260928.md)。
 
-底包来自 [Armbian](https://www.armbian.com/radxa-zero-3/)，引导来自瑞莎 [`u-boot-rk2410`](https://radxa-repo.github.io/bookworm/pool/main/u/u-boot-rk2410/)，遵循 GPL 及各软件自身许可。这是社区修改版，并非 Armbian 或瑞莎官方发布。[制卡脚本与指南](https://github.com/fanhao375/microduck-replica/tree/master/tools/radxa)。
+底包来自 [Armbian](https://www.armbian.com/radxa-zero-3/)，引导来自瑞莎 [`u-boot-rk2410`](https://radxa-repo.github.io/bookworm/pool/main/u/u-boot-rk2410/)，遵循 GPL 及各软件自身许可。这是社区修改版，并非 Armbian 或瑞莎官方发布。[制卡脚本与指南](https://github.com/UnitClaw/microduck-replica/tree/master/tools/radxa)。

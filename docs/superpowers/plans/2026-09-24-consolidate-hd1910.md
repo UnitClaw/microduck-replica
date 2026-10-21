@@ -7,7 +7,7 @@ to keep training only in a separate fork.
 **Goal:** Clone or download one repository and get the complete HD1910 training
 source, geometry, parameters, initialization fix, dependencies, tests and docs.
 
-**Design:** Import the tracked training tree from fanhao375/microduck_rl revision
+**Design:** Import the tracked training tree from UnitClaw/microduck_rl revision
 `d9e1926c5220a0eb79fa5aab9df7b336f8e9a226` as a fixed-revision source snapshot at
 `software/training/`. Ordinary clones include the contents; no submodule or
 cross-repository setup is required. Preserve licenses, parameter bytes and
@@ -56,7 +56,7 @@ checkpoint is not a trained or hardware-validated gait. No hardware access occur
 - Parameter SHA-256 remains
   `ef2d51adfb1cc0831b9b02ca19aa9176fceecdf725148d084378d7d9a64afceb`.
 - Import commit `25791f0bd260fd869ed841578785fa8d7e14396d` was pushed to
-  `fanhao375/microduck-replica` master; the remote training tree and parameter
+  `UnitClaw/microduck-replica` master; the remote training tree and parameter
   blob `5a1af6ce935fdf58e0ad021f5297c933397d67e8` were verified through GitHub.
   The user's pre-existing uncommitted checklist retained its original SHA-256.
 - Whitespace checks pass for authored changes. The imported snapshot retains

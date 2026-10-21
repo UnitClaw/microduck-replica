@@ -4,7 +4,7 @@
 > 官方从未公开这块板的原理图、Gerber 或外形（全网零命中，见
 > [硬件方案逆向](../../docs/硬件方案逆向.md)）。本目录是根据 MJCF 模型、官方运行时源码
 > 和已开源的 HAT 工程反推 + 自行选型的结果，**未经打样、未经实物验证**。
-> 发现问题请开 [issue](https://github.com/fanhao375/microduck-replica/issues)。
+> 发现问题请开 [issue](https://github.com/UnitClaw/microduck-replica/issues)。
 
 ![imu_to_dxl 原理图](../../assets/hw/imu_to_dxl-原理图.png)
 

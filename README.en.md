@@ -40,9 +40,9 @@ This repository is what falls out of reading both.
 
 ---
 
-> **Models and print files: [microduck-replica-cad](https://github.com/fanhao375/microduck-replica-cad).** Select the Feetech or XL330 version there. Outdated printable STLs have been removed from this repository.
+> **Models and print files: [microduck-replica-cad](https://github.com/UnitClaw/microduck-replica-cad).** Select the Feetech or XL330 version there. Outdated printable STLs have been removed from this repository.
 
-> **Assembly videos: [the "MicroDuck from scratch" series on Bilibili](https://space.bilibili.com/312747174/lists/9279084?type=season)** (Chinese narration), by 机械行者Robo, who also made the CAD. One subassembly per episode; 6 of 8 out → [episode list](#-assembly-videos)
+> **Assembly videos: [the "MicroDuck from scratch" series on Bilibili](https://space.bilibili.com/312747174/lists/9279084?type=season)** (Chinese narration), by WWNT Robotics, who also made the CAD. One subassembly per episode; 6 of 8 out → [episode list](#-assembly-videos)
 
 ## Two tracks — pick one
 
@@ -52,7 +52,7 @@ This repository covers two servo choices. **Mechanics, electronics and software 
 |---|---|---|
 | **Servos** | XL330-M288-T ×15 | HD-1910-C001 ×15 — half the price, 2.5× the torque |
 | **Voltage** | rated 6 V, run at 6.6–8.2 V, **37% over** | rated 4–8.4 V, within spec; a full pack sits at the 8.4 V ceiling |
-| **Printed parts** | [CAD repository · XL330](https://github.com/fanhao375/microduck-replica-cad) | [CAD repository · Feetech](https://github.com/fanhao375/microduck-replica-cad); mating parts are not interchangeable |
+| **Printed parts** | [CAD repository · XL330](https://github.com/UnitClaw/microduck-replica-cad) | [CAD repository · Feetech](https://github.com/UnitClaw/microduck-replica-cad); mating parts are not interchangeable |
 | **Editable CAD** | [CAD repo v1.1](https://github.com/fanhao375/microduck-replica-cad/releases/tag/v1.1) | [CAD repo v2.1](https://github.com/fanhao375/microduck-replica-cad/releases/tag/v2.1), files carry an `-FT` suffix |
 | **Electronics** | official HAT + [`imu_to_dxl`](hardware/imu_to_dxl/) | same; servo connectors are 2.0 mm (official 2.5), `imu_to_dxl` has J4/J5 at 2.0 |
 | **Software** | official runtime runs as-is | different bus protocol, swap the protocol module — [adaptation architecture](software/飞特适配架构.md) (zh); policy retrained for HD-1910 — [training data checklist](docs/HD-1910训练前数据清单.md) |
@@ -64,7 +64,7 @@ The selection argument is in [Actuator Selection](docs/actuator-selection.en.md)
 
 ## 📺 Assembly videos
 
-**[Bilibili series "MicroDuck 从零安装教程" (assembly from scratch)](https://space.bilibili.com/312747174/lists/9279084?type=season)** — recorded by **机械行者Robo**, who modelled the CAD and wrote the assembly BOM. It starts from the parts list and builds one subassembly per episode. Narration is in Chinese, but the hands-on footage is easy to follow. 6 of 8 episodes are out as of 2026-10-12:
+**[Bilibili series "MicroDuck 从零安装教程" (assembly from scratch)](https://space.bilibili.com/312747174/lists/9279084?type=season)** — recorded by **WWNT Robotics**, who modelled the CAD and wrote the assembly BOM. It starts from the parts list and builds one subassembly per episode. Narration is in Chinese, but the hands-on footage is easy to follow. 6 of 8 episodes are out as of 2026-10-12:
 
 | Episode | Content | Length |
 |---|---|---|
@@ -75,13 +75,13 @@ The selection argument is in [Actuator Selection](docs/actuator-selection.en.md)
 | [5](https://www.bilibili.com/video/BV1EEpg6nEkD/) | Neck | 0:40 |
 | [6](https://www.bilibili.com/video/BV1aKpE6hEzj/) | Head | 5:50 |
 
-Get the printed and purchased parts from the assembly BOM in the [CAD repository](https://github.com/fanhao375/microduck-replica-cad) before you start. The remaining episodes will appear on the same accounts — Bilibili, Xiaohongshu (RED) and Douyin:
+Get the printed and purchased parts from the assembly BOM in the [CAD repository](https://github.com/UnitClaw/microduck-replica-cad) before you start. Contact us:
 
 <table align="center">
 <tr>
-<td align="center"><a href="https://space.bilibili.com/312747174"><img src="assets/social/bilibili-qr.jpg" alt="Bilibili: 机械行者Robo" height="280"></a><br><sub><b>Bilibili</b> · 机械行者Robo<br>UID 312747174</sub></td>
-<td align="center"><a href="https://www.xiaohongshu.com/user/profile/5ad950114eacab046016f038"><img src="assets/social/xiaohongshu-qr.jpg" alt="Xiaohongshu: 机械行者" height="280"></a><br><sub><b>Xiaohongshu</b> · 机械行者<br>ID 270594280</sub></td>
-<td align="center"><a href="https://www.douyin.com/user/MS4wLjABAAAArLa_6yE3GE-AoRURoQnIHdbbI7yM-GHhzlgLZ-XbeYE"><img src="assets/social/douyin-qr.jpg" alt="Douyin: 机械行者Robo" height="280"></a><br><sub><b>Douyin</b> · 机械行者Robo<br>ID 1852366168</sub></td>
+<td align="center"><a href="https://www.wwntai.com"><b>Website</b></a><br><sub>www.wwntai.com</sub></td>
+<td align="center"><a href="https://wwnt.ai"><b>International</b></a><br><sub>wwnt.ai</sub></td>
+<td align="center"><a href="mailto:Support@wwntai.com"><b>Email</b></a><br><sub>Support@wwntai.com</sub></td>
 </tr>
 </table>
 
@@ -95,7 +95,7 @@ The code below is for **Duck Replica Group 11** (WeChat disables QR joins once a
   <img src="assets/wechat-group-11.png" alt="Duck Replica Group 11 WeChat QR code" width="280">
   <br>
   <sub><b>Duck Replica Group 11 · expires 2026-10-29</b> — WeChat group codes are valid for 7 days<br>
-  If it has expired, open an <a href="https://github.com/fanhao375/microduck-replica/issues">issue</a> and I will post a fresh one</sub>
+  If it has expired, open an <a href="https://github.com/UnitClaw/microduck-replica/issues">issue</a> and I will post a fresh one</sub>
 </div>
 
 ## Where things stand
@@ -152,10 +152,10 @@ horns were remodelled and reprinted. The editable SolidWorks drawings have an FT
 
 **[Assembly videos](#-assembly-videos)**　·
 **[Build Log](BUILD-LOG.en.md)**　·
-**[Feetech-variant SolidWorks drawings](https://github.com/fanhao375/microduck-replica-cad)**　·
-**[Models and print files](https://github.com/fanhao375/microduck-replica-cad)**　·
+**[Feetech-variant SolidWorks drawings](https://github.com/UnitClaw/microduck-replica-cad)**　·
+**[Models and print files](https://github.com/UnitClaw/microduck-replica-cad)**　·
 [Debug Log](调试记录.md)　·
-**[BOM with purchase links](https://github.com/fanhao375/microduck-replica-cad#装配-bom)**　·
+**[BOM with purchase links](https://github.com/UnitClaw/microduck-replica-cad#装配-bom)**　·
 [Print downloads](print/)
 </td>
 </tr>
@@ -178,7 +178,7 @@ horns were remodelled and reprinted. The editable SolidWorks drawings have an FT
 - **Remote**: stand up, walk, sit down, skills and moves;
 - **Logs**: categorised and levelled; export a diagnostics bundle in one click to ask for help.
 
-**Replica image (pre-release, real-duck test in progress)**: one card with everything — our fork of the main program, the walking and skill models, Studio, and a first boot that names the duck, finds the IMU and opens a hotspot for WiFi setup. Flash → boot → join the duck's `Microduck-xxxx` hotspot from a phone → enter your home WiFi in Studio → follow the checklist, no SSH at any point. The 10-21 build fixes what a fresh card turned up on a real duck: every checklist step can be skipped, skipping the IMU step still gets you into motion mode, the robot can stand in commissioning mode for the standing IMU check, Studio opens with Clash running, the page follows the duck to its new address after WiFi setup, and Studio's More page turns on SSH with a password you choose or a public key you register; the bus IMU may also be this repository's own imu_to_dxl board. The full run on our second duck is not finished yet, so it is out as a pre-release: **[download (Releases)](https://github.com/fanhao375/microduck-replica/releases/tag/microduck-replica-image-20261021b)** · [flashing and first use](software/image/烧录和第一次使用.md) (Chinese). The image is free, for personal non-commercial builds only, and is not distributed with any paid product (the models in it are under their author's personal non-commercial licence).
+**Replica image (pre-release, real-duck test in progress)**: one card with everything — our fork of the main program, the walking and skill models, Studio, and a first boot that names the duck, finds the IMU and opens a hotspot for WiFi setup. Flash → boot → join the duck's `Microduck-xxxx` hotspot from a phone → enter your home WiFi in Studio → follow the checklist, no SSH at any point. The 10-21 build fixes what a fresh card turned up on a real duck: every checklist step can be skipped, skipping the IMU step still gets you into motion mode, the robot can stand in commissioning mode for the standing IMU check, Studio opens with Clash running, the page follows the duck to its new address after WiFi setup, and Studio's More page turns on SSH with a password you choose or a public key you register; the bus IMU may also be this repository's own imu_to_dxl board. The full run on our second duck is not finished yet, so it is out as a pre-release: **[download (Releases)](https://github.com/UnitClaw/microduck-replica/releases/tag/microduck-replica-image-20261021b)** · [flashing and first use](software/image/烧录和第一次使用.md) (Chinese). The image is free, for personal non-commercial builds only, and is not distributed with any paid product (the models in it are under their author's personal non-commercial licence).
 
 **What has been tested**: Studio runs as a boot service on our second duck; gamepad pairing and the e-stop were tested on it. "Write into the main program", WiFi setup and the replica image have not been tested on a real duck yet; we are on it. Not done yet: editing the walking feel from the page.
 
@@ -245,8 +245,8 @@ This repo is not one person's work. Merged code and bench-verified findings are 
 
 | Who | What they contributed |
 |---|---|
-| [@yoyojacky](https://github.com/yoyojacky) | **A Rust test tool for Feetech servos** ([PR #27](https://github.com/fanhao375/microduck-replica/pull/27), merged). A minimal STS/SCS protocol implementation of his own (framing, checksum, ping, register read/write, status parsing). The CLI scans the bus with a progress bar, reads status, moves a servo to a position, and runs single or batch tests that report position error, peak current, peak load, voltage and temperature, with a PASS/FAIL verdict — one command gives you a bench acceptance table → [`tools/sts3215Servo_testtool/`](tools/sts3215Servo_testtool/) |
-| [@Abo1ish](https://github.com/Abo1ish) | **IMU board firmware + attitude view in the debug console** ([PR #32](https://github.com/fanhao375/microduck-replica/pull/32), merged). A base STM32G031 firmware for the imu_to_dxl board that Pollen never open-sourced, verified on real hardware, with host-side tests and a [`VALIDATION.md`](hardware/imu_to_dxl/firmware/VALIDATION.md) that is clear about its limits → [`hardware/imu_to_dxl/firmware/`](hardware/imu_to_dxl/firmware/). He also streams the IMU attitude over J-Link into the web debug console, so the 3D duck's body turns with the real board (`--imu-jlink`, or `--imu-demo` with no hardware) → [`tools/servo-web/`](tools/servo-web/) |
+| [@yoyojacky](https://github.com/yoyojacky) | **A Rust test tool for Feetech servos** ([PR #27](https://github.com/UnitClaw/microduck-replica/pull/27), merged). A minimal STS/SCS protocol implementation of his own (framing, checksum, ping, register read/write, status parsing). The CLI scans the bus with a progress bar, reads status, moves a servo to a position, and runs single or batch tests that report position error, peak current, peak load, voltage and temperature, with a PASS/FAIL verdict — one command gives you a bench acceptance table → [`tools/sts3215Servo_testtool/`](tools/sts3215Servo_testtool/) |
+| [@Abo1ish](https://github.com/Abo1ish) | **IMU board firmware + attitude view in the debug console** ([PR #32](https://github.com/UnitClaw/microduck-replica/pull/32), merged). A base STM32G031 firmware for the imu_to_dxl board that Pollen never open-sourced, verified on real hardware, with host-side tests and a [`VALIDATION.md`](hardware/imu_to_dxl/firmware/VALIDATION.md) that is clear about its limits → [`hardware/imu_to_dxl/firmware/`](hardware/imu_to_dxl/firmware/). He also streams the IMU attitude over J-Link into the web debug console, so the 3D duck's body turns with the real board (`--imu-jlink`, or `--imu-demo` with no hardware) → [`tools/servo-web/`](tools/servo-web/) |
 | A member of the WeChat group | **Boot recipe for the Radxa Zero 3W V1.12J.** On this batch (WiFi changed to AIC8800DS2), swapping in Radxa's bootloader is not enough. He found by testing that the device tree has to come from Radxa too: **B1 bootloader + B1 DTB + Armbian 6.1.115 kernel + Trixie userland**, and got it booting → written up in the [pitfalls log](踩坑记录.md#软件) and the [image guide](tools/radxa/镜像使用说明.md) (both Chinese) |
 
 ### Projects from the flock
@@ -256,19 +256,19 @@ Some people build duck-related things in their own repos. The good ones get a sh
 | Project | Author | What it does |
 |---|---|---|
 | [microduck-color-studio](https://github.com/LathamZ/microduck-color-studio) ([live demo](https://lathamz.github.io/microduck-color-studio/)) | [@LathamZ](https://github.com/LathamZ) | **A 3D color studio for the duck: settle the colors in your browser before you print.** Color each of the 70 parts, pick a material (PLA / matte / PETG / metallic / carbon fiber / TPU) and lighting to preview. Enter the filaments you already own and it recommends palettes from your stock (use what you have / add one color / acrylic accents). You can also import your own 3MF (e.g. the Feetech version) and export a **colored multi-plate 3MF** plus per-part STLs, with presets for Bambu P1S / A1 mini / H2D. Chinese and English UI, works on mobile |
-| [MICDUCK_FTHD1901_REBUILD](https://github.com/fengj4780-sudo/MICDUCK_FTHD1901_REBUILD) | [@fengj4780-sudo](https://github.com/fengj4780-sudo) | **Feetech-build structural rework with optional CNC reinforcement.** Builds on our [editable SolidWorks drawings](https://github.com/fanhao375/microduck-replica-cad): adapted to the Feetech servo (written as HD1901 in that repo; the part files are HD-1910-C001), weak parts reinforced, assembly interferences fixed and some broken models repaired. **Five leg parts can be made as CNC parts** for better load paths (still being prototyped; the author estimates about ¥45 for all five including shipping); printing them instead also works and is stronger than the original. Includes a one-click 3MF (Bambu H2D, 0.4 mm, 5 plates) and the reworked SolidWorks drawings (Chinese) |
+| [MICDUCK_FTHD1901_REBUILD](https://github.com/fengj4780-sudo/MICDUCK_FTHD1901_REBUILD) | [@fengj4780-sudo](https://github.com/fengj4780-sudo) | **Feetech-build structural rework with optional CNC reinforcement.** Builds on our [editable SolidWorks drawings](https://github.com/UnitClaw/microduck-replica-cad): adapted to the Feetech servo (written as HD1901 in that repo; the part files are HD-1910-C001), weak parts reinforced, assembly interferences fixed and some broken models repaired. **Five leg parts can be made as CNC parts** for better load paths (still being prototyped; the author estimates about ¥45 for all five including shipping); printing them instead also works and is stronger than the original. Includes a one-click 3MF (Bambu H2D, 0.4 mm, 5 plates) and the reworked SolidWorks drawings (Chinese) |
 | [Microduck-kissqy](https://github.com/kissqy/Microduck-kissqy) | [@kissqy](https://github.com/kissqy) | **A reference for Feetech HD1910 training workflows and robot control.** Includes a training console, environment setup and job management guides, ONNX model export, a robot control console, firmware and demo videos. Recommended in the algorithms section for the practical training workflow |
 
 Built something for the duck (a tool, tutorial, mod, policy…)? Open an issue with the link and we'll add it.
 
-Want to join in: open an [issue](https://github.com/fanhao375/microduck-replica/issues) or send a PR.
+Want to join in: open an [issue](https://github.com/UnitClaw/microduck-replica/issues) or send a PR.
 Hardware, firmware, algorithms, documentation, measured data — all of it counts. **Measured data especially**: the rule in this repo is that results get recorded honestly, positive or negative.
 
 ---
 
 ## Latest
 
-**2026-10-20 — Replica image, first build (pre-release, real-duck test pending).** One card with everything (our fork of the main program, the walking and skill models, Studio, first boot and WiFi setup): flash it, boot, join the duck's hotspot from a phone, enter your home WiFi in Studio and follow the checklist, no SSH. After the first build we ran a three-way review and found that a fresh card cannot get through the "IMU mount" and "write into the main program" steps: out of the box the main program has to run in commissioning mode, and the image had it in motion mode. Fixed and rebuilt; it is out as a pre-release on [Releases](https://github.com/fanhao375/microduck-replica/releases/tag/microduck-replica-image-20261020) and becomes a full release once it passes on a real duck. [Flashing and first use](software/image/烧录和第一次使用.md) · [image build scripts](software/image/) (Chinese).
+**2026-10-20 — Replica image, first build (pre-release, real-duck test pending).** One card with everything (our fork of the main program, the walking and skill models, Studio, first boot and WiFi setup): flash it, boot, join the duck's hotspot from a phone, enter your home WiFi in Studio and follow the checklist, no SSH. After the first build we ran a three-way review and found that a fresh card cannot get through the "IMU mount" and "write into the main program" steps: out of the box the main program has to run in commissioning mode, and the image had it in motion mode. Fixed and rebuilt; it is out as a pre-release on [Releases](https://github.com/UnitClaw/microduck-replica/releases/tag/microduck-replica-image-20261020) and becomes a full release once it passes on a real duck. [Flashing and first use](software/image/烧录和第一次使用.md) · [image build scripts](software/image/) (Chinese).
 
 **2026-10-20 — Three new custom boards drawn.** Bus IMU board v2 (its servo connector is now an A2007WR-3P that takes the Feetech plug), a servo bus hub and a battery terminal board; EasyEDA projects and 3D models are in [`hardware/新版/`](hardware/新版/) (Chinese). None has been made or tested yet.
 
@@ -286,9 +286,9 @@ Hardware, firmware, algorithms, documentation, measured data — all of it count
 
 **2026-10-12 — Main board correction:** We previously recommended the Radxa Zero 3W "2 GB / 16 GB eMMC" SKU. **That was unnecessary and cost people money.** The official spec only says 1 GB RAM and 32 GB storage. Our first robot runs a 2 GB board **without eMMC** on a microSD card; with the full kissqy stack it uses 175 MB of RAM and 3.3 GB of storage. **A 1 GB or 2 GB board without eMMC plus a 32 GB microSD card is enough.** Buy from official distributors (ALLNET, Radxa's official stores) rather than resellers. A 2G/16G board you already bought works fine. See the [purchase guide](docs/电控采购清单.md#该买哪个配置) (Chinese).
 
-**2026-10-12 — Assembly videos:** 机械行者Robo is publishing a from-scratch assembly series on Bilibili. Six of eight episodes are out: parts list, lower legs, thighs, torso, neck and head. The same account is on Xiaohongshu and Douyin. See the [episode list](#-assembly-videos).
+**2026-10-12 — Assembly videos:** WWNT Robotics is publishing a from-scratch assembly series on Bilibili. Six of eight episodes are out: parts list, lower legs, thighs, torso, neck and head. The same account is on Xiaohongshu and Douyin. See the [episode list](#-assembly-videos).
 
-**2026-09-29 — Image login correction:** The original public image requires **`root / 1234`** for the first login. Complete the Armbian wizard before using `duck / duck1234`; it also changes the root password. Change both default passwords immediately. The old image still needs the `wlan0` DHCP fix. The [guide](tools/radxa/镜像使用说明.md) is corrected, and a separate DHCP fix candidate image was published at the time. (10-21: both September base images have been taken down from Releases; for a ready-made card use the [replica image](https://github.com/fanhao375/microduck-replica/releases/latest).) It contains neither the robot runtime nor the web servo console.
+**2026-09-29 — Image login correction:** The original public image requires **`root / 1234`** for the first login. Complete the Armbian wizard before using `duck / duck1234`; it also changes the root password. Change both default passwords immediately. The old image still needs the `wlan0` DHCP fix. The [guide](tools/radxa/镜像使用说明.md) is corrected, and a separate DHCP fix candidate image was published at the time. (10-21: both September base images have been taken down from Releases; for a ready-made card use the [replica image](https://github.com/UnitClaw/microduck-replica/releases/latest).) It contains neither the robot runtime nor the web servo console.
 
 **2026-09-28 — HAT feedback test:** Web console **0.15.4** is deployed on the board, with responses matched by their actual servo ID and a 50 Hz sampling target. While holding the existing pose for about 64 seconds, all 14 joints returned **3,000/3,000** valid samples (42,000 total), with no timeout, checksum or ID errors in that window. The observed rate was **46.87 Hz**. Torque remained enabled and goals/settings were unchanged. **The full control loop with IMU, inference and motion writes, and the walking policy, remain unverified.** Occasional missing responses have occurred outside this window. See the [test scope and results](tools/radxa/50Hz保持姿势读状态-20260928.md) (Chinese).
 
@@ -352,7 +352,7 @@ parts list with LCSC numbers.
 
 ## Print files and CAD assemblies
 
-**Download models from [fanhao375/microduck-replica-cad](https://github.com/fanhao375/microduck-replica-cad).** SolidWorks, STEP, print projects, assembly BOMs and installation instructions are maintained together there.
+**Download models from [UnitClaw/microduck-replica-cad](https://github.com/UnitClaw/microduck-replica-cad).** SolidWorks, STEP, print projects, assembly BOMs and installation instructions are maintained together there.
 
 | Servo version | CAD release checked on 2026-09-28 |
 |---|---|
@@ -361,7 +361,7 @@ parts list with LCSC numbers.
 
 The old `print/` parts and `cad/` assembly STLs came from upstream simulation geometry and did not include the physical CAD changes. Those files have been removed; the directories now contain download pointers. **Do not mix the two servo versions or print simulation/web-viewer meshes from this repository.**
 
-The CAD repository's older 09-15 3MF does not include the v2.1 combined wheel. Check the attachment version; see [printing notes](print/README.en.md). CAD modelling and assembly documentation are by **机械行者Robo**, with attribution and licensing in the CAD repository. The [assembly videos](#-assembly-videos) walk through the build.
+The CAD repository's older 09-15 3MF does not include the v2.1 combined wheel. Check the attachment version; see [printing notes](print/README.en.md). CAD modelling and assembly documentation are by **WWNT Robotics**, with attribution and licensing in the CAD repository. The [assembly videos](#-assembly-videos) walk through the build.
 
 ---
 
@@ -454,7 +454,7 @@ Skip 100% replication and go **"copy the mechanics, build your own electronics"*
 
 | | Approach |
 |---|---|
-| Mechanics | Select the matching servo version in the [CAD repository](https://github.com/fanhao375/microduck-replica-cad) |
+| Mechanics | Select the matching servo version in the [CAD repository](https://github.com/UnitClaw/microduck-replica-cad) |
 | Servos | XL330 × 15, off the shelf |
 | Main board | **Radxa Zero 3W**, same as the original |
 | IMU board | Roll your own `imu_to_dxl`: LSM6DSV16X + a small MCU + half-duplex transceiver. The protocol is fully documented here |

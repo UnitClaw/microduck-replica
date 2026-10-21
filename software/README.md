@@ -1,6 +1,6 @@
 # software · 软件
 
-> 本目录保留训练所需的上游仿真模型，**不是最新实物结构件的打印来源**。模型下载统一到 [microduck-replica-cad](https://github.com/fanhao375/microduck-replica-cad)；引入飞特舵机参数不等于已更新 CAD 几何、质量和惯量。
+> 本目录保留训练所需的上游仿真模型，**不是最新实物结构件的打印来源**。模型下载统一到 [microduck-replica-cad](https://github.com/UnitClaw/microduck-replica-cad)；引入飞特舵机参数不等于已更新 CAD 几何、质量和惯量。
 
 官方运行时 [`pollen-robotics/microduck`](https://github.com/pollen-robotics/microduck) 是照 Dynamixel XL330 写的，本仓库主线用飞特 HD-1910，所以主程序要改。
 
@@ -34,12 +34,12 @@ STM32G031 + LSM6DSV16X 固件与硬件资料放在 [`hardware/imu_to_dxl/firmwar
 
 > 现在用的主程序是上面一览表里的 fork。下面是 9 月基于官方 0.14.1 写的第一版飞特后端，没上过板，留作参考。
 >
-> [`fanhao375/microduck` · `feetech` 分支](https://github.com/fanhao375/microduck/tree/feetech)：已跟上官方 **0.14.1**，三个 crate 的测试全过（duck-control 80 / robotd-params 151 / robotd 93）。
+> [`UnitClaw/microduck` · `feetech` 分支](https://github.com/UnitClaw/microduck/tree/feetech)：已跟上官方 **0.14.1**，三个 crate 的测试全过（duck-control 80 / robotd-params 151 / robotd 93）。
 
 | 文件 | 行数 | 做了什么 |
 |---|---|---|
-| [`duck-control/src/bus_feetech.rs`](https://github.com/fanhao375/microduck/blob/feetech/duck-control/src/bus_feetech.rs) | 744（新） | **`FeetechIo` 主体**：每 tick 一次 `sync_read` 地址 56 长 15；位置换算带方向表；写目标带钳位；`set_gain` 只写 P（飞特没有 I/D 同构）；`reboot` 先关扭矩再 0x08；开机检查 END 字节序 / 应答级别 / 运行模式 / 波特率 / 相位；`imu_ready()` 恒 false。含 11 个单元测试 |
-| [`duck-control/src/bus_select.rs`](https://github.com/fanhao375/microduck/blob/feetech/duck-control/src/bus_select.rs) | 149（新） | `AnyBus` 枚举，两种后端二选一（`Box<dyn RobotIo>` 编不过，原因见[架构文档](飞特适配架构.md) §3.1） |
+| [`duck-control/src/bus_feetech.rs`](https://github.com/UnitClaw/microduck/blob/feetech/duck-control/src/bus_feetech.rs) | 744（新） | **`FeetechIo` 主体**：每 tick 一次 `sync_read` 地址 56 长 15；位置换算带方向表；写目标带钳位；`set_gain` 只写 P（飞特没有 I/D 同构）；`reboot` 先关扭矩再 0x08；开机检查 END 字节序 / 应答级别 / 运行模式 / 波特率 / 相位；`imu_ready()` 恒 false。含 11 个单元测试 |
+| [`duck-control/src/bus_select.rs`](https://github.com/UnitClaw/microduck/blob/feetech/duck-control/src/bus_select.rs) | 149（新） | `AnyBus` 枚举，两种后端二选一（`Box<dyn RobotIo>` 编不过，原因见[架构文档](飞特适配架构.md) §3.1） |
 | `robotd-params/` | +50 | `[bus] protocol = "dynamixel2" \| "feetech-sts"`、`[bus.feetech] p_scale / directions`，登记进参数表 |
 | `robotd/src/main.rs` | +63 | `BusIo` 换成 `AnyBus`，开总线时带协议；参数不合法直接报错不重试 |
 | `duck-control/src/model.rs` | +8 | HD-1910 出厂运行模式 4 的期望值 |
@@ -48,7 +48,7 @@ STM32G031 + LSM6DSV16X 固件与硬件资料放在 [`hardware/imu_to_dxl/firmwar
 编译（需要 Rust）：
 
 ```bash
-git clone -b feetech https://github.com/fanhao375/microduck.git
+git clone -b feetech https://github.com/UnitClaw/microduck.git
 cd microduck && cargo test -p duck-control -p robotd-params -p robotd
 ```
 

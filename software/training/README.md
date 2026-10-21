@@ -14,7 +14,7 @@
 在 Linux / WSL 终端执行：
 
 ```bash
-git clone https://github.com/fanhao375/microduck-replica.git
+git clone https://github.com/UnitClaw/microduck-replica.git
 cd microduck-replica/software/training
 uv sync --frozen --python 3.12
 
