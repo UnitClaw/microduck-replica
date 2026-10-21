@@ -2,6 +2,8 @@
 
 本仓库是 **Microduck 的第三方复刻研究**，与 Pollen Robotics 无隶属关系，未获其背书。
 
+> **本项目原作者**：逆向研究、装配图、爆炸图、硬件分析与文档最初由 [@fanhao375](https://github.com/fanhao375) 完成（原仓库 [fanhao375/microduck-replica](https://github.com/fanhao375/microduck-replica)）；SolidWorks 图纸、装配 BOM 与装配视频由 **机械行者Robo** 建模整理。本 fork 由 WWNT Robotics 维护。
+
 ## 上游来源
 
 | 来源 | 作者 | 许可证 |
