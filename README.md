@@ -78,7 +78,7 @@ MJCF 里包含了完整的运动学树：每个零件挂在谁身上、相对位
 <div align="center">
   <img src="assets/wechat-group-11.png" alt="鸭子复刻群 11 微信二维码" width="280">
   <br>
-  <sub><b>鸭子复刻群 11 · 二维码有效期到 2026-10-23</b>（微信群码 7 天自动失效）<br>
+  <sub><b>鸭子复刻群 11 · 二维码有效期到 2026-10-29</b>（微信群码 7 天自动失效）<br>
   过期了请开个 <a href="https://github.com/fanhao375/microduck-replica/issues">issue</a> 说一声，我会换上新的</sub>
 </div>
 
