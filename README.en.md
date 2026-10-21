@@ -42,7 +42,7 @@ This repository is what falls out of reading both.
 
 > **Models and print files: [microduck-replica-cad](https://github.com/UnitClaw/microduck-replica-cad).** Select the Feetech or XL330 version there. Outdated printable STLs have been removed from this repository.
 
-> **Assembly videos: [the "MicroDuck from scratch" series on Bilibili](https://space.bilibili.com/312747174/lists/9279084?type=season)** (Chinese narration), by WWNT Robotics, who also made the CAD. One subassembly per episode; 6 of 8 out → [episode list](#-assembly-videos)
+> **Assembly videos: [the "MicroDuck from scratch" series on Bilibili](https://space.bilibili.com/312747174/lists/9279084?type=season)** (Chinese narration). One subassembly per episode; 6 of 8 out → [episode list](#-assembly-videos)
 
 ## Two tracks — pick one
 
@@ -64,7 +64,7 @@ The selection argument is in [Actuator Selection](docs/actuator-selection.en.md)
 
 ## 📺 Assembly videos
 
-**[Bilibili series "MicroDuck 从零安装教程" (assembly from scratch)](https://space.bilibili.com/312747174/lists/9279084?type=season)** — recorded by **WWNT Robotics**, who modelled the CAD and wrote the assembly BOM. It starts from the parts list and builds one subassembly per episode. Narration is in Chinese, but the hands-on footage is easy to follow. 6 of 8 episodes are out as of 2026-10-12:
+**[Bilibili series "MicroDuck 从零安装教程" (assembly from scratch)](https://space.bilibili.com/312747174/lists/9279084?type=season)** — starts from the parts list and builds one subassembly per episode. Narration is in Chinese, but the hands-on footage is easy to follow. 6 of 8 episodes are out as of 2026-10-12:
 
 | Episode | Content | Length |
 |---|---|---|
@@ -286,7 +286,7 @@ Hardware, firmware, algorithms, documentation, measured data — all of it count
 
 **2026-10-12 — Main board correction:** We previously recommended the Radxa Zero 3W "2 GB / 16 GB eMMC" SKU. **That was unnecessary and cost people money.** The official spec only says 1 GB RAM and 32 GB storage. Our first robot runs a 2 GB board **without eMMC** on a microSD card; with the full kissqy stack it uses 175 MB of RAM and 3.3 GB of storage. **A 1 GB or 2 GB board without eMMC plus a 32 GB microSD card is enough.** Buy from official distributors (ALLNET, Radxa's official stores) rather than resellers. A 2G/16G board you already bought works fine. See the [purchase guide](docs/电控采购清单.md#该买哪个配置) (Chinese).
 
-**2026-10-12 — Assembly videos:** WWNT Robotics is publishing a from-scratch assembly series on Bilibili. Six of eight episodes are out: parts list, lower legs, thighs, torso, neck and head. The same account is on Xiaohongshu and Douyin. See the [episode list](#-assembly-videos).
+**2026-10-12 — Assembly videos:** A from-scratch assembly series is available on Bilibili. Six of eight episodes are out: parts list, lower legs, thighs, torso, neck and head. See the [episode list](#-assembly-videos).
 
 **2026-09-29 — Image login correction:** The original public image requires **`root / 1234`** for the first login. Complete the Armbian wizard before using `duck / duck1234`; it also changes the root password. Change both default passwords immediately. The old image still needs the `wlan0` DHCP fix. The [guide](tools/radxa/镜像使用说明.md) is corrected, and a separate DHCP fix candidate image was published at the time. (10-21: both September base images have been taken down from Releases; for a ready-made card use the [replica image](https://github.com/UnitClaw/microduck-replica/releases/latest).) It contains neither the robot runtime nor the web servo console.
 
