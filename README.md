@@ -219,6 +219,8 @@ HUB 和 IMU 板的脚序对得上，同向线直连。
 
 这个仓库不是一个人写的。合并进来的代码、实测验证过的结论，都记在这儿。
 
+> **原作者**：本仓库源自 [@fanhao375](https://github.com/fanhao375) 的 [microduck-replica](https://github.com/fanhao375/microduck-replica) —— 逆向研究、装配图、爆炸图、硬件分析与文档的最初工作都由他完成；SolidWorks 图纸、装配 BOM 与装配视频由 **机械行者Robo** 建模整理。本仓库在其基础上继续维护。
+
 | 谁 | 贡献了什么 |
 |---|---|
 | [@yoyojacky](https://github.com/yoyojacky) | **Rust 版飞特舵机测试工具**（[PR #27](https://github.com/UnitClaw/microduck-replica/pull/27)，已合并）。自己实现的最小 STS/SCS 协议（帧打包、校验和、ping、读写寄存器、状态解析），命令行可以扫描总线（带进度条）、读状态、转到指定位置、单颗测试和批量测试，输出位置偏差、峰值电流、峰值负载、电压温度并判定 PASS/FAIL。台架验收一条命令出汇总表 → [`tools/sts3215Servo_testtool/`](tools/sts3215Servo_testtool/) |

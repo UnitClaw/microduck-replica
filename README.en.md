@@ -243,6 +243,8 @@ needs joint calibration, IMU/runtime integration, and checks of actual mass/iner
 
 This repo is not one person's work. Merged code and bench-verified findings are credited here.
 
+> **Original authors**: this repo descends from [@fanhao375](https://github.com/fanhao375)'s [microduck-replica](https://github.com/fanhao375/microduck-replica) — the reverse-engineering study, assembly drawings, exploded views, hardware analysis and documentation were originally his work. The SolidWorks drawings, assembly BOM and assembly videos were modelled by **机械行者Robo**. This repo continues that work.
+
 | Who | What they contributed |
 |---|---|
 | [@yoyojacky](https://github.com/yoyojacky) | **A Rust test tool for Feetech servos** ([PR #27](https://github.com/UnitClaw/microduck-replica/pull/27), merged). A minimal STS/SCS protocol implementation of his own (framing, checksum, ping, register read/write, status parsing). The CLI scans the bus with a progress bar, reads status, moves a servo to a position, and runs single or batch tests that report position error, peak current, peak load, voltage and temperature, with a PASS/FAIL verdict — one command gives you a bench acceptance table → [`tools/sts3215Servo_testtool/`](tools/sts3215Servo_testtool/) |
