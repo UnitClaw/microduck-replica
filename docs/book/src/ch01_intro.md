@@ -61,9 +61,9 @@ MicroDuck 原版采用 Dynamixel XL330 舵机，官方预购价 **399 美元**�
 | 仓库 | 性质 | 舵机 | 配套 |
 |---|---|---|---|
 | `pollen-robotics/microduck_rl` | 原版 RL 内核 | XL330 | 仅训练代码 |
+| `UnitClaw/microduck-wwduck` | WWNTRobotics 优化版 | HD1910 | 训练+CAD+固件+镜像+工程优化 |
 | `fanhao375/microduck-replica` | 完整复刻工程 | XL330 + HD1910 | 训练+CAD+固件+镜像 |
 | `fanhao375/microduck-replica-cad` | 机械图纸 | XL330 + HD1910 | SolidWorks/STL |
-| `UnitClaw/Microduck-wwduck-rl` | 个人实验版 | HD1910 | 仅训练代码 |
 | `LuwuDynamics/xgoduck_hardware` | 飞特合作机器鸭 | HD1910 | 独立机器人 |
 
 > 边界说明：晨芯时代科技是国内硬件方案商，基于原版做国产化硬件适配，但**没有独立的 Microduck GitHub 仓库**，只交付适配 RK 平台的镜像与 BSP。飞特官方也未发布同名 Microduck 仓库。
