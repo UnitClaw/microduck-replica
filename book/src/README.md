@@ -10,17 +10,8 @@
     本书以 Pollen Robotics 开源的 MicroDuck 为蓝本，系统呈现一条<b>国内可复现、低成本</b>的双足机器人技术路线：从 MJCF 逆向与 Onshape→MJCF 自动化动力学建模、HD1910 串口总线舵机 BAM 台架辨识，到扩展域随机化 + 课程学习的 PPO 策略训练，再到 RK3566 板端 50&nbsp;Hz 实时推理与真机闭环迭代，完整覆盖「CAD → 动力学 → 执行器 → 仿真 → 真机」的全栈工程闭环。
   </p>
 
-  <div style="color:#3b4045; font-size:0.95rem; margin-bottom: 0.6rem;">
+  <div style="color:#3b4045; font-size:0.95rem; margin-bottom: 1.8rem;">
     万物拟态机器人（WWNT Robotics）<span style="color:#c2c6cc;">·</span> 开源生态 GitHub <a href="https://github.com/UnitClaw" target="_blank" rel="noopener">UnitClaw</a>
-  </div>
-
-  <div style="color:#8a8f98; font-size:0.8rem; margin-bottom: 1.8rem;">
-    版权 © 广东省万物拟态机器人有限公司 · Copyright © WWNT Robotics
-  </div>
-
-  <div style="display:inline-block; padding: 1rem 1.5rem 1.1rem; border:1px solid #e6e8eb; border-radius: 12px; background:#fafbfc;">
-    <img src="assets/wechat-group-2.png" alt="微信交流群二维码" width="132" style="display:block; margin:0 auto; border-radius:6px;">
-    <div style="font-size:0.8rem; color:#6a7078; margin-top:0.6rem; line-height:1.6;">小鸭子的配件（主板，舵机群 2）<br>扫码入群 · 有效期至 2026-10-31</div>
   </div>
 
 </div>
@@ -134,6 +125,17 @@
 ## 全书技术链路
 
 `STEP装配 → Onshape云端CAD（设置零件密度、舵机质量覆盖） → onshape-to-robot导出MJCF → MuJoCo-Warp GPU仿真 → BAM舵机模型（台架实测辨识HD1910参数） → 域随机化+课程学习PPO多任务训练 → ONNX策略导出 → RK3566 Rust固件50Hz实时推理 → 真机采集IMU/关节数据 → 系统辨识修正动力学模型 → 迭代重训`
+
+## 加入交流群
+
+<div style="display:inline-block; padding: 1rem 1.5rem 1.1rem; border:1px solid #e6e8eb; border-radius: 12px; background:#fafbfc;">
+  <img src="assets/wechat-group-2.png" alt="微信交流群二维码" width="132" style="display:block; margin:0 auto; border-radius:6px;">
+  <div style="font-size:0.8rem; color:#6a7078; margin-top:0.6rem; line-height:1.6;">小鸭子的配件（主板，舵机群 2）<br>扫码入群 · 有效期至 2026-10-31</div>
+</div>
+
+欢迎加入微信交流群，与社区一起交流复刻经验、反馈勘误、共建国产低成本双足机器人开源生态。
+
+> ⚠️ 微信群二维码 7 天自动失效（本图有效期至 **2026-10-31**）。过期后请访问官网 <https://www.wwntai.com/parts.html> 获取最新二维码，或在 GitHub 仓库提 issue 更新。
 
 ## 开源许可边界（务必阅读）
 

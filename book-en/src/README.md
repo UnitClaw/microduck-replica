@@ -10,17 +10,8 @@
     Building on the open-source MicroDuck released by Pollen Robotics, this book presents a <b>reproducible, low-cost</b> bipedal-robot engineering pipeline for China's domestic supply chain: from MJCF reverse engineering and automated Onshape&nbsp;→&nbsp;MJCF dynamic modeling, through bench identification of the HD1910 serial-bus servo using a Bandwidth-Aware Motor (BAM) model, to PPO policy training with extended domain randomization and curriculum learning, and finally to 50&nbsp;Hz on-device inference on the RK3566 and closed-loop iteration on the physical robot. Together, these cover the full-stack engineering loop of CAD → dynamics → actuation → simulation → hardware.
   </p>
 
-  <div style="color:#3b4045; font-size:0.95rem; margin-bottom: 0.6rem;">
+  <div style="color:#3b4045; font-size:0.95rem; margin-bottom: 1.8rem;">
     WWNT Robotics<span style="color:#c2c6cc;"> · </span>open-source ecosystem on GitHub <a href="https://github.com/UnitClaw" target="_blank" rel="noopener">UnitClaw</a>
-  </div>
-
-  <div style="color:#8a8f98; font-size:0.8rem; margin-bottom: 1.8rem;">
-    Copyright © Guangdong WWNT Robotics Co., Ltd. · Copyright © WWNT Robotics
-  </div>
-
-  <div style="display:inline-block; padding: 1rem 1.5rem 1.1rem; border:1px solid #e6e8eb; border-radius: 12px; background:#fafbfc;">
-    <img src="assets/wechat-group-2.png" alt="WeChat community group QR code" width="132" style="display:block; margin:0 auto; border-radius:6px;">
-    <div style="font-size:0.8rem; color:#6a7078; margin-top:0.6rem; line-height:1.6;">MicroDuck Parts (Mainboard, Servo Group 2)<br>Scan to join · valid until 2026-10-31</div>
   </div>
 
 </div>
@@ -135,6 +126,17 @@ This book is neither a purely theoretical reinforcement-learning textbook nor a 
 ## The Full Technical Chain
 
 `STEP assembly → Onshape cloud CAD (assign part densities, override servo masses) → onshape-to-robot MJCF export → MuJoCo-Warp GPU simulation → BAM servo model (bench-identified HD1910 parameters) → domain randomization + curriculum-learning PPO multi-task training → ONNX policy export → RK3566 Rust firmware 50 Hz real-time inference → real-robot IMU/joint data collection → system identification to correct the dynamics model → iterative retraining`
+
+## Join the Community
+
+<div style="display:inline-block; padding: 1rem 1.5rem 1.1rem; border:1px solid #e6e8eb; border-radius: 12px; background:#fafbfc;">
+  <img src="assets/wechat-group-2.png" alt="WeChat community group QR code" width="132" style="display:block; margin:0 auto; border-radius:6px;">
+  <div style="font-size:0.8rem; color:#6a7078; margin-top:0.6rem; line-height:1.6;">MicroDuck Parts (Mainboard, Servo Group 2)<br>Scan to join · valid until 2026-10-31</div>
+</div>
+
+Join our WeChat community to share replication experience, report corrections, and help build the domestic open-source ecosystem for low-cost bipedal robots.
+
+> ⚠️ The WeChat group QR code expires automatically after 7 days (this image is valid until **2026-10-31**). After expiry, visit <https://www.wwntai.com/parts.html> for the latest QR code, or open a GitHub issue to update it.
 
 ## Open-Source Licensing Boundaries (Please Read)
 
