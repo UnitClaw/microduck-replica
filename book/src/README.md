@@ -2,7 +2,7 @@
 
   <div style="letter-spacing: 0.22em; color:#8a8f98; font-size: 0.78rem; margin-bottom: 1.3rem;">开源工程实践 · 具身智能 · SIM2REAL 强化学习</div>
 
-  <h1 style="margin:0 0 0.7rem; font-size: 2.05rem; line-height: 1.3; font-weight: 800;">MicroDuck 国产飞特舵机版电子书（首版）</h1>
+  <h1 style="margin:0 0 0.7rem; font-size: 1.75rem; line-height: 1.35; font-weight: 800; overflow-wrap: break-word;">MicroDuck 国产飞特舵机版电子书（首版）</h1>
 
   <div style="font-size: 1.05rem; color:#3b4045; font-weight: 600; margin-bottom: 1.5rem;">双足机器人 Sim2Real 迁移的工程方法论</div>
 

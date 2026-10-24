@@ -14,3 +14,5 @@ create-missing = false
 git-repository-url = "https://github.com/UnitClaw/microduck-wwduck"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/UnitClaw/microduck-wwduck/edit/master/book/src/{path}"
+additional-css = ["custom.css"]
+additional-js = ["custom.js"]

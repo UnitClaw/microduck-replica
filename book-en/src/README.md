@@ -2,7 +2,7 @@
 
   <div style="letter-spacing: 0.22em; color:#8a8f98; font-size: 0.78rem; margin-bottom: 1.3rem;">OPEN-SOURCE ENGINEERING PRACTICE · EMBODIED INTELLIGENCE · SIM2REAL REINFORCEMENT LEARNING</div>
 
-  <h1 style="margin:0 0 0.7rem; font-size: 2.05rem; line-height: 1.3; font-weight: 800;">MicroDuck: A Bipedal Robot with Feetech Servos<br>(First Edition)</h1>
+  <h1 style="margin:0 0 0.7rem; font-size: 1.5rem; line-height: 1.35; font-weight: 800; overflow-wrap: break-word;">MicroDuck: A Bipedal Robot with Feetech Servos<br>(First Edition)</h1>
 
   <div style="font-size: 1.05rem; color:#3b4045; font-weight: 600; margin-bottom: 1.5rem;">An Engineering Methodology for Sim2Real Transfer in Bipedal Robots</div>
 
