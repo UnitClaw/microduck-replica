@@ -43,7 +43,7 @@ git clone https://github.com/UnitClaw/microduck-replica.git
 ```
 
 1. **选路线** —— XL330（官方原版）还是 HD-1910（飞特，便宜一半）
-2. **备料** —— 按 [BOM.md](BOM.md) 买舵机、轴承、紧固件，打印件到 [CAD 仓库](https://github.com/UnitClaw/microduck-replica-cad) 下载
+2. **备料** —— 按 [BOM.md](BOM.md) 买舵机、轴承、紧固件，打印件到 [CAD 仓库](https://github.com/UnitClaw/microduck-replica-cad) 下载；舵机、主控、电池等配件可到 [配件商城](https://www.wwntai.com/parts.html) 一站配齐（完整清单见 [PARTS.md](PARTS.md)）
 3. **看视频装配** —— [B 站合集](https://space.bilibili.com/312747174/lists/9279084?type=season)，一集装一个部件
 4. **烧镜像走起来** —— [复刻镜像](https://github.com/UnitClaw/microduck-replica/releases/latest)，烧卡 → 开机 → 手机连热点配网，全程不用 SSH
 
@@ -268,15 +268,17 @@ python scripts/analyze_holes.py upstream/microduck_rl/src/mjlab_microduck/robot/
 <tr>
 <td align="center"><a href="https://www.wwntai.com"><b>官网</b></a><br><sub>www.wwntai.com</sub></td>
 <td align="center"><a href="https://wwnt.ai"><b>国际站</b></a><br><sub>wwnt.ai</sub></td>
+<td align="center"><a href="https://www.wwntai.com/parts.html"><b>配件商城</b></a><br><sub>wwntai.com/parts.html</sub></td>
 <td align="center"><a href="mailto:Support@wwntai.com"><b>邮箱</b></a><br><sub>Support@wwntai.com</sub></td>
 </tr>
 </table>
 
 <div align="center">
-  <img src="assets/wechat-group-11.png" alt="鸭子复刻群 11 微信二维码" width="280">
+  <img src="assets/wechat-group-2.png" alt="小鸭子的配件（主板，舵机群 2）微信二维码" width="280">
   <br>
-  <sub><b>鸭子复刻群 11 · 二维码有效期到 2026-10-29</b>（微信群码 7 天自动失效）<br>
-  过期了请开个 <a href="https://github.com/UnitClaw/microduck-replica/issues">issue</a> 说一声，我会换上新的</sub>
+  <sub><b>小鸭子的配件（主板，舵机群 2）· 下单：wwntai.com · 二维码有效期到 2026-10-31</b><br>
+  配件商城：<a href="https://www.wwntai.com/parts.html">www.wwntai.com/parts.html</a> · 完整清单见 <a href="PARTS.md">PARTS.md</a><br>
+  微信群码 7 天自动失效，过期后请访问官网获取最新，或在 <a href="https://github.com/UnitClaw/microduck-replica/issues">issue</a> 说一声，我会换上新的</sub>
 </div>
 
 ---

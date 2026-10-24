@@ -48,7 +48,7 @@ git clone https://github.com/UnitClaw/microduck-replica.git
 ```
 
 1. **Pick a track** — XL330 (original) or HD-1910 (Feetech, half the price)
-2. **Source parts** — servos, bearings and fasteners per [BOM.en.md](BOM.en.md); print files from the [CAD repository](https://github.com/UnitClaw/microduck-replica-cad)
+2. **Source parts** — servos, bearings and fasteners per [BOM.en.md](BOM.en.md); print files from the [CAD repository](https://github.com/UnitClaw/microduck-replica-cad); servos, mainboard and batteries are available at the [Parts Store](https://www.wwntai.com/parts.html) (full list in [PARTS.md](PARTS.md))
 3. **Watch the assembly videos** — [Bilibili series](https://space.bilibili.com/312747174/lists/9279084?type=season), one subassembly per episode
 4. **Flash the image and walk** — [replica image](https://github.com/UnitClaw/microduck-replica/releases/latest): flash → boot → join the hotspot → set up WiFi, no SSH at any point
 
@@ -274,15 +274,17 @@ See [NOTICE.md](NOTICE.md). Not affiliated with or endorsed by Pollen Robotics.
 <tr>
 <td align="center"><a href="https://www.wwntai.com"><b>Website</b></a><br><sub>www.wwntai.com</sub></td>
 <td align="center"><a href="https://wwnt.ai"><b>International</b></a><br><sub>wwnt.ai</sub></td>
+<td align="center"><a href="https://www.wwntai.com/parts.html"><b>Parts Store</b></a><br><sub>wwntai.com/parts.html</sub></td>
 <td align="center"><a href="mailto:Support@wwntai.com"><b>Email</b></a><br><sub>Support@wwntai.com</sub></td>
 </tr>
 </table>
 
 <div align="center">
-  <img src="assets/wechat-group-11.png" alt="Duck Replica Group 11 WeChat QR code" width="280">
+  <img src="assets/wechat-group-2.png" alt="MicroDuck Parts (Mainboard & Servo) Group 2 WeChat QR code" width="280">
   <br>
-  <sub><b>Duck Replica Group 11 · expires 2026-10-29</b> — WeChat group codes are valid for 7 days<br>
-  If it has expired, open an <a href="https://github.com/UnitClaw/microduck-replica/issues">issue</a> and I will post a fresh one</sub>
+  <sub><b>MicroDuck Parts (Mainboard & Servo) Group 2 · order at wwntai.com · expires 2026-10-31</b><br>
+  Parts store: <a href="https://www.wwntai.com/parts.html">www.wwntai.com/parts.html</a> · full list: <a href="PARTS.md">PARTS.md</a><br>
+  WeChat group codes are valid for 7 days; if expired, visit the website for the latest, or open an <a href="https://github.com/UnitClaw/microduck-replica/issues">issue</a> and I will post a fresh one</sub>
 </div>
 
 ---

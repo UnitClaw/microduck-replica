@@ -38,3 +38,4 @@
 - [附录C：故障排查手册](appendix_c_troubleshoot.md)
 - [附录D：术语表](appendix_d_glossary.md)
 - [附录E：参考文献BibTeX](appendix_e_references.md)
+- [附录F：配件商城（散件与配件）](appendix_f_parts.md)
