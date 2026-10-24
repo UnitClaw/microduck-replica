@@ -2,10 +2,34 @@
 
 ## 配套图书阅读入口
 
-- **在线电子书（GitHub Pages 自动编译）**：<https://github.com/UnitClaw/microduck-wwduck>
+- **在线电子书（GitHub Pages 自动编译）**：<https://unitclaw.github.io/microduck-wwduck/>
 - **书稿源码仓库**：<https://github.com/UnitClaw/microduck-wwduck>（`docs/book/` 目录，mdbook 编写，随提交自动编译部署为网页电子书）
 
 > 本书每一章书稿都与配套工程仓库的 commit hash 一一绑定，读者可 checkout 到对应版本，完整复现书中每一步实验。
+> 电子书每个章节**右上角**都有两个入口：📝「编辑」图标直达该章源文件、Octocat 图标直达仓库首页。
+
+## 电子书章节 ↔ 仓库资源对照
+
+每一章都对应仓库里的具体工程资源，点击即可跳转查阅源码、图纸、清单与日志：
+
+| 电子书章节 | 仓库对应资源 |
+|---|---|
+| 第 2 章 配件商城 | [PARTS.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/PARTS.md) · [官网商城](https://www.wwntai.com/parts.html) |
+| 第 3 章 最小仿真 Demo | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
+| 第 4 章 CAD 模型解析 | [cad/](https://github.com/UnitClaw/microduck-wwduck/tree/master/cad) · [CAD 仓库](https://github.com/UnitClaw/microduck-replica-cad) |
+| 第 5 章 Onshape → MJCF | [scripts/](https://github.com/UnitClaw/microduck-wwduck/tree/master/scripts) |
+| 第 6 章 3D 打印与装配 | [print/](https://github.com/UnitClaw/microduck-wwduck/tree/master/print) · [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
+| 第 7 章 硬件电路与总线 | [hardware/](https://github.com/UnitClaw/microduck-wwduck/tree/master/hardware) |
+| 第 8 章 RK3566 镜像与固件 | [software/image/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/image) · [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
+| 第 9 章 舵机 / IMU 标定 | [tools/](https://github.com/UnitClaw/microduck-wwduck/tree/master/tools) |
+| 第 10~14 章 仿真与训练 | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
+| 第 15 章 ONNX 部署 | [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
+| 第 16 章 真机步态 | [software/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software) |
+| 第 18 章 工程化与开源 | [NOTICE.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/NOTICE.md) · [LICENSE](https://github.com/UnitClaw/microduck-wwduck/blob/master/LICENSE) |
+| 附录 B BOM 采购清单 | [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
+| 附录 C 故障排查 | [踩坑记录.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/踩坑记录.md) |
+
+> 仓库侧反向入口：仓库 `README.md` 顶部有电子书在线阅读链接与配件商城入口；`PARTS.md`、`BOM.md` 等文档也标注了对应电子书章节。
 
 ## 核心工程亮点（本书重点创新）
 

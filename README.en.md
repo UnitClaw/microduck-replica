@@ -2,6 +2,9 @@
 
 **English** · [简体中文](README.md)
 
+> 📖 **Read the online book** (19-chapter full-stack engineering book, Ch.2 = Parts Store) → [unitclaw.github.io/microduck-wwduck](https://unitclaw.github.io/microduck-wwduck/)
+> 🛒 **Parts Store** (parts & accessories · illustrated list) → [wwntai.com/parts.html](https://www.wwntai.com/parts.html) ｜ in-repo list: [PARTS.md](PARTS.md)
+
 > A third-party reconstruction study of [Pollen Robotics' Microduck](https://pollen-robotics.com/microduck/).
 > Assembly drawings, exploded views, CAD-importable assemblies, and a complete electronics teardown — all derived from publicly released files and source code.
 >
@@ -58,12 +61,14 @@ git clone https://github.com/UnitClaw/microduck-replica.git
 
 ```
 microduck-replica/
+├── docs/book/           # 📖 The book (mdbook source, online at unitclaw.github.io/microduck-wwduck)
+├── docs/                # Reverse-engineering notes, selection, sourcing
 ├── assembly-drawings/   # Assembly drawings and exploded views
 ├── build-log/           # Physical build log (photos)
-├── docs/                # Reverse-engineering notes, selection, sourcing
 ├── hardware/            # imu_to_dxl board, HAT, new custom boards
 ├── software/            # Studio web console, replica image, training
 ├── tools/               # Web servo console, Feetech tools, gait analysis
+├── PARTS.md             # 🛒 Parts store list (maps to book Ch.2)
 ├── BOM.en.md            # Bill of materials (what to buy, how many)
 ├── BUILD-LOG.en.md      # Mechanical assembly log
 ├── 调试记录.md           # Electrical & software debug log (Chinese)

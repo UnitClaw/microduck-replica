@@ -2,6 +2,9 @@
 
 **简体中文** · [English](README.en.md)
 
+> 📖 **在线阅读电子书**（19 章全栈工程书，第 2 章为配件商城）→ [unitclaw.github.io/microduck-wwduck](https://unitclaw.github.io/microduck-wwduck/)
+> 🛒 **配件商城**（散件与配件 · 图文清单）→ [wwntai.com/parts.html](https://www.wwntai.com/parts.html) ｜ 仓库清单见 [PARTS.md](PARTS.md)
+
 > 对 [Pollen Robotics Microduck](https://pollen-robotics.com/microduck/) 的第三方复刻研究 —— 从官方公开的 MJCF 仿真模型，反推出装配图、爆炸图与可导入 CAD 的装配体。
 >
 > 模型与打印文件：[microduck-replica-cad](https://github.com/UnitClaw/microduck-replica-cad)　·　装配视频：[B 站合集《MicroDuck 从零安装教程》](https://space.bilibili.com/312747174/lists/9279084?type=season)
@@ -53,12 +56,14 @@ git clone https://github.com/UnitClaw/microduck-replica.git
 
 ```
 microduck-replica/
+├── docs/book/           # 📖 电子书（mdbook 源码，在线见 unitclaw.github.io/microduck-wwduck）
+├── docs/                # 逆向分析、选型、采购清单
 ├── assembly-drawings/   # 装配图、爆炸图
 ├── build-log/           # 实物构建日志（照片）
-├── docs/                # 逆向分析、选型、采购清单
 ├── hardware/            # imu_to_dxl 板、HAT、新版自制板
 ├── software/            # Studio 网页中控、复刻镜像、训练工程
 ├── tools/               # 网页调试台、飞特工具、步态分析
+├── PARTS.md             # 🛒 配件商城清单（对照电子书第 2 章）
 ├── BOM.md               # 物料清单（要买什么、买几个）
 ├── 构建日志.md           # 机械装配过程
 ├── 调试记录.md           # 电气与软件调试过程
