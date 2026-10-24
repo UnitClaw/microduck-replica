@@ -56,7 +56,7 @@ git clone https://github.com/UnitClaw/microduck-replica.git
 
 ```
 microduck-replica/
-├── docs/book/           # 📖 电子书（mdbook 源码，在线见 unitclaw.github.io/microduck-wwduck）
+├── book/                # 📖 电子书（mdbook 源码，在线见 unitclaw.github.io/microduck-wwduck）
 ├── docs/                # 逆向分析、选型、采购清单
 ├── assembly-drawings/   # 装配图、爆炸图
 ├── build-log/           # 实物构建日志（照片）

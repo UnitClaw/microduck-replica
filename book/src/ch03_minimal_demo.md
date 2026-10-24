@@ -1,4 +1,4 @@
-# 第3章 最小仿真 Demo：一键启动飞特版 MicroDuck 仿真
+# 第3章 最小仿真示例
 
 > 本章目标：无需 3D 打印、无需硬件、无需焊接，在 GPU 电脑上一键跑通飞特 HD1910 版 MicroDuck 仿真环境，理解 Sim2Real 完整链路全貌。
 > 前置：Docker + NVIDIA GPU 驱动（CUDA 支持）；仓库已切换至 `book-dev` 分支。

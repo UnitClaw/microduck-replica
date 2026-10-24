@@ -10,8 +10,12 @@
     本书以 Pollen Robotics 开源的 MicroDuck 为蓝本，系统呈现一条<b>国内可复现、低成本</b>的双足机器人技术路线：从 MJCF 逆向与 Onshape→MJCF 自动化动力学建模、HD1910 串口总线舵机 BAM 台架辨识，到扩展域随机化 + 课程学习的 PPO 策略训练，再到 RK3566 板端 50&nbsp;Hz 实时推理与真机闭环迭代，完整覆盖「CAD → 动力学 → 执行器 → 仿真 → 真机」的全栈工程闭环。
   </p>
 
-  <div style="color:#3b4045; font-size:0.95rem; margin-bottom: 1.8rem;">
+  <div style="color:#3b4045; font-size:0.95rem; margin-bottom: 0.6rem;">
     万物拟态机器人（WWNT Robotics）<span style="color:#c2c6cc;">·</span> 开源生态 GitHub <a href="https://github.com/UnitClaw" target="_blank" rel="noopener">UnitClaw</a>
+  </div>
+
+  <div style="color:#8a8f98; font-size:0.8rem; margin-bottom: 1.8rem;">
+    版权 © 广东省万物拟态机器人有限公司 · Copyright © WWNT Robotics
   </div>
 
   <div style="display:inline-block; padding: 1rem 1.5rem 1.1rem; border:1px solid #e6e8eb; border-radius: 12px; background:#fafbfc;">
@@ -28,7 +32,7 @@
 ## 配套图书阅读入口
 
 - **在线电子书（GitHub Pages 自动编译）**：<https://unitclaw.github.io/microduck-wwduck/>
-- **书稿源码仓库**：<https://github.com/UnitClaw/microduck-wwduck>（`docs/book/` 目录，mdbook 编写，随提交自动编译部署为网页电子书）
+- **书稿源码仓库**：<https://github.com/UnitClaw/microduck-wwduck>（`book/` 目录，mdbook 编写，随提交自动编译部署为网页电子书）
 
 > 本书每一章书稿都与配套工程仓库的 commit hash 一一绑定，读者可 checkout 到对应版本，完整复现书中每一步实验。
 > 电子书每个章节**右上角**都有两个入口：📝「编辑」图标直达该章源文件、Octocat 图标直达仓库首页。
@@ -139,6 +143,29 @@
 > 若读者需要商用产品，必须独立正向设计机械结构，脱离本套 CAD 模型。
 
 本书配套工程仓库：所有代码、脚本、实验记录、Docker 配置、书稿源码全部托管在 GitHub，每一个书稿章节绑定仓库 commit hash，你可以 checkout 到对应版本，保证代码与书中内容完全一致。
+
+## 版权与免责声明
+
+### 版权声明
+
+本书（含正文、图表、代码片段与配套文档）的著作权归 **广东省万物拟态机器人有限公司**（WWNT Robotics，开源生态 GitHub [UnitClaw](https://github.com/UnitClaw)）所有。
+
+> Copyright © WWNT Robotics (Guangdong WWNT Robotics Co., Ltd.) All rights reserved.
+
+除另行注明外，本书正文按 CC-BY 4.0 许可开放阅读与引用（引用时须保留署名）；上游代码遵循 Apache-2.0，机械 CAD 模型遵循 CC BY-NC-SA（仅限非商用学习与研究）。
+
+### 责任免除声明（务必阅读）
+
+本书是一份**开源工程实践记录**，部分技术资料（仿真参数、BAM 辨识结果、固件配置、装配公差等）来自特定硬件批次与实验环境，**尚未全部经过真机充分验证**。硬件装配、电路接线、上电调试本身存在短路、烧毁、机械损伤等固有风险；仿真模型与真机动力学之间存在固有 Gap，直接照搬可能无法稳定行走；舵机、主控、传感器等参数会随批次、固件版本、供电与负载条件变化。
+
+因此，**万物拟态机器人不对任何读者照搬本书内容而导致的实验失败、财产损失或人身伤害承担任何责任**。请务必在安全环境下逐步验证——先仿真、后台架、再真机——并做好供电隔离与防护。您使用本书即表示已理解并接受上述风险与责任边界。
+
+### 知识产权与侵权声明
+
+1. 本项目是基于 Pollen Robotics 开源 MicroDuck 的**第三方独立复刻研究**，与 Pollen Robotics 无隶属、授权、背书或赞助关系；「MicroDuck」及相关商标、品牌归其各自权利人所有。
+2. 本书与配套仓库仅为**教学、科研与非商业开源学习**目的，不构成对任何上游商业产品、商标或专利的授权使用。
+3. 若读者基于本书内容开展商用活动，须自行独立正向设计机械结构、脱离本套 CAD 模型，并自行完成对相关权利人知识产权、商标与专利的合规审查与必要授权。
+4. 因读者擅自商用、侵权使用或未取得必要授权而引发的任何纠纷与损失，**万物拟态机器人不承担任何责任**。
 
 ## 致谢
 

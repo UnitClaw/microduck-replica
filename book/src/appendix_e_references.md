@@ -42,7 +42,7 @@
 
 ## E.4 参考资料归档
 
-全书原始资料归档于仓库 `docs/book/materials/`，按以下子目录分类：
+全书原始资料归档于仓库 `book/materials/`，按以下子目录分类：
 - `pollen_original/`：原版 RL、固件、博客、论文；
 - `replica_source/`：microduck-replica 源码快照；
 - `cad/`：CAD 图纸、STEP、onshape 配置；

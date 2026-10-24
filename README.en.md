@@ -61,7 +61,7 @@ git clone https://github.com/UnitClaw/microduck-replica.git
 
 ```
 microduck-replica/
-├── docs/book/           # 📖 The book (mdbook source, online at unitclaw.github.io/microduck-wwduck)
+├── book/                # 📖 The book (mdbook source, online at unitclaw.github.io/microduck-wwduck)
 ├── docs/                # Reverse-engineering notes, selection, sourcing
 ├── assembly-drawings/   # Assembly drawings and exploded views
 ├── build-log/           # Physical build log (photos)

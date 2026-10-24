@@ -1,4 +1,4 @@
-# 第12章 域随机化 Domain Randomization
+# 第12章 域随机化
 
 > 本章目标：理解域随机化原理，学会扩展随机化参数集，并结合课程学习（Curriculum Learning）从站立逐步过渡到行走、爬坡。
 

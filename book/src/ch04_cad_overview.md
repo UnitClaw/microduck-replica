@@ -1,4 +1,4 @@
-# 第4章 飞特 HD1910 版本 CAD 模型解析
+# 第4章 HD1910 CAD 模型解析
 
 > 本章目标：读懂 `microduck-replica-cad` 仓库的机械结构，理解两套舵机版本的零件差异，并学会导出整机 STEP 装配，为第 5 章的 Onshape 自动化 MJCF 导出做准备。
 

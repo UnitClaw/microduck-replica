@@ -1,4 +1,4 @@
-# 第1章 机器鸭的由来：Pollen MicroDuck 与开源具身智能
+# 第1章 绪论：Pollen MicroDuck 与开源具身智能
 
 > 本章目标：理解 MicroDuck 是什么、Sim2Real 范式如何运作、为什么国内难以获取原版，以及社区复刻方案的选型逻辑。
 
