@@ -1,6 +1,6 @@
-# Chapter 8 — Servo and IMU Calibration
+# Servo and IMU Calibration
 
-> Learning objectives: perform three calibration tasks on the hardware side — servo zero-position calibration, IMU six-face calibration, and HD1910 bench data collection (providing measured data for the BAM parameter fitting in Chapter 10).
+> Learning objectives: perform three calibration tasks on the hardware side — servo zero-position calibration, IMU six-face calibration, and HD1910 bench data collection (providing measured data for the BAM parameter fitting in BAM Actuator Modeling and Identification).
 
 ## 8.1 Servo Zero-Position Calibration
 
@@ -23,7 +23,7 @@ configd set-servo-offset --id 1 --offset +12
 Each joint's physical range of motion must be written into both the simulation (MJCF `limits`) and the board (servo target limits):
 
 1. Manually drive each joint slowly and record the mechanical hard-stop angles;
-2. Compare against the MJCF `limits` from Chapter 4;
+2. Compare against the MJCF `limits` from Automated Onshape→MJCF Modeling;
 3. If the simulated range exceeds the hardware, the trained policy may command "impossible angles" on the real robot, causing mechanical seizure or servo stall.
 
 ## 8.3 IMU Six-Face Calibration
@@ -41,7 +41,7 @@ robotd imu-calibrate --faces 6
 
 ## 8.4 HD1910 Bench Data Collection (Core; for BAM Fitting)
 
-Chapter 10 fits the BAM model using measured data, which requires bench experiments first. Mount the HD1910 on a bench and run four types of tests:
+BAM Actuator Modeling and Identification fits the BAM model using measured data, which requires bench experiments first. Mount the HD1910 on a bench and run four types of tests:
 
 ### 8.4.1 Step-Response Test (to fit bandwidth)
 
@@ -92,7 +92,7 @@ Output `bam_params.json`:
 }
 ```
 
-Fitting algorithm: least-squares fitting of a simplified first-order bandwidth model (`scipy.optimize.minimize`); see Chapter 10 for the code walkthrough.
+Fitting algorithm: least-squares fitting of a simplified first-order bandwidth model (`scipy.optimize.minimize`); see BAM Actuator Modeling and Identification for the code walkthrough.
 
 ## 8.6 Ablation Study Design (recorded in the book)
 

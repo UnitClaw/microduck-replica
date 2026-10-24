@@ -1,4 +1,4 @@
-# Chapter 7 — RK3566 Image and Firmware
+# RK3566 Image and Firmware
 
 > Learning objectives: flash the prebuilt RK3566 system image onto the board, understand the on-device Rust firmware's process architecture, and master the implementation and verification of the 50 Hz real-time control loop.
 

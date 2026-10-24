@@ -1,4 +1,4 @@
-# Chapter 11 — Domain Randomization
+# Domain Randomization
 
 > Learning objectives: understand the principle of domain randomization, learn to extend the randomization parameter set, and combine it with curriculum learning to progress from standing to walking and climbing.
 
@@ -25,7 +25,7 @@ domain_rand = {
 }
 ```
 
-> **Mass randomization `mass_scale` is especially important**: it covers whole-machine mass variation caused by 3D-print infill changes (see Chapters 4 and 5).
+> **Mass randomization `mass_scale` is especially important**: it covers whole-machine mass variation caused by 3D-print infill changes (see Automated Onshape→MJCF Modeling and 3D Printing, Assembly, and Tolerances).
 
 ## 11.3 Wiring Domain Randomization into the Code
 

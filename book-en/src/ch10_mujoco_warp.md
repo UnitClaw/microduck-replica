@@ -1,4 +1,4 @@
-# Chapter 9 — The MuJoCo-Warp Simulation Environment
+# The MuJoCo-Warp Simulation Environment
 
 > Learning objectives: understand GPU-parallel simulation, resolve the most frustrating environment-deployment issues, and master the definition of the observation and action spaces.
 
@@ -58,7 +58,7 @@ MicroDuck's standard interface:
 - **Action space**: 14-dimensional joint actions (servo target positions), typically normalized to [-1, 1];
 - **Observation space**: 61-dimensional, including IMU attitude (quaternion/Euler angles), joint positions, joint velocities, and the previous action, etc.
 
-> Key convention: **actions in simulation are "position commands," not torques.** Because the hardware uses position-control servos, simulation must also model position actuators — which leads directly to the BAM model in Chapter 10.
+> Key convention: **actions in simulation are "position commands," not torques.** Because the hardware uses position-control servos, simulation must also model position actuators — which leads directly to the BAM model in BAM Actuator Modeling and Identification.
 
 ## 9.5 Parallel Environment Count and Training Speed
 

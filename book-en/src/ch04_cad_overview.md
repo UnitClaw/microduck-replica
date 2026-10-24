@@ -1,6 +1,6 @@
-# Chapter 3 — HD1910 CAD Model Analysis
+# HD1910 CAD Model Analysis
 
-> Learning objectives: understand the mechanical structure of the `microduck-replica-cad` repository, grasp the part differences between the two servo versions, and learn to export the full-assembly STEP, preparing for the automated Onshape MJCF export in Chapter 4.
+> Learning objectives: understand the mechanical structure of the `microduck-replica-cad` repository, grasp the part differences between the two servo versions, and learn to export the full-assembly STEP, preparing for the automated Onshape MJCF export in Automated Onshape→MJCF Modeling.
 
 ## 3.1 Repository Structure Overview
 
@@ -33,7 +33,7 @@ The whole machine has **14–15 servos** (some replicas add degrees of freedom a
 
 ## 3.3 Mapping the Kinematic Tree (Preparing for MJCF)
 
-When exporting MJCF in Chapter 4, you must tell Onshape/onshape-to-robot **which parts are links and which joints are actuated**. This must be clarified in advance. The recommended kinematic tree (for 14 DOF):
+When exporting MJCF in Automated Onshape→MJCF Modeling, you must tell Onshape/onshape-to-robot **which parts are links and which joints are actuated**. This must be clarified in advance. The recommended kinematic tree (for 14 DOF):
 
 ```
 base(torso/base)

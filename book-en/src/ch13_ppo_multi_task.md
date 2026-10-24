@@ -1,4 +1,4 @@
-# Chapter 12 — PPO Multi-Task Training
+# PPO Multi-Task Training
 
 > Learning objectives: understand PPO's role in robot locomotion, learn to design multi-task reward functions, implement a single-policy scheme where "one ONNX supports multiple gaits," and master training hyperparameters and export.
 
@@ -97,7 +97,7 @@ torch.onnx.export(
 
 Place the artifact `microduck_feetech_multitask.onnx` in `software/training/pretrained/`.
 
-> Large-file management: ONNX models are large; use **Git LFS** rather than committing directly to the main repo (see Chapter 17).
+> Large-file management: ONNX models are large; use **Git LFS** rather than committing directly to the main repo (see Engineering Practices and Open-Source Compliance).
 
 ## 12.6 Ready-to-Use Pre-Trained Weights
 

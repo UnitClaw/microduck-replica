@@ -1,4 +1,4 @@
-# Chapter 18 — Outlook and Future Directions
+# Outlook and Future Directions
 
 > Learning objectives: point readers to the advanced paths beyond MicroDuck — hardware upgrades, algorithm advances, and commercialization boundaries. This chapter is an open outlook, not a full implementation.
 
@@ -11,7 +11,7 @@
 | Hand end-effectors | add degrees of freedom and explore grasping/manipulation |
 | Higher-performance servos | switch to higher torque/bandwidth bus servos to extend load capacity |
 
-> Upgrade note: changing servos changes the whole-machine dynamics; MJCF inertia and BAM parameters must be re-calibrated (return to Chapters 4 and 10).
+> Upgrade note: changing servos changes the whole-machine dynamics; MJCF inertia and BAM parameters must be re-calibrated (return to Automated Onshape→MJCF Modeling and BAM Actuator Modeling and Identification).
 
 ## 18.2 Algorithm-Advance Directions
 
@@ -47,7 +47,7 @@ Establish a quantitative metric system and compare against the original Pollen M
 3. **Brands and trademarks**: do not misuse the Pollen/MicroDuck trademarks;
 4. For a commercial product, independent design + self-developed software are required, independent of the open-source CAD models.
 
-> This is consistent with the licensing boundaries in Chapter 17. Commercialization is a direction, but it must be built on compliant reconstruction.
+> This is consistent with the licensing boundaries in Engineering Practices and Open-Source Compliance. Commercialization is a direction, but it must be built on compliant reconstruction.
 
 ## 18.5 Community Collaboration and Continuous Iteration
 

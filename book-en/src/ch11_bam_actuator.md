@@ -1,4 +1,4 @@
-# Chapter 10 — BAM Actuator Modeling and Identification
+# BAM Actuator Modeling and Identification
 
 > This is one of the book's most important technical chapters. Learning objectives: understand why the BAM (Bandwidth-Aware Motor) model is central to Sim2Real success, learn to fit the HD1910's BAM parameters from bench data, and correctly implement the backlash model.
 
@@ -38,7 +38,7 @@ The original `microduck_rl` ships Dynamixel XL330-specific parameters (back-EMF,
 
 ## 10.4 HD1910 Parameter Fitting (Measured vs. Estimated)
 
-Chapter 8 collected the bench data. Here we fit it with `scripts/calibration/hd1910_bench_data_process.py`.
+Servo and IMU Calibration collected the bench data. Here we fit it with `scripts/calibration/hd1910_bench_data_process.py`.
 
 ### 10.4.1 Fitting Script Walkthrough
 
@@ -128,7 +128,7 @@ class FeetechHD1910BAMActuator(FrictionDRBamActuator):
 
 The original implements `BacklashEncoderBamActuator` — the single most important design for Sim2Real success. **The replica must implement it in full; otherwise back-and-forth oscillation, jitter, and tracking error will all be mismatched.**
 
-> ⚠️ Backlash is one of the largest contributors to Sim2Real error. Back-and-forth oscillation on hardware is essentially always caused by inaccurate backlash. After fitting, it is recommended to add perturbation to it in domain randomization (see Chapter 11).
+> ⚠️ Backlash is one of the largest contributors to Sim2Real error. Back-and-forth oscillation on hardware is essentially always caused by inaccurate backlash. After fitting, it is recommended to add perturbation to it in domain randomization (see Domain Randomization).
 
 ## 10.6 Ablation Study: Estimated vs. Measured
 

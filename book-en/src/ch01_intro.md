@@ -1,4 +1,4 @@
-# Chapter 1 — Introduction: Pollen MicroDuck and Open-Source Embodied Intelligence
+# Introduction: Pollen MicroDuck and Open-Source Embodied Intelligence
 
 > Learning objectives: understand what MicroDuck is, how the Sim2Real paradigm operates, why the original is difficult to obtain in China, and the rationale behind the community replica's servo selection.
 
@@ -24,7 +24,7 @@ This is the complete **Sim2Real (simulation-to-reality)** loop. It does not requ
 | Disturbance robustness | Depends on precise feedback; fragile | Has seen various disturbances in training; robust |
 | Complex terrain | Hard to plan by hand | Guided by the reward function |
 
-The essence of Sim2Real is not "simulation" itself but **how to close the gap between simulation and reality** — the central problem this book revisits from Chapter 4 through Chapter 15.
+The essence of Sim2Real is not "simulation" itself but **how to close the gap between simulation and reality** — the central problem this book revisits from Automated Onshape→MJCF Modeling through The Sim2Real Closed-Loop Iteration.
 
 ## 1.3 Why the Original Is Hard to Buy in China
 
@@ -54,7 +54,7 @@ Key specifications of the Feetech HD1910:
 - Weight: 21±2 g;
 - Communication: TTL bus, baud rate up to 1 Mbps, 360° magnetic encoder, multi-turn position readout.
 
-> ⚠️ Selection warning: the **torque, friction, bandwidth, and backlash** parameters of domestic servos differ dramatically from the original. The original's pre-trained gait model **cannot be directly transplanted**; the servo model must be re-calibrated and the policy retrained (see Chapter 10).
+> ⚠️ Selection warning: the **torque, friction, bandwidth, and backlash** parameters of domestic servos differ dramatically from the original. The original's pre-trained gait model **cannot be directly transplanted**; the servo model must be re-calibrated and the policy retrained (see BAM Actuator Modeling and Identification).
 
 ## 1.5 The Community Replica Landscape
 
@@ -72,10 +72,10 @@ Key specifications of the Feetech HD1910:
 
 This book completes something the community has not yet done in full: **building, from scratch, a reproducible MicroDuck full-stack engineering loop using domestic Feetech HD1910 servos**, while specifically addressing five shortcomings of the original replica project:
 
-1. **Dynamics modeling**: replace manually estimated inertia parameters with the Onshape→MJCF automated pipeline (Chapter 4);
-2. **Servo modeling**: identify the HD1910's BAM actuator parameters via bench measurement (Chapter 10);
-3. **Training robustness**: extended domain randomization + curriculum learning to shrink the Sim2Real gap (Chapter 11);
-4. **Engineering**: Docker environment, automated validation, experiment management (Chapter 9);
-5. **Hardware closed loop**: real-robot gait iteration and system identification (Chapter 15).
+1. **Dynamics modeling**: replace manually estimated inertia parameters with the Onshape→MJCF automated pipeline (Automated Onshape→MJCF Modeling);
+2. **Servo modeling**: identify the HD1910's BAM actuator parameters via bench measurement (BAM Actuator Modeling and Identification);
+3. **Training robustness**: extended domain randomization + curriculum learning to shrink the Sim2Real gap (Domain Randomization);
+4. **Engineering**: Docker environment, automated validation, experiment management (The MuJoCo-Warp Simulation Environment);
+5. **Hardware closed loop**: real-robot gait iteration and system identification (The Sim2Real Closed-Loop Iteration).
 
 > **Chapter summary**: You now understand the value of MicroDuck and the necessity of a domestic replica. In the next chapter, we run the simulation end-to-end with one Docker command, building first-hand intuition for the entire pipeline.

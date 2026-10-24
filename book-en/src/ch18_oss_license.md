@@ -1,4 +1,4 @@
-# Chapter 17 — Engineering Practices and Open-Source Compliance
+# Engineering Practices and Open-Source Compliance
 
 > Learning objectives: turn the entire project into a standardized, reproducible, open-source-compliant repository. Covers branch management, documentation engineering, automated testing, and open-source licensing.
 

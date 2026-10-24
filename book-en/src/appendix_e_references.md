@@ -1,4 +1,4 @@
-# Appendix E — References and Project Index
+# References and Project Index
 
 ## E.1 Open-Source Projects
 

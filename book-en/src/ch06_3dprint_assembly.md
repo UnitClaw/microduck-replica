@@ -1,6 +1,6 @@
-# Chapter 5 — 3D Printing, Assembly, and Tolerances
+# 3D Printing, Assembly, and Tolerances
 
-> Learning objectives: turn the CAD drawings into a robot duck that can move. Includes the full BOM, print parameters, assembly order, tolerance control, and the post-assembly weighing procedure (used for MJCF calibration in Chapter 4).
+> Learning objectives: turn the CAD drawings into a robot duck that can move. Includes the full BOM, print parameters, assembly order, tolerance control, and the post-assembly weighing procedure (used for MJCF calibration in Automated Onshape→MJCF Modeling).
 
 ## 5.1 Complete BOM
 
@@ -16,7 +16,7 @@
 | Wiring | servo TTL bus cable | several | daisy-chains 15 servos |
 | Misc. | washers, bearings | several | friction reduction, positioning |
 
-> Procurement advice: servos, board, and IMU are critical parts — prefer authorized channels; fasteners and wiring can be sourced locally. Appendix B lists recommended channels and alternative substitutes.
+> Procurement advice: servos, board, and IMU are critical parts — prefer authorized channels; fasteners and wiring can be sourced locally. The BOM Procurement List lists recommended channels and alternative substitutes.
 
 ## 5.2 3D Printing Parameters
 
@@ -28,7 +28,7 @@
 | Supports | as needed | overhangs require supports |
 | Print orientation | vertical for axially loaded parts | improves strength |
 
-> ⚠️ The print infill ratio directly changes the machine's dynamics! 20% and 40% infill have different equivalent densities and will introduce error during MJCF calibration in Chapter 4. **Be sure to record the infill ratio of every printed batch**, and use the matching equivalent density during MJCF calibration.
+> ⚠️ The print infill ratio directly changes the machine's dynamics! 20% and 40% infill have different equivalent densities and will introduce error during MJCF calibration in Automated Onshape→MJCF Modeling. **Be sure to record the infill ratio of every printed batch**, and use the matching equivalent density during MJCF calibration.
 
 ## 5.3 Step-by-Step Assembly Order
 
@@ -65,7 +65,7 @@ knee_right,0.020,0.019,40%
 ...
 ```
 
-4. Compare against the Onshape-computed CAD mass from Chapter 4; if the error exceeds 5%, return to Onshape to fine-tune part densities and re-export MJCF.
+4. Compare against the Onshape-computed CAD mass from Automated Onshape→MJCF Modeling; if the error exceeds 5%, return to Onshape to fine-tune part densities and re-export MJCF.
 
 ## 5.6 Common Assembly Problems and Troubleshooting
 

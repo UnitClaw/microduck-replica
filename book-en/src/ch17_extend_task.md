@@ -1,4 +1,4 @@
-# Chapter 16 — Task Extension
+# Task Extension
 
 > Learning objectives: on top of basic walking, implement three advanced tasks — turning, climbing, and obstacle avoidance — turning a "straight-line walker" into a duck that "walks in many ways."
 
@@ -36,7 +36,7 @@ slope_forward = obs[:, proj_along_slope_idx]
 reward = clip(slope_forward * 1.0, 0, 1.0) + stability_terms
 ```
 
-> Pair with curriculum learning: flat ground first, then a small incline (5°), gradually up to 15° (see Chapter 11).
+> Pair with curriculum learning: flat ground first, then a small incline (5°), gradually up to 15° (see Domain Randomization).
 
 ### 16.2.3 Hardware Verification
 
@@ -68,7 +68,7 @@ else:
 
 ## 16.4 Combined Multi-Task Training
 
-Merge turning and climbing into the Chapter 12 multi-task one-hot encoding, so one ONNX supports all behaviors:
+Merge turning and climbing into the PPO Multi-Task Training multi-task one-hot encoding, so one ONNX supports all behaviors:
 
 | Encoding | Task |
 |---|---|

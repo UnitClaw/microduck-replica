@@ -1,4 +1,4 @@
-# Appendix B — BOM Procurement List
+# BOM Procurement List
 
 > Complete bill of materials, with recommended procurement channels and alternative substitutes. Prices are reference only and fluctuate with the market.
 

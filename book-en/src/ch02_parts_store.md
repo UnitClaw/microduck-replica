@@ -1,4 +1,4 @@
-# Chapter 19 — Parts Store and Procurement Guide
+# Parts Store and Procurement Guide
 
 > This chapter is synchronized with the official parts store: <https://www.wwntai.com/parts.html>
 > Prices and stock are subject to the official site in real time; the product images below are all from the official store.
@@ -66,7 +66,7 @@ IEEE 802.3af/at. A Power-over-Ethernet expansion board that delivers power and n
 
 ![HD-1910-C001 serial-bus servo](assets/parts/servo-hd-1910.jpg)
 
-FEETECH coreless serial-bus servo, dedicated for open-source AI, suited to the joints of MicroDuck and other biomimetic robots. 12 kg·cm stall torque at 6 V, 12-bit magnetic-encoder 360° position feedback, TTL bus daisy-chaining (see Chapters 1, 8, and 10 for details).
+FEETECH coreless serial-bus servo, dedicated for open-source AI, suited to the joints of MicroDuck and other biomimetic robots. 12 kg·cm stall torque at 6 V, 12-bit magnetic-encoder 360° position feedback, TTL bus daisy-chaining (see Introduction: Pollen MicroDuck and Open-Source Embodied Intelligence, Servo and IMU Calibration, and BAM Actuator Modeling and Identification for details).
 
 **¥1380** · [Buy now](https://www.wwntai.com/microduck-shop.html?item=HD-1910-C001%20%E4%B8%B2%E5%8F%A3%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA%2015%20%E4%B8%AA%E5%A5%97%E8%A3%85&price=1380)
 

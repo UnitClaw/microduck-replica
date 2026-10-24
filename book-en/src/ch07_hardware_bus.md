@@ -1,4 +1,4 @@
-# Chapter 6 — Hardware Circuits and the TTL Bus
+# Hardware Circuits and the TTL Bus
 
 > Learning objectives: build MicroDuck's electrical system — power, servo bus communication, and IMU integration — and master the most common troubleshooting (servo packet loss, communication timeouts, over-current protection).
 

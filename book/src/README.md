@@ -35,20 +35,20 @@
 
 | 电子书章节 | 仓库对应资源 |
 |---|---|
-| 第 19 章 配件商城 | [PARTS.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/PARTS.md) · [官网商城](https://www.wwntai.com/parts.html) |
-| 第 2 章 最小仿真 Demo | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
-| 第 3 章 CAD 模型解析 | [cad/](https://github.com/UnitClaw/microduck-wwduck/tree/master/cad) · [CAD 仓库](https://github.com/UnitClaw/microduck-replica-cad) |
-| 第 4 章 Onshape → MJCF | [scripts/](https://github.com/UnitClaw/microduck-wwduck/tree/master/scripts) |
-| 第 5 章 3D 打印与装配 | [print/](https://github.com/UnitClaw/microduck-wwduck/tree/master/print) · [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
-| 第 6 章 硬件电路与总线 | [hardware/](https://github.com/UnitClaw/microduck-wwduck/tree/master/hardware) |
-| 第 7 章 RK3566 镜像与固件 | [software/image/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/image) · [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
-| 第 8 章 舵机 / IMU 标定 | [tools/](https://github.com/UnitClaw/microduck-wwduck/tree/master/tools) |
-| 第 9~13 章 仿真与训练 | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
-| 第 14 章 ONNX 部署 | [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
-| 第 15 章 真机步态 | [software/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software) |
-| 第 17 章 工程化与开源 | [NOTICE.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/NOTICE.md) · [LICENSE](https://github.com/UnitClaw/microduck-wwduck/blob/master/LICENSE) |
-| 附录 B BOM 采购清单 | [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
-| 附录 C 故障排查 | [踩坑记录.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/踩坑记录.md) |
+| 配件商城 | [PARTS.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/PARTS.md) · [官网商城](https://www.wwntai.com/parts.html) |
+| 最小仿真 Demo | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
+| CAD 模型解析 | [cad/](https://github.com/UnitClaw/microduck-wwduck/tree/master/cad) · [CAD 仓库](https://github.com/UnitClaw/microduck-replica-cad) |
+| Onshape → MJCF | [scripts/](https://github.com/UnitClaw/microduck-wwduck/tree/master/scripts) |
+| 3D 打印与装配 | [print/](https://github.com/UnitClaw/microduck-wwduck/tree/master/print) · [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
+| 硬件电路与总线 | [hardware/](https://github.com/UnitClaw/microduck-wwduck/tree/master/hardware) |
+| RK3566 镜像与固件 | [software/image/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/image) · [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
+| 舵机 / IMU 标定 | [tools/](https://github.com/UnitClaw/microduck-wwduck/tree/master/tools) |
+| 仿真与训练 | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
+| ONNX 部署 | [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
+| 真机步态 | [software/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software) |
+| 工程化与开源 | [NOTICE.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/NOTICE.md) · [LICENSE](https://github.com/UnitClaw/microduck-wwduck/blob/master/LICENSE) |
+| BOM 采购清单 | [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
+| 故障排查 | [踩坑记录.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/踩坑记录.md) |
 
 > 仓库侧反向入口：仓库 `README.md` 顶部有电子书在线阅读链接与配件商城入口；`PARTS.md`、`BOM.md` 等文档也标注了对应电子书章节。
 
@@ -118,7 +118,7 @@
 - 想入门 Sim2Real、MuJoCo-Warp、低成本双足强化学习机器人开发者。
 
 > 阅读路径推荐：
-> 1. 先跑【第2章 最小仿真Demo】，Docker 一键启动仿真，直观看到机器鸭仿真步态；
+> 1. 先跑【最小仿真Demo】，Docker 一键启动仿真，直观看到机器鸭仿真步态；
 > 2. 理解 Sim2Real 整体链路之后，再阅读机械 CAD、3D 打印、硬件装配章节；
 > 3. 进阶读者深入 BAM 模型、系统辨识、域随机化消融实验。
 

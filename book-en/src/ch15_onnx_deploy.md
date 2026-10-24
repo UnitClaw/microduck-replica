@@ -1,4 +1,4 @@
-# Chapter 14 — Policy Deployment and On-Device Inference
+# Policy Deployment and On-Device Inference
 
 > Learning objectives: upload the trained ONNX policy to the board, verify the inference chain, and focus on solving observation/action scaling alignment — the most frequently hit Sim2Real pitfall.
 
@@ -19,7 +19,7 @@ scp software/training/pretrained/microduck_feetech_multitask.onnx user@rk3566:~/
 IMU + joint readback → pack observation (61-dim) → ONNX inference → action (14-dim) → servo target positions
 ```
 
-> Key: **observation space and action scaling must match simulation exactly** (see Chapter 7). Actions normalized to [-1, 1] in simulation must be de-normalized on the board to the actual servo position range (radians/degrees) before being sent.
+> Key: **observation space and action scaling must match simulation exactly** (see RK3566 Image and Firmware). Actions normalized to [-1, 1] in simulation must be de-normalized on the board to the actual servo position range (radians/degrees) before being sent.
 
 ## 14.3 Observation/Action Scaling Alignment (the Most Common Pitfall)
 

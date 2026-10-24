@@ -1,4 +1,4 @@
-# Chapter 2 — Minimal Simulation Example
+# Minimal Simulation Example
 
 > Learning objectives: with no 3D printing, no hardware, and no soldering, run the Feetech HD1910 MicroDuck simulation environment on a GPU machine with one command, and grasp the full Sim2Real pipeline.
 > Prerequisites: Docker + NVIDIA GPU driver (CUDA support); the repository switched to the `book-dev` branch.
@@ -96,8 +96,8 @@ Observe the simulated behavior:
 3. No large number of numerical-explosion warnings.
 
 > Common troubleshooting (pitfall log for this chapter)
-> 1. Falls immediately on startup: most likely incorrect MJCF center of mass / inertia; re-check the CAD→MJCF pipeline in Chapter 4;
-> 2. Violent joint jitter: mismatched BAM servo parameters; bench calibration is required (Chapter 8);
+> 1. Falls immediately on startup: most likely incorrect MJCF center of mass / inertia; re-check the CAD→MJCF pipeline in Automated Onshape→MJCF Modeling;
+> 2. Violent joint jitter: mismatched BAM servo parameters; bench calibration is required (Servo and IMU Calibration);
 > 3. CUDA out of memory: reduce `num_envs`.
 
 ## 2.6 Chapter Summary
@@ -105,6 +105,6 @@ Observe the simulated behavior:
 You have validated the entire simulation software stack: the MJCF model, the BAM servo model, MuJoCo-Warp, and PPO policy loading.
 
 > Simulation is only a digital world; whether the simulated dynamics parameters match the real robot determines the success of subsequent hardware transfer.
-> The next chapter enters mechanical CAD. Chapter 4 automates Onshape MJCF export, computing link inertias and centers of mass from the source — no more manual estimation.
+> The next chapter enters mechanical CAD. Automated Onshape→MJCF Modeling automates Onshape MJCF export, computing link inertias and centers of mass from the source — no more manual estimation.
 
 > Experiment log: this run is archived under `experiments/exp01_standup/`; view observation and reward curves in TensorBoard.

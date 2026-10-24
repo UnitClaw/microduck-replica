@@ -35,20 +35,20 @@ Each chapter maps to concrete engineering resources in the repository; click to 
 
 | Book Chapter | Corresponding Repository Resource |
 |---|---|
-| Ch. 19 Parts Store | [PARTS.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/PARTS.md) · [Official Store](https://www.wwntai.com/parts.html) |
-| Ch. 2 Minimal Simulation Demo | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
-| Ch. 3 CAD Model Analysis | [cad/](https://github.com/UnitClaw/microduck-wwduck/tree/master/cad) · [CAD repo](https://github.com/UnitClaw/microduck-replica-cad) |
-| Ch. 4 Onshape → MJCF | [scripts/](https://github.com/UnitClaw/microduck-wwduck/tree/master/scripts) |
-| Ch. 5 3D Printing & Assembly | [print/](https://github.com/UnitClaw/microduck-wwduck/tree/master/print) · [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
-| Ch. 6 Hardware Circuits & Bus | [hardware/](https://github.com/UnitClaw/microduck-wwduck/tree/master/hardware) |
-| Ch. 7 RK3566 Image & Firmware | [software/image/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/image) · [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
-| Ch. 8 Servo / IMU Calibration | [tools/](https://github.com/UnitClaw/microduck-wwduck/tree/master/tools) |
-| Ch. 9–13 Simulation & Training | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
-| Ch. 14 ONNX Deployment | [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
-| Ch. 15 Real-Robot Gait | [software/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software) |
-| Ch. 17 Engineering & Open Source | [NOTICE.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/NOTICE.md) · [LICENSE](https://github.com/UnitClaw/microduck-wwduck/blob/master/LICENSE) |
-| Appendix B BOM | [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
-| Appendix C Troubleshooting | [踩坑记录.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/踩坑记录.md) |
+| Parts Store | [PARTS.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/PARTS.md) · [Official Store](https://www.wwntai.com/parts.html) |
+| Minimal Simulation Demo | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
+| CAD Model Analysis | [cad/](https://github.com/UnitClaw/microduck-wwduck/tree/master/cad) · [CAD repo](https://github.com/UnitClaw/microduck-replica-cad) |
+| Onshape → MJCF | [scripts/](https://github.com/UnitClaw/microduck-wwduck/tree/master/scripts) |
+| 3D Printing & Assembly | [print/](https://github.com/UnitClaw/microduck-wwduck/tree/master/print) · [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
+| Hardware Circuits & Bus | [hardware/](https://github.com/UnitClaw/microduck-wwduck/tree/master/hardware) |
+| RK3566 Image & Firmware | [software/image/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/image) · [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
+| Servo / IMU Calibration | [tools/](https://github.com/UnitClaw/microduck-wwduck/tree/master/tools) |
+| Simulation & Training | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
+| ONNX Deployment | [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
+| Real-Robot Gait | [software/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software) |
+| Engineering & Open Source | [NOTICE.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/NOTICE.md) · [LICENSE](https://github.com/UnitClaw/microduck-wwduck/blob/master/LICENSE) |
+| BOM | [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
+| Troubleshooting | [踩坑记录.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/踩坑记录.md) |
 
 > Reverse entry points on the repository side: the repository `README.md` carries the online-book link and the parts-store entry at the top; documents such as `PARTS.md` and `BOM.md` also reference their corresponding book chapters.
 
@@ -60,37 +60,37 @@ Building on the community `microduck-replica` project, this book completes six e
 
 A complete reproduction of Pollen's original Onshape → MJCF automated workflow: starting from the full-assembly STEP import, the pipeline automatically computes each link's **mass, center of mass, and inertia tensor**, and uses `validate_mjcf.py` to automatically validate the inertia tensor, joint limits, and total mass — **eliminating the Sim2Real bias** introduced by the replica's manual inertia estimation.
 
-> See Chapter 4 · Deliverables: `scripts/cad2mjcf/export_mjcf.py` + `validate_mjcf.py`
+> See Automated Onshape→MJCF Modeling · Deliverables: `scripts/cad2mjcf/export_mjcf.py` + `validate_mjcf.py`
 
 ### Highlight 2 — Bench Identification of the HD1910 Servo Using a BAM Model
 
 Performs **bench-based identification** of the Feetech HD1910 to fit the full BAM (Bandwidth-Aware Motor) parameter set — bandwidth, viscous friction, Coulomb friction, rotor inertia, and backlash — resolving the Sim2Real bias caused by the original replica's use of empirically guessed parameters.
 
-> See Chapters 8 and 10 · Deliverable: `scripts/calibration/hd1910_bench_data_process.py`
+> See Servo and IMU Calibration and BAM Actuator Modeling and Identification · Deliverable: `scripts/calibration/hd1910_bench_data_process.py`
 
 ### Highlight 3 — Extended Domain Randomization + Curriculum Learning
 
 Extends the baseline domain randomization with an eight-dimensional parameter set (mass, friction, torque, bandwidth, backlash, IMU noise, ground friction, gravity) combined with **curriculum learning** that progresses from standing to walking, turning, and climbing; **ablation studies** compare the real-robot transfer success of different randomization strategies.
 
-> See Chapters 11 and 12 · Deliverables: the `domain_rand` extended parameter set + curriculum scheduling logic
+> See Domain Randomization and PPO Multi-Task Training · Deliverables: the `domain_rand` extended parameter set + curriculum scheduling logic
 
 ### Highlight 4 — Automatic Validation Between Simulated Observation Space and On-Device Firmware
 
 Provides an **automatic validation script that cross-checks the simulation observation space against the on-device Rust firmware**, comparing the dimension, scaling, and ordering of observations/actions in one step, thereby eliminating the most common hidden Sim2Real bugs caused by dimension or scaling mismatches.
 
-> See Chapters 7 and 14 · Deliverable: `scripts/validation/check_obs_act_space.py`
+> See RK3566 Image and Firmware and Policy Deployment and On-Device Inference · Deliverable: `scripts/validation/check_obs_act_space.py`
 
 ### Highlight 5 — A Complete Experiment-Management System (Reproducible)
 
 Establishes a standardized **experiment-management system**: every training run saves `config.yaml`, an MJCF snapshot, BAM parameters, training logs, and TensorBoard curves, so any experiment can be reproduced and traced one-to-one.
 
-> See Chapter 17 · Deliverable: the `experiments/` directory convention (config / mjcf / bam_params / logs / readme)
+> See Engineering Practices and Open-Source Compliance · Deliverable: the `experiments/` directory convention (config / mjcf / bam_params / logs / readme)
 
 ### Highlight 6 — Docker-Locked Dependency Versions
 
 Uses Docker to pin CUDA, Python, MuJoCo-Warp, mjlab, and other dependency versions, eliminating the "works locally, fails elsewhere" environment problem and enabling one-command reproduction of the training environment.
 
-> See Chapters 2 and 17 · Deliverables: `Dockerfile` + `requirements-lock.txt`
+> See Minimal Simulation Example and Engineering Practices and Open-Source Compliance · Deliverables: `Dockerfile` + `requirements-lock.txt`
 
 ---
 
@@ -119,7 +119,7 @@ This book is neither a purely theoretical reinforcement-learning textbook nor a 
 - Developers who want to get started with Sim2Real, MuJoCo-Warp, and low-cost bipedal RL robots.
 
 > Recommended reading path:
-> 1. First run [Chapter 2 — Minimal Simulation Demo], launching the simulation with one Docker command to see the robot duck's simulated gait;
+> 1. First run [Minimal Simulation Demo], launching the simulation with one Docker command to see the robot duck's simulated gait;
 > 2. After understanding the overall Sim2Real chain, read the mechanical CAD, 3D printing, and hardware assembly chapters;
 > 3. Advanced readers should go deep into the BAM model, system identification, and domain-randomization ablation experiments.
 

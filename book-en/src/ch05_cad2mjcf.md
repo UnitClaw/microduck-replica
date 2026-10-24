@@ -1,4 +1,4 @@
-# Chapter 4 — Automated Onshape→MJCF Modeling
+# Automated Onshape→MJCF Modeling
 
 > This chapter is the book's core innovation: replacing the original replica's manual inertia-entry approach with a full reproduction of Pollen's CAD→MJCF automated pipeline, which computes each link's mass, center of mass, and inertia tensor automatically.
 > Companion scripts: `scripts/cad2mjcf/export_mjcf.py` + `onshape_config.json`.

@@ -1,4 +1,4 @@
-# Chapter 15 — The Sim2Real Closed-Loop Iteration
+# The Sim2Real Closed-Loop Iteration
 
 > Learning objectives: master the hardware testing procedure, methods for diagnosing jitter/drift/falling, and implement the closed-loop iteration of "simulation training → hardware testing → data collection → model correction → retraining." This is the ultimate engineering capability of Sim2Real.
 
@@ -18,24 +18,24 @@
 
 Troubleshooting order:
 
-1. **BAM parameters**: inaccurate bandwidth/backlash → re-calibrate (Chapter 10);
+1. **BAM parameters**: inaccurate bandwidth/backlash → re-calibrate (BAM Actuator Modeling and Identification);
 2. **Action smoothing**: reward function missing the smoothing penalty → retrain;
-3. **Control-loop timeout**: inference too slow, unstable control period (see Chapter 14).
+3. **Control-loop timeout**: inference too slow, unstable control period (see Policy Deployment and On-Device Inference).
 
 ### Symptom B: Attitude drift (slowly tilting)
 
 Troubleshooting order:
 
-1. **IMU bias**: not six-face calibrated → Chapter 8;
+1. **IMU bias**: not six-face calibrated → Servo and IMU Calibration;
 2. **IMU mounting tilt**: not compensated → add compensation in firmware;
-3. **Center-of-mass offset**: asymmetric assembly → re-weigh per Chapter 5.
+3. **Center-of-mass offset**: asymmetric assembly → re-weigh per 3D Printing, Assembly, and Tolerances.
 
 ### Symptom C: Frequent falling
 
 Troubleshooting order:
 
 1. **Observation/action scaling**: dimension or scaling misaligned → `check_obs_act_space.py`;
-2. **MJCF inertia error**: wrong center of mass → Chapter 4;
+2. **MJCF inertia error**: wrong center of mass → Automated Onshape→MJCF Modeling;
 3. **Whole-machine mass differs from simulation**: different infill → cover via domain randomization or re-calibrate.
 
 ## 15.3 Hardware Data Collection (the Key to the Closed Loop)
@@ -87,7 +87,7 @@ To quantify progress, define metrics:
 - fall-recovery success rate;
 - turning-angle accuracy.
 
-> These metrics are compared against the original Pollen MicroDuck, forming the book's performance-evaluation material (extended in Chapter 16).
+> These metrics are compared against the original Pollen MicroDuck, forming the book's performance-evaluation material (extended in Task Extension).
 
 ## 15.7 Engineering Pitfall Log
 
