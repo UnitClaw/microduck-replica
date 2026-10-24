@@ -1,8 +1,8 @@
-# Chapter 6 — 3D Printing, Assembly, and Tolerances
+# Chapter 5 — 3D Printing, Assembly, and Tolerances
 
-> Learning objectives: turn the CAD drawings into a robot duck that can move. Includes the full BOM, print parameters, assembly order, tolerance control, and the post-assembly weighing procedure (used for MJCF calibration in Chapter 5).
+> Learning objectives: turn the CAD drawings into a robot duck that can move. Includes the full BOM, print parameters, assembly order, tolerance control, and the post-assembly weighing procedure (used for MJCF calibration in Chapter 4).
 
-## 6.1 Complete BOM
+## 5.1 Complete BOM
 
 | Category | Part | Spec / quantity | Notes |
 |---|---|---|---|
@@ -18,7 +18,7 @@
 
 > Procurement advice: servos, board, and IMU are critical parts — prefer authorized channels; fasteners and wiring can be sourced locally. Appendix B lists recommended channels and alternative substitutes.
 
-## 6.2 3D Printing Parameters
+## 5.2 3D Printing Parameters
 
 | Parameter | Recommended | Notes |
 |---|---|---|
@@ -28,9 +28,9 @@
 | Supports | as needed | overhangs require supports |
 | Print orientation | vertical for axially loaded parts | improves strength |
 
-> ⚠️ The print infill ratio directly changes the machine's dynamics! 20% and 40% infill have different equivalent densities and will introduce error during MJCF calibration in Chapter 5. **Be sure to record the infill ratio of every printed batch**, and use the matching equivalent density during MJCF calibration.
+> ⚠️ The print infill ratio directly changes the machine's dynamics! 20% and 40% infill have different equivalent densities and will introduce error during MJCF calibration in Chapter 4. **Be sure to record the infill ratio of every printed batch**, and use the matching equivalent density during MJCF calibration.
 
-## 6.3 Step-by-Step Assembly Order
+## 5.3 Step-by-Step Assembly Order
 
 1. **Test one leg first**: print and assemble a single leg (hip, knee, ankle) to validate servo fit, range of motion, and horn fastening;
 2. **Torso assembly**: mount the IMU and mainboard in the torso and route wiring;
@@ -40,7 +40,7 @@
 
 > Strong recommendation: **do not print the full part set at once**. Print a single leg to validate the design first, then the whole machine, to avoid scrapping an entire batch due to a design defect.
 
-## 6.4 Tolerance Control Essentials
+## 5.4 Tolerance Control Essentials
 
 | Region | Tolerance requirement | Handling |
 |---|---|---|
@@ -50,7 +50,7 @@
 
 3D printing itself has ±0.1–0.3 mm shrinkage error; complex assemblies should reserve clearance, or compensate with **shims/bearings**.
 
-## 6.5 Post-Assembly Weighing (for Simulation Calibration)
+## 5.5 Post-Assembly Weighing (for Simulation Calibration)
 
 A key to Sim2Real success: **the simulated mass must match the real machine**. After assembly:
 
@@ -65,9 +65,9 @@ knee_right,0.020,0.019,40%
 ...
 ```
 
-4. Compare against the Onshape-computed CAD mass from Chapter 5; if the error exceeds 5%, return to Onshape to fine-tune part densities and re-export MJCF.
+4. Compare against the Onshape-computed CAD mass from Chapter 4; if the error exceeds 5%, return to Onshape to fine-tune part densities and re-export MJCF.
 
-## 6.6 Common Assembly Problems and Troubleshooting
+## 5.6 Common Assembly Problems and Troubleshooting
 
 | Symptom | Likely cause | Handling |
 |---|---|---|
@@ -76,7 +76,7 @@ knee_right,0.020,0.019,40%
 | Center-of-mass shift | asymmetric assembly | check left-right part consistency |
 | Joint seizure | print interference / insufficient clearance | correct CAD per 4.6 |
 
-## 6.7 Chapter Summary
+## 5.7 Chapter Summary
 
 Completing this chapter, you should have a robot duck that is **mechanically correctly assembled, with the bus daisy-chained and every servo independently rotatable**, along with measured mass data for the whole machine and each link.
 

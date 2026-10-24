@@ -14,10 +14,23 @@
 
   var t = target();
   var a = document.createElement('a');
-  a.id = 'lang-switch';
+  a.className = 'icon-button lang-switch';
   a.href = t.href;
-  a.setAttribute('aria-label', t.isEn ? '切换到中文版' : 'Switch to English');
-  a.setAttribute('title', t.isEn ? '切换到中文版' : 'Switch to English');
-  a.textContent = t.isEn ? '中文' : 'EN';
-  document.body.appendChild(a);
+  a.title = t.isEn ? '切换到中文版' : 'Switch to English';
+  a.setAttribute('aria-label', a.title);
+
+  var icon = document.createElement('i');
+  icon.className = 'fa fa-language';
+  a.appendChild(icon);
+
+  var label = document.createElement('span');
+  label.textContent = t.isEn ? '中文' : 'EN';
+  a.appendChild(label);
+
+  var right = document.querySelector('#menu-bar .right-buttons');
+  if (right) {
+    right.insertBefore(a, right.firstChild);
+  } else {
+    document.body.appendChild(a);
+  }
 })();

@@ -1,8 +1,8 @@
-# Chapter 11 — BAM Actuator Modeling and Identification
+# Chapter 10 — BAM Actuator Modeling and Identification
 
 > This is one of the book's most important technical chapters. Learning objectives: understand why the BAM (Bandwidth-Aware Motor) model is central to Sim2Real success, learn to fit the HD1910's BAM parameters from bench data, and correctly implement the backlash model.
 
-## 11.1 Why the Servo Needs a Model
+## 10.1 Why the Servo Needs a Model
 
 The hardware uses **position-control servos**, not ideal torque sources. A servo has torque limits, friction, bandwidth, backlash, and response latency. If simulation treats the servo as an ideal "point-and-shoot" actuator, the trained policy will, on hardware:
 
@@ -12,7 +12,7 @@ The hardware uses **position-control servos**, not ideal torque sources. A servo
 
 The **BAM model** is the actuator model that simulates these characteristics accurately — the core of Pollen's original Sim2Real success.
 
-## 11.2 The Physical Components of the BAM Model
+## 10.2 The Physical Components of the BAM Model
 
 The BAM model contains five key parameters:
 
@@ -26,7 +26,7 @@ The BAM model contains five key parameters:
 
 In addition, there is **backlash** — hysteresis caused by gear clearance.
 
-## 11.3 Differences Between the Original XL330 and the Feetech HD1910
+## 10.3 Differences Between the Original XL330 and the Feetech HD1910
 
 The original `microduck_rl` ships Dynamixel XL330-specific parameters (back-EMF, voltage-torque curve, friction, backlash, and response latency, all bench-calibrated). The Feetech HD1910, by contrast, has:
 
@@ -36,11 +36,11 @@ The original `microduck_rl` ships Dynamixel XL330-specific parameters (back-EMF,
 
 **Running the original pre-trained model directly on Feetech servos will necessarily fail.** The BAM parameters must be re-calibrated and the policy retrained.
 
-## 11.4 HD1910 Parameter Fitting (Measured vs. Estimated)
+## 10.4 HD1910 Parameter Fitting (Measured vs. Estimated)
 
-Chapter 9 collected the bench data. Here we fit it with `scripts/calibration/hd1910_bench_data_process.py`.
+Chapter 8 collected the bench data. Here we fit it with `scripts/calibration/hd1910_bench_data_process.py`.
 
-### 11.4.1 Fitting Script Walkthrough
+### 10.4.1 Fitting Script Walkthrough
 
 ```python
 #!/usr/bin/env python3
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     fit_bam(a.csv, a.out)
 ```
 
-### 11.4.2 Reference Parameters (replace with measured values)
+### 10.4.2 Reference Parameters (replace with measured values)
 
 ```python
 hd1910_params = {
@@ -104,7 +104,7 @@ hd1910_params = {
 }
 ```
 
-### 11.4.3 Modifying `bam_actuator.py`
+### 10.4.3 Modifying `bam_actuator.py`
 
 Add to the Feetech branch of `software/training/mjlab/actuators/bam_actuator.py`:
 
@@ -119,7 +119,7 @@ class FeetechHD1910BAMActuator(FrictionDRBamActuator):
         )
 ```
 
-## 11.5 The Backlash Model: The Easiest Place to Go Wrong
+## 10.5 The Backlash Model: The Easiest Place to Go Wrong
 
 **Key design decision**: Pollen's original places the backlash at the **servo output (the encoder sits after the backlash)**. This means:
 
@@ -128,9 +128,9 @@ class FeetechHD1910BAMActuator(FrictionDRBamActuator):
 
 The original implements `BacklashEncoderBamActuator` — the single most important design for Sim2Real success. **The replica must implement it in full; otherwise back-and-forth oscillation, jitter, and tracking error will all be mismatched.**
 
-> ⚠️ Backlash is one of the largest contributors to Sim2Real error. Back-and-forth oscillation on hardware is essentially always caused by inaccurate backlash. After fitting, it is recommended to add perturbation to it in domain randomization (see Chapter 12).
+> ⚠️ Backlash is one of the largest contributors to Sim2Real error. Back-and-forth oscillation on hardware is essentially always caused by inaccurate backlash. After fitting, it is recommended to add perturbation to it in domain randomization (see Chapter 11).
 
-## 11.6 Ablation Study: Estimated vs. Measured
+## 10.6 Ablation Study: Estimated vs. Measured
 
 To demonstrate the value of measured fitting, design a comparison (recorded in the appendix data):
 
@@ -140,12 +140,12 @@ To demonstrate the value of measured fitting, design a comparison (recorded in t
 
 > Expected conclusion: measured parameters significantly improve hardware transfer success, especially in walking and rough-terrain scenarios.
 
-## 11.7 Engineering Pitfall Log
+## 10.7 Engineering Pitfall Log
 
 - **Backlash in the wrong place**: placing backlash on the motor shaft instead of the output makes the simulated observation inconsistent with the hardware encoder reading, causing back-and-forth oscillation. 
 - **Distorted bandwidth fit**: insufficient bench sampling rate with a fast step response yields an underestimated bandwidth, so the simulated servo "can't keep up." Re-sample at a higher rate (> 500 Hz) and refit.
 
-## 11.8 Chapter Summary
+## 10.8 Chapter Summary
 
 You can now:
 

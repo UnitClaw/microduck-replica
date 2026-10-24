@@ -1,8 +1,8 @@
-# Chapter 13 — PPO Multi-Task Training
+# Chapter 12 — PPO Multi-Task Training
 
 > Learning objectives: understand PPO's role in robot locomotion, learn to design multi-task reward functions, implement a single-policy scheme where "one ONNX supports multiple gaits," and master training hyperparameters and export.
 
-## 13.1 PPO Fundamentals
+## 12.1 PPO Fundamentals
 
 PPO (Proximal Policy Optimization) is a common algorithm for robot reinforcement learning:
 
@@ -12,7 +12,7 @@ PPO (Proximal Policy Optimization) is a common algorithm for robot reinforcement
 
 MicroDuck's PPO uses MuJoCo-Warp to sample hundreds of environments in parallel, paired with the mjlab training loop.
 
-## 13.2 Multi-Task, Single-Policy Scheme
+## 12.2 Multi-Task, Single-Policy Scheme
 
 The original uses continuous velocity commands. To support multiple gaits, this book adopts a **multi-task, single-policy** scheme:
 
@@ -29,7 +29,7 @@ append a **one-hot task encoding** to the observation vector:
 
 The on-device firmware only needs to pass a task id to switch gaits, without loading multiple ONNX models.
 
-## 13.3 Multi-Task Reward Design
+## 12.3 Multi-Task Reward Design
 
 Rewards branch by task. For walking, for example:
 
@@ -53,7 +53,7 @@ Reward essentials per task:
 | Fall recovery | body elevation +, joint reset, standing reward |
 | Climbing | maintain stability + advance along the slope (see 17.2) |
 
-## 13.4 Training Configuration and Tuning
+## 12.4 Training Configuration and Tuning
 
 ```yaml
 # key training configuration
@@ -76,7 +76,7 @@ Quick tuning reference:
 | Training crash | reduce clip_range, lower randomization intensity |
 | Overfitting to simulation | strengthen domain randomization |
 
-## 13.5 Exporting the ONNX Policy
+## 12.5 Exporting the ONNX Policy
 
 After training, export a deployable ONNX:
 
@@ -97,9 +97,9 @@ torch.onnx.export(
 
 Place the artifact `microduck_feetech_multitask.onnx` in `software/training/pretrained/`.
 
-> Large-file management: ONNX models are large; use **Git LFS** rather than committing directly to the main repo (see Chapter 18).
+> Large-file management: ONNX models are large; use **Git LFS** rather than committing directly to the main repo (see Chapter 17).
 
-## 13.6 Ready-to-Use Pre-Trained Weights
+## 12.6 Ready-to-Use Pre-Trained Weights
 
 The repository's `pretrained/` should provide pre-trained ONNX models so readers can verify the whole chain out of the box without training from scratch. Each weight must carry:
 
@@ -108,12 +108,12 @@ The repository's `pretrained/` should provide pre-trained ONNX models so readers
 - the training configuration;
 - the experiment-log link.
 
-## 13.7 Engineering Pitfall Log
+## 12.7 Engineering Pitfall Log
 
 - **Observation/action scaling mismatch**: simulation normalizes to [-1, 1] but the board does not, so hardware actions overflow. Validate with `check_obs_act_space.py`.
 - **Unbalanced multi-task reward weights**: the walking reward is too large, so the standing task is ignored. Sample by task per episode to balance training.
 
-## 13.8 Chapter Summary
+## 12.8 Chapter Summary
 
 You can now: design multi-task rewards, tune PPO, and export and manage ONNX pre-trained weights.
 

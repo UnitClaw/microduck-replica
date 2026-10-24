@@ -1,8 +1,8 @@
-# Chapter 14 — Simulation Debugging and Diagnostics
+# Chapter 13 — Simulation Debugging and Diagnostics
 
 > Learning objectives: learn to observe training with TensorBoard, master methods for locating training failures (non-convergence, jitter, action divergence), and judge whether the problem lies in the reward function, the dynamics, or the observation space.
 
-## 14.1 Observing Training with TensorBoard
+## 13.1 Observing Training with TensorBoard
 
 The training process records reward curves, losses, action distributions, and observation statistics:
 
@@ -16,7 +16,7 @@ Key metrics:
 - **action std**: whether actions converge (don't diverge);
 - **value loss / policy loss**: whether they oscillate.
 
-## 14.2 Locating Common Training Failures
+## 13.2 Locating Common Training Failures
 
 ### Symptom 1: Non-convergence / reward plateau
 
@@ -32,31 +32,31 @@ Troubleshooting order:
 
 1. **Missing action penalty**: add `action_penalty` and `smooth_penalty` (see 13.3);
 2. **High-frequency reward fluctuation**: suppress violent actions;
-3. **Actuator bandwidth too low**: the simulated servo can't keep up (see Chapter 11).
+3. **Actuator bandwidth too low**: the simulated servo can't keep up (see Chapter 10).
 
 ### Symptom 3: Always falling
 
 Troubleshooting order:
 
-1. **Dynamics error**: wrong MJCF center of mass / inertia (re-check Chapter 5);
+1. **Dynamics error**: wrong MJCF center of mass / inertia (re-check Chapter 4);
 2. **Over-strong domain randomization**: too hard to train; lower intensity or pair with curriculum learning;
 3. **Reward doesn't encourage standing**: add standing and height rewards.
 
-## 14.3 A Framework for Locating Simulation-vs-Hardware Differences
+## 13.3 A Framework for Locating Simulation-vs-Hardware Differences
 
 When "simulation is perfect but the robot walks chaotically," check in priority order:
 
 | Priority | Check item | Tool / chapter |
 |---|---|---|
-| 1 | Observation-space consistency | `check_obs_act_space.py` (Ch. 8) |
-| 2 | Joint-limit alignment | MJCF `limits` vs. hardware (Ch. 4/8) |
-| 3 | IMU bias / mounting | six-face calibration (Ch. 9) |
-| 4 | BAM parameter accuracy | bench fitting (Ch. 11) |
-| 5 | Whole-machine mass / center of mass | weighing vs. CAD (Ch. 6) |
+| 1 | Observation-space consistency | `check_obs_act_space.py` (Ch. 7) |
+| 2 | Joint-limit alignment | MJCF `limits` vs. hardware (Ch. 3/8) |
+| 3 | IMU bias / mounting | six-face calibration (Ch. 8) |
+| 4 | BAM parameter accuracy | bench fitting (Ch. 10) |
+| 5 | Whole-machine mass / center of mass | weighing vs. CAD (Ch. 5) |
 
 > This framework is the core message the book reiterates: **the Sim2Real gap is not a single cause but an entire chain from observation, dynamics, actuation, to sensing**, and it must be investigated layer by layer.
 
-## 14.4 Simulation Self-Check Scripts
+## 13.4 Simulation Self-Check Scripts
 
 After every code change, run the environment self-checks first to keep errors out of training:
 
@@ -65,12 +65,12 @@ python scripts/validation/test_env.py
 python scripts/validation/validate_mjcf.py --mjcf software/training/assets/robots/microduck_feetech.xml
 ```
 
-## 14.5 Engineering Pitfall Log
+## 13.5 Engineering Pitfall Log
 
-- **MJCF unit error**: Onshape exported in millimeters without converting to meters, scaling the model by 1000× and crashing simulation (see Chapter 5).
+- **MJCF unit error**: Onshape exported in millimeters without converting to meters, scaling the model by 1000× and crashing simulation (see Chapter 4).
 - **Reward drowned in noise**: the reward signal magnitude is far smaller than `action_penalty`, so the policy "gives up" and outputs only tiny actions. Adjust the reward weights.
 
-## 14.6 Chapter Summary
+## 13.6 Chapter Summary
 
 You have mastered the framework for locating training failures, and the layer-by-layer method for "good in simulation, poor on hardware."
 

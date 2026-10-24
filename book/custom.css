@@ -1,28 +1,11 @@
-/* ===== Language switcher button ===== */
-#lang-switch {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 999;
-  display: inline-block;
-  padding: 6px 14px;
-  font-size: 13px;
+/* ===== Language switch (top-right menu bar) ===== */
+#menu-bar .right-buttons .lang-switch {
+  font-size: 0.9rem;
   font-weight: 600;
-  line-height: 1.5;
-  color: #ffffff !important;
-  background: #2563eb;
-  border-radius: 999px;
-  text-decoration: none !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  letter-spacing: 0.02em;
 }
-#lang-switch:hover {
-  opacity: 0.88;
-  transform: translateY(-2px);
-  text-decoration: none !important;
-}
-@media print {
-  #lang-switch { display: none !important; }
+#menu-bar .right-buttons .lang-switch i {
+  margin-right: 5px;
 }
 
 /* ===== Title overflow fixes ===== */

@@ -1,8 +1,8 @@
-# Chapter 4 — HD1910 CAD Model Analysis
+# Chapter 3 — HD1910 CAD Model Analysis
 
-> Learning objectives: understand the mechanical structure of the `microduck-replica-cad` repository, grasp the part differences between the two servo versions, and learn to export the full-assembly STEP, preparing for the automated Onshape MJCF export in Chapter 5.
+> Learning objectives: understand the mechanical structure of the `microduck-replica-cad` repository, grasp the part differences between the two servo versions, and learn to export the full-assembly STEP, preparing for the automated Onshape MJCF export in Chapter 4.
 
-## 4.1 Repository Structure Overview
+## 3.1 Repository Structure Overview
 
 The mechanical CAD drawings live separately in `fanhao375/microduck-replica-cad`:
 
@@ -19,7 +19,7 @@ microduck-replica-cad/
 
 > Key distinction: **parts are not interchangeable between the two servo versions**. The Feetech HD1910 and the original Dynamixel differ in outline, mounting-boss orientation, and output-shaft position. When printing, you must select parts from the matching version to avoid discovering a mismatch during assembly.
 
-## 4.2 The Robot Duck's Mechanical Topology
+## 3.2 The Robot Duck's Mechanical Topology
 
 MicroDuck is a bipedal robot. Each leg roughly contains:
 
@@ -31,9 +31,9 @@ MicroDuck is a bipedal robot. Each leg roughly contains:
 
 The whole machine has **14–15 servos** (some replicas add degrees of freedom at the tail or head); the exact count and limits follow your CAD assembly tree.
 
-## 4.3 Mapping the Kinematic Tree (Preparing for MJCF)
+## 3.3 Mapping the Kinematic Tree (Preparing for MJCF)
 
-When exporting MJCF in Chapter 5, you must tell Onshape/onshape-to-robot **which parts are links and which joints are actuated**. This must be clarified in advance. The recommended kinematic tree (for 14 DOF):
+When exporting MJCF in Chapter 4, you must tell Onshape/onshape-to-robot **which parts are links and which joints are actuated**. This must be clarified in advance. The recommended kinematic tree (for 14 DOF):
 
 ```
 base(torso/base)
@@ -43,7 +43,7 @@ base(torso/base)
 
 > The hip roll/yaw usually sit between the torso and the thigh; if your assembly places roll/yaw after hip pitch, the joint hierarchy in the exported MJCF must match reality one-to-one, or the simulation will error out immediately.
 
-## 4.4 Exporting the Full-Assembly STEP
+## 3.4 Exporting the Full-Assembly STEP
 
 The `microduck-replica-cad` repository uploads SolidWorks source files (`.sldasm`/`.sldprt`) by default and **does not provide a pre-packaged STEP**; you must export it manually:
 
@@ -54,19 +54,19 @@ The `microduck-replica-cad` repository uploads SolidWorks source files (`.sldasm
 
 > No SolidWorks? The free, open-source **FreeCAD** can open `.sldasm` and export STEP, but FreeCAD's compatibility with SolidWorks assembly constraints is limited; some constraints may be lost, so verify assembly integrity before exporting.
 
-## 4.5 Three Checks Before Exporting STEP
+## 3.5 Three Checks Before Exporting STEP
 
 1. **Assembly hierarchy must not collapse**: confirm parts are not all flattened to the root node, or the exported MJCF joint hierarchy will be scrambled;
 2. **No over- or under-constrained mates**: assembly constraints must be complete, or joint positions will drift after importing the STEP into Onshape;
 3. **Servo mounting orientation is correct**: the HD1910's mounting-boss orientation must match the thigh/shank parts — this is the most error-prone point between the two versions.
 
-## 4.6 Engineering Pitfall Log
+## 3.6 Engineering Pitfall Log
 
 1. **Ankle joint seizure**: a classic replica problem. After 3D printing, the servo horn interferes with adjacent structure, restricting rotation or seizing it. Check the horn-to-shell clearance in CAD, and if necessary correct the assembly interference in the STEP source and widen the clearance.
 2. **Part walls too thin**: some structural parts have insufficient wall thickness and fracture under load after printing. Thicken load-bearing regions or raise the infill ratio.
 3. **Printing the wrong part**: downloading both the feetech and xl330 STL sets and selecting the wrong version during printing leads to assembly failure. Print by directory and version labeling.
 
-## 4.7 Chapter Summary
+## 3.7 Chapter Summary
 
 You should now be able to:
 

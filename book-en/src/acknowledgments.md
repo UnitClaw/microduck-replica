@@ -23,6 +23,10 @@ Thanks to [Pollen Robotics](https://pollen-robotics.com/) for open-sourcing Micr
 
 > Note: this project is a **third-party replication study** of MicroDuck. It has no affiliation with Pollen Robotics and has not received its endorsement.
 
+### Hugging Face
+
+Thanks to [Hugging Face](https://huggingface.co/) for its open platform and robotics ecosystem — MicroDuck is an open-source project of Pollen Robotics, its in-house robotics team, and the online simulator (HF Spaces) and related training toolchain also run on the Hugging Face open community. It is this openness that makes "watching the robot duck walk in the cloud" and "reproducing the training locally" possible.
+
 ### Feetech
 
 Thanks to **Feetech** for providing the HD-1910 serial-bus servo hardware and its official technical documentation. It is this high-value domestic servo that gives MicroDuck a "half the price, 2.5× the torque" domestic alternative, and that gives this book's BAM bench identification a real calibration target.

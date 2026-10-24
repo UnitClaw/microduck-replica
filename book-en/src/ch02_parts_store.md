@@ -1,11 +1,11 @@
-# Chapter 2 — Parts Store and Procurement Guide
+# Chapter 19 — Parts Store and Procurement Guide
 
 > This chapter is synchronized with the official parts store: <https://www.wwntai.com/parts.html>
 > Prices and stock are subject to the official site in real time; the product images below are all from the official store.
 >
 > Source your parts before replicating MicroDuck: this chapter brings the store's components and accessories (servos, mainboards, batteries, cameras, etc.) into the book with images and descriptions, so readers can one-stop procure against the BOM.
 
-## 2.1 In-Stock Parts (IN STOCK · ships within 7 days)
+## 19.1 In-Stock Parts (IN STOCK · ships within 7 days)
 
 ### Radxa ZERO 3W Mainboard
 
@@ -66,7 +66,7 @@ IEEE 802.3af/at. A Power-over-Ethernet expansion board that delivers power and n
 
 ![HD-1910-C001 serial-bus servo](assets/parts/servo-hd-1910.jpg)
 
-FEETECH coreless serial-bus servo, dedicated for open-source AI, suited to the joints of MicroDuck and other biomimetic robots. 12 kg·cm stall torque at 6 V, 12-bit magnetic-encoder 360° position feedback, TTL bus daisy-chaining (see Chapters 1, 9, and 11 for details).
+FEETECH coreless serial-bus servo, dedicated for open-source AI, suited to the joints of MicroDuck and other biomimetic robots. 12 kg·cm stall torque at 6 V, 12-bit magnetic-encoder 360° position feedback, TTL bus daisy-chaining (see Chapters 1, 8, and 10 for details).
 
 **¥1380** · [Buy now](https://www.wwntai.com/microduck-shop.html?item=HD-1910-C001%20%E4%B8%B2%E5%8F%A3%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA%2015%20%E4%B8%AA%E5%A5%97%E8%A3%85&price=1380)
 
@@ -133,7 +133,7 @@ A one-stop service for kit assembly + first-run debugging. Professional engineer
 
 **¥699** · [Buy now](https://www.wwntai.com/microduck-shop.html?item=%E4%BB%A3%E8%A3%85%E6%95%B4%E6%9C%BA%E6%9C%8D%E5%8A%A1&price=699)
 
-## 2.2 MicroDuck Domestic-Edition Parts (Coming Soon)
+## 19.2 MicroDuck Domestic-Edition Parts (Coming Soon)
 
 Components and expansion accessories for the open-source bipedal robot duck, friendly to individual developers.
 
@@ -172,7 +172,7 @@ A Bluetooth controller, playable with zero code. Connect and remotely drive the 
 - **imu_to_dxl board**: an IMU-to-Dynamixel protocol bridge board, converting attitude data for the microduck-replica open-source solution. Price TBD.
 - **Banana PCB + banana-plug PCB (gold-plated copper)**: 2.5 mm banana-plug PCB (gold-plated copper) ×2 + banana PCB (JLC) ×1. Price TBD.
 
-## 2.3 Coming Soon
+## 19.3 Coming Soon
 
 | Product | Status |
 |---|---|
@@ -181,7 +181,7 @@ A Bluetooth controller, playable with zero code. Connect and remotely drive the 
 | Radxa ZERO 3W 8 GB | Coming soon |
 | Radxa ZERO 3E (gigabit Ethernet version) | Coming soon |
 
-## 2.4 How to Order
+## 19.4 How to Order
 
 1. **Click to buy**: on the store card, click "Buy now," which auto-fills the selected part;
 2. **Pay via Alipay QR**: verify the amount, scan to pay, and record the transfer number;
@@ -196,3 +196,38 @@ A Bluetooth controller, playable with zero code. Connect and remotely drive the 
 Scan with WeChat or WeCom to join.
 
 > ⚠️ The WeChat group QR code expires automatically after 7 days (this image is valid until **2026-10-31**). After expiry, visit <https://www.wwntai.com/parts.html> for the latest QR code, or open a GitHub issue to update it.
+
+## 19.5 A Note from the Founder
+
+> **The MicroDuck Parts Store · For anyone who has hit the same pitfalls**
+
+In open-source robotics, the most grinding part is often not the code, but the parts.
+
+A part suddenly goes out of stock, and after two weeks you find it cannot ship; the camera cable you bought doesn't match the mainboard; the servo specs look right, but after installing it you discover the protocol is incompatible; to assemble a full set of fasteners you visit three shops and pay three shipping fees, only to find one screw still missing. We have been through all of this ourselves.
+
+The MicroDuck Parts Store was never a platform we planned from the start; it is more like a shelf gradually forced into existence by those pitfalls. Our capabilities are limited — we can't do everything — so we focus on doing one thing as well as we can: helping individual developers who are reproducing open-source robots avoid one more selection headache and one more wasted trip.
+
+### A few things we are working hard to do
+
+- **Being upfront about stock status.** In-stock parts are marked "ships within 7 days"; coming-soon items are announced in advance, so nobody places an order and then discovers an indefinite wait. Unstable supply is the reality, and we choose to state that reality up front.
+- **Spelling out compatibility.** Which board a camera cable fits, which joint a servo suits, what prerequisites a PoE HAT requires, exactly how many screws of what size are in the hardware kit — we don't hide these details, because developers know better than anyone what one wrong choice costs.
+- **Showing where quality comes from.** Sensor models, servo brands, battery specs, TF-card uses — we publish the key parameters as openly as we can. We don't claim every item is the optimal choice, but at least you know what you are buying.
+- **Consolidating scattered purchases into one order.** The complete kit, structural parts, electronics, standard hardware, and optional accessories are listed together with clear prices and one-click ordering. The full-assembly service is an extra option for those who want peace of mind, not a requirement.
+
+### What the store has now
+
+In-stock and orderable today: the Radxa ZERO 3W mainboard, the 8M 219 camera, the PoE HAT, the 15-pack of HD-1910-C001 servos, the debug board, the VL53L8CX ToF module, the NP-F550 battery pack, the speaker module, the 64 GB high-speed TF card, the standard hardware kit, and the full-assembly service.
+
+Coming soon: the MicroDuck domestic-edition complete kit, the 3D-printed structural-parts kit, the roller-skate kit, the game controller, the imu_to_dxl board, the banana-plug PCB, and the ZERO 3W 1 GB/4 GB/8 GB and ZERO 3E gigabit-Ethernet versions. The structural-part drawings are fully open-sourced, and the tolerance-and-interference issue list is public too — a slightly higher reproduction success rate is the sincerity we can offer.
+
+The purchase path is kept simple: click to buy → pay via Alipay QR code → fill in shipping details and the transfer number → copy the order to customer service.
+
+### A few honest words
+
+We know this store is still far from perfect. The selection isn't large enough, some parts are still on the way, and customer service may not always be on call. But it has been built up piece by piece around real reproduction scenarios, and every parameter, every image, and every "coming soon" came from a concrete problem we hit while building our own machines.
+
+If, during purchasing or assembly, you find something written wrong, something missing, or something that could be clearer, please tell us directly. Individual developers already have a hard enough time doing hardware; if this little shelf can save you a bit of time, that is the meaning of what we do.
+
+—— Chi Ching Ip (Henry Ip), CEO of WWNT Robotics
+
+> The MicroDuck Parts Store — we are still learning, and we'll try our best not to let those who come later step into the same pit again.

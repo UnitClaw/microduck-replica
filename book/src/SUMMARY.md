@@ -4,37 +4,37 @@
 
 ## 第一篇：绪论与快速上手
 - [第1章 绪论：Pollen MicroDuck 与开源具身智能](ch01_intro.md)
-- [第2章 配件商城与备料指南](ch02_parts_store.md)
-- [第3章 最小仿真示例](ch03_minimal_demo.md)
+- [第2章 最小仿真示例](ch03_minimal_demo.md)
 
 ## 第二篇：机械CAD与Onshape自动导出MJCF
-- [第4章 HD1910 CAD 模型解析](ch04_cad_overview.md)
-- [第5章 Onshape→MJCF 自动化建模](ch05_cad2mjcf.md)
-- [第6章 3D 打印、装配与公差](ch06_3dprint_assembly.md)
+- [第3章 HD1910 CAD 模型解析](ch04_cad_overview.md)
+- [第4章 Onshape→MJCF 自动化建模](ch05_cad2mjcf.md)
+- [第5章 3D 打印、装配与公差](ch06_3dprint_assembly.md)
 
 ## 第三篇：硬件电路、总线与RK3566板端系统
-- [第7章 硬件电路与 TTL 总线](ch07_hardware_bus.md)
-- [第8章 RK3566 镜像与固件](ch08_rk3566_firmware.md)
-- [第9章 舵机与 IMU 标定](ch09_calibration.md)
+- [第6章 硬件电路与 TTL 总线](ch07_hardware_bus.md)
+- [第7章 RK3566 镜像与固件](ch08_rk3566_firmware.md)
+- [第8章 舵机与 IMU 标定](ch09_calibration.md)
 
 ## 第四篇：仿真、BAM执行器与强化学习
-- [第10章 MuJoCo-Warp 仿真环境](ch10_mujoco_warp.md)
-- [第11章 BAM 执行器建模与辨识](ch11_bam_actuator.md)
-- [第12章 域随机化](ch12_domain_randomization.md)
-- [第13章 PPO 多任务训练](ch13_ppo_multi_task.md)
-- [第14章 仿真调试与诊断](ch14_sim_debug.md)
+- [第9章 MuJoCo-Warp 仿真环境](ch10_mujoco_warp.md)
+- [第10章 BAM 执行器建模与辨识](ch11_bam_actuator.md)
+- [第11章 域随机化](ch12_domain_randomization.md)
+- [第12章 PPO 多任务训练](ch13_ppo_multi_task.md)
+- [第13章 仿真调试与诊断](ch14_sim_debug.md)
 
 ## 第五篇：Sim2Real真机部署与步态迭代
-- [第15章 策略部署与板端推理](ch15_onnx_deploy.md)
-- [第16章 Sim2Real 闭环迭代](ch16_real_robot_tune.md)
-- [第17章 任务拓展](ch17_extend_task.md)
+- [第14章 策略部署与板端推理](ch15_onnx_deploy.md)
+- [第15章 Sim2Real 闭环迭代](ch16_real_robot_tune.md)
+- [第16章 任务拓展](ch17_extend_task.md)
 
 ## 第六篇：工程化、开源合规与进阶拓展
-- [第18章 工程化与开源合规](ch18_oss_license.md)
-- [第19章 展望与拓展](ch19_future.md)
+- [第17章 工程化与开源合规](ch18_oss_license.md)
+- [第18章 展望与拓展](ch19_future.md)
 
 ## 附录
 - [附录A：代码清单](appendix_a_code.md)
+- [第19章 配件商城与备料指南](ch02_parts_store.md)
 - [附录B：BOM采购清单](appendix_b_bom.md)
 - [附录C：故障排查手册](appendix_c_troubleshoot.md)
 - [附录D：术语表](appendix_d_glossary.md)

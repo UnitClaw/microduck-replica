@@ -1,8 +1,8 @@
-# Chapter 8 — RK3566 Image and Firmware
+# Chapter 7 — RK3566 Image and Firmware
 
 > Learning objectives: flash the prebuilt RK3566 system image onto the board, understand the on-device Rust firmware's process architecture, and master the implementation and verification of the 50 Hz real-time control loop.
 
-## 8.1 Flashing the System Image
+## 7.1 Flashing the System Image
 
 The repository's `software/image/` provides the prebuilt RK3566 image. Flashing procedure:
 
@@ -18,7 +18,7 @@ sync
 3. **Configure**: after first boot, configure Wi-Fi, SSH, and timezone;
 4. **Verify**: confirm the system boots and the `robotd` service runs.
 
-## 8.2 On-Device Software Architecture
+## 7.2 On-Device Software Architecture
 
 The RK3566 runs a multi-daemon system written in Rust, with this typical structure:
 
@@ -31,7 +31,7 @@ The RK3566 runs a multi-daemon system written in Rust, with this typical structu
 
 Processes communicate via **Unix socket + JSON-RPC**, with separated responsibilities for independent debugging and fault isolation.
 
-## 8.3 The 50 Hz Real-Time Control Loop (Core)
+## 7.3 The 50 Hz Real-Time Control Loop (Core)
 
 The control loop is the key to landing Sim2Real on hardware. Pseudocode:
 
@@ -58,7 +58,7 @@ loop {
 
 > ⚠️ **Observation-space consistency is the single most frequent Sim2Real bug.** In simulation the observation vector is 61-dimensional (including IMU, joint positions, velocities, etc.); the observation packed by the on-device firmware **must have the same dimension and the same scaling**. This book provides the `check_obs_act_space.py` validation script (see 8.5).
 
-## 8.4 ONNX Inference Optimization
+## 7.4 ONNX Inference Optimization
 
 The RK3566 has limited compute (1 GB RAM), so running ONNX gait inference requires care:
 
@@ -66,7 +66,7 @@ The RK3566 has limited compute (1 GB RAM), so running ONNX gait inference requir
 - Keep a single inference to a few milliseconds, leaving headroom in the control loop;
 - If high-resolution vision and the RL policy cannot run simultaneously, downgrade or time-share the vision task.
 
-## 8.5 Observation/Action-Space Validation Script
+## 7.5 Observation/Action-Space Validation Script
 
 `scripts/validation/check_obs_act_space.py`: reads the simulation config and the on-device firmware's observation definition, and automatically compares dimensions and scaling factors.
 
@@ -78,7 +78,7 @@ python scripts/validation/check_obs_act_space.py \
 
 > Output: any dimension or scaling mismatch raises an error immediately, eliminating the hidden bug of "walks in simulation, walks chaotically on hardware."
 
-## 8.6 WebUI Debugging
+## 7.6 WebUI Debugging
 
 The on-device WebUI provides real-time visualization:
 
@@ -89,12 +89,12 @@ The on-device WebUI provides real-time visualization:
 
 During hardware debugging, use the WebUI to observe whether the control loop times out, joints jitter, or attitude drifts.
 
-## 8.7 Engineering Pitfall Log
+## 7.7 Engineering Pitfall Log
 
 - **Control-loop timeout**: inference + bus communication exceeding 20 ms causes dropped control frames and gait jitter. Optimize by reducing inference latency and using DMA for batched servo commands.
 - **Bus packet loss**: servo communication times out, position readback is missing, and the observation vector is filled with garbage data. Add timeout-retransmission and data-validity flags in `busd`.
 
-## 8.8 Chapter Summary
+## 7.8 Chapter Summary
 
 You should be able to bring up the RK3566, understand every stage of the 50 Hz control loop, and troubleshoot observation-space consistency and bus timeouts.
 

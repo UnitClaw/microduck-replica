@@ -1,14 +1,14 @@
-# Chapter 12 — Domain Randomization
+# Chapter 11 — Domain Randomization
 
 > Learning objectives: understand the principle of domain randomization, learn to extend the randomization parameter set, and combine it with curriculum learning to progress from standing to walking and climbing.
 
-## 12.1 Why Domain Randomization Is Needed
+## 11.1 Why Domain Randomization Is Needed
 
 A simulation model can never reproduce hardware with 100% accuracy. Print infill, servo-parameter error, and ground-material differences all cause "walks in simulation, falls on hardware." **Domain randomization** addresses this by randomly perturbing simulation parameters during training, so the policy "sees" a wide range of possible conditions and becomes robust to model error.
 
 Pollen's original achieves product-grade Sim2Real through domain randomization (distinguishing flat and rough terrain). The replica project's baseline randomization is too small and must be extended.
 
-## 12.2 The Extended Domain-Randomization Parameter Set
+## 11.2 The Extended Domain-Randomization Parameter Set
 
 Extend the `domain_rand` section of `software/training/train_ppo.py`:
 
@@ -25,9 +25,9 @@ domain_rand = {
 }
 ```
 
-> **Mass randomization `mass_scale` is especially important**: it covers whole-machine mass variation caused by 3D-print infill changes (see Chapters 5 and 6).
+> **Mass randomization `mass_scale` is especially important**: it covers whole-machine mass variation caused by 3D-print infill changes (see Chapters 4 and 5).
 
-## 12.3 Wiring Domain Randomization into the Code
+## 11.3 Wiring Domain Randomization into the Code
 
 On each environment `reset()`, sample the random parameters once from their distributions and apply them to every step of that episode:
 
@@ -48,7 +48,7 @@ def apply_domain_rand(self, model, r):
     return model
 ```
 
-## 12.4 Curriculum Learning
+## 11.4 Curriculum Learning
 
 Full-parameter randomization alone can leave the policy "learning nothing." Curriculum learning progresses from easy to hard, improving convergence stability and final performance:
 
@@ -63,7 +63,7 @@ Full-parameter randomization alone can leave the policy "learning nothing." Curr
 
 The curriculum advances automatically: once the policy reaches a success-rate threshold on the current stage, the difficulty is raised.
 
-## 12.5 Reward Smoothing Terms
+## 11.5 Reward Smoothing Terms
 
 Beyond domain randomization, the reward function must also suppress jitter. Add an action-smoothing penalty to discourage violent output jumps:
 
@@ -72,7 +72,7 @@ action_smooth_penalty = -0.05 * torch.sum(torch.square(next_action - prev_action
 reward = reward + action_smooth_penalty
 ```
 
-## 12.6 Ablation Study Design (recorded in the book)
+## 11.6 Ablation Study Design (recorded in the book)
 
 To quantify the value of domain randomization, design an ablation:
 
@@ -82,12 +82,12 @@ To quantify the value of domain randomization, design an ablation:
 
 Compare the three on hardware transfer success, and record the results in the appendix experiment data. Expected: C > B > A, with a significant gap especially in walking scenarios.
 
-## 12.7 Engineering Pitfall Log
+## 11.7 Engineering Pitfall Log
 
 - **Over-strong randomization prevents convergence**: starting with large full-parameter randomization, the policy cannot learn to stand. Start with low intensity and increase gradually (paired with curriculum learning).
 - **Mass randomization not taking effect**: the randomization code is not wired to the MuJoCo model — the parameter changed but the simulation didn't. Use a validation script to confirm `body_mass` is actually modified.
 
-## 12.8 Chapter Summary
+## 11.8 Chapter Summary
 
 You have mastered: extending the domain-randomization parameter set, wiring it into the reset logic, curriculum progression, and reward smoothing.
 

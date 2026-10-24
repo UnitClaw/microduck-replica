@@ -1,8 +1,8 @@
-# Chapter 18 — Engineering Practices and Open-Source Compliance
+# Chapter 17 — Engineering Practices and Open-Source Compliance
 
 > Learning objectives: turn the entire project into a standardized, reproducible, open-source-compliant repository. Covers branch management, documentation engineering, automated testing, and open-source licensing.
 
-## 18.1 Fork Workflow and Branch Management
+## 17.1 Fork Workflow and Branch Management
 
 A correct branch strategy avoids "upstream-sync conflicts":
 
@@ -30,7 +30,7 @@ git checkout book-dev
 git merge main   # resolve any conflicts that arise
 ```
 
-## 18.2 Documentation Engineering
+## 17.2 Documentation Engineering
 
 Repository documentation layers:
 
@@ -42,7 +42,7 @@ Repository documentation layers:
 
 > Consider adding a bilingual `README_EN.md` — an improvement missing from the original replica and part of your plan.
 
-## 18.3 Automated Testing and CI
+## 17.3 Automated Testing and CI
 
 `.github/workflows/test-sim.yml`: on every commit, load the MJCF and validate the model, keeping errors out before merging.
 
@@ -62,7 +62,7 @@ jobs:
 
 `build-book.yml`: mdbook auto-compilation, deploying the GitHub Pages web book.
 
-## 18.4 Experiment-Management Convention
+## 17.4 Experiment-Management Convention
 
 All training experiments go into `experiments/`; each experiment folder must contain:
 
@@ -74,7 +74,7 @@ All training experiments go into `experiments/`; each experiment folder must con
 
 > Guaranteeing that every experiment is reproducible and traceable is the core of engineering and of the book's case studies.
 
-## 18.5 Managing Large Files with Git LFS
+## 17.5 Managing Large Files with Git LFS
 
 ONNX, STL, STEP, CSV, and TensorBoard logs are large; use Git LFS:
 
@@ -86,7 +86,7 @@ ONNX, STL, STEP, CSV, and TensorBoard logs are large; use Git LFS:
 *.csv   filter=lfs diff=lfs merge=lfs -text
 ```
 
-## 18.6 Open-Source Licensing Details (Must Comply)
+## 17.6 Open-Source Licensing Details (Must Comply)
 
 | Content | License | Commercial restriction |
 |---|---|---|
@@ -106,12 +106,12 @@ ONNX, STL, STEP, CSV, and TensorBoard logs are large; use Git LFS:
 
 Prefer images produced by your own experiments; cite original Pollen images cautiously to avoid image-copyright issues.
 
-## 18.7 Engineering Pitfall Log
+## 17.7 Engineering Pitfall Log
 
 - **Editing `main` directly**: a pile of conflicts after upstream updates. Switching to book-dev + feature branches greatly reduced conflicts.
 - **Unpinned versions**: the environment broke after dependency upgrades. Pin with `requirements-lock.txt`.
 
-## 18.8 Chapter Summary
+## 17.8 Chapter Summary
 
 You have mastered branch management, documentation engineering, CI, experiment management, Git LFS, and open-source licensing compliance.
 

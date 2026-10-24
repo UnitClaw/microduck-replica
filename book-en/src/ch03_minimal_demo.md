@@ -1,9 +1,9 @@
-# Chapter 3 — Minimal Simulation Example
+# Chapter 2 — Minimal Simulation Example
 
 > Learning objectives: with no 3D printing, no hardware, and no soldering, run the Feetech HD1910 MicroDuck simulation environment on a GPU machine with one command, and grasp the full Sim2Real pipeline.
 > Prerequisites: Docker + NVIDIA GPU driver (CUDA support); the repository switched to the `book-dev` branch.
 
-## 3.1 Why the Demo Comes First
+## 2.1 Why the Demo Comes First
 
 Traditional robotics tutorials start from mechanical drawings and hardware assembly, so readers spend substantial time printing parts only to discover that the simulation cannot run at all.
 
@@ -21,7 +21,7 @@ This chapter's minimal demo does only three things:
 
 > This chapter trains no new policy; it only reproduces an already-converged standing policy to quickly verify that the entire software stack works.
 
-## 3.2 Environment Setup (One-Command Docker Container)
+## 2.2 Environment Setup (One-Command Docker Container)
 
 The repository ships a Dockerfile that pins CUDA, Python, MuJoCo-Warp, and mjlab versions, eliminating dependency conflicts.
 
@@ -44,7 +44,7 @@ In a new terminal, enter the container:
 docker exec -it microduck-replica-sim bash
 ```
 
-## 3.3 Model Validation (Mandatory)
+## 2.3 Model Validation (Mandatory)
 
 In Sim2Real engineering, **MJCF model errors are the most frequent failure**. The repository ships an automated validation script that checks the inertia tensor, total mass, and joint limits.
 
@@ -62,7 +62,7 @@ python scripts/validation/validate_mjcf.py \
 
 ❌ Failure scenarios: a non-positive-definite inertia tensor, or joint limits exceeding the servo's physical range — return to the CAD/Onshape step to correct them.
 
-## 3.4 Running the Minimal Demo: Loading a Pre-trained Standing Policy
+## 2.4 Running the Minimal Demo: Loading a Pre-trained Standing Policy
 
 ```bash
 python software/training/train_ppo.py \
@@ -72,7 +72,7 @@ resume=experiments/exp01_standup/checkpoints/latest.onnx
 
 After execution, MuJoCo-Warp launches GPU-parallel simulation, opens a visualization window, and the robot duck holds its standing pose.
 
-### 3.4.1 Experiment Configuration (exp01_standup/config.yaml)
+### 2.4.1 Experiment Configuration (exp01_standup/config.yaml)
 
 ```yaml
 robot_xml: "software/training/assets/robots/microduck_feetech.xml"
@@ -87,7 +87,7 @@ domain_randomization: false
 - `control_freq: 50`: strictly aligned with the RK3566 board's 50 Hz control frequency — the key to Sim2Real transfer;
 - `domain_randomization: false`: the minimal demo disables domain randomization for stable behavior; later chapters enable it for ablation studies.
 
-## 3.5 Observations and Basic Diagnostics
+## 2.5 Observations and Basic Diagnostics
 
 Observe the simulated behavior:
 
@@ -96,15 +96,15 @@ Observe the simulated behavior:
 3. No large number of numerical-explosion warnings.
 
 > Common troubleshooting (pitfall log for this chapter)
-> 1. Falls immediately on startup: most likely incorrect MJCF center of mass / inertia; re-check the CAD→MJCF pipeline in Chapter 5;
-> 2. Violent joint jitter: mismatched BAM servo parameters; bench calibration is required (Chapter 9);
+> 1. Falls immediately on startup: most likely incorrect MJCF center of mass / inertia; re-check the CAD→MJCF pipeline in Chapter 4;
+> 2. Violent joint jitter: mismatched BAM servo parameters; bench calibration is required (Chapter 8);
 > 3. CUDA out of memory: reduce `num_envs`.
 
-## 3.6 Chapter Summary
+## 2.6 Chapter Summary
 
 You have validated the entire simulation software stack: the MJCF model, the BAM servo model, MuJoCo-Warp, and PPO policy loading.
 
 > Simulation is only a digital world; whether the simulated dynamics parameters match the real robot determines the success of subsequent hardware transfer.
-> The next chapter enters mechanical CAD. Chapter 5 automates Onshape MJCF export, computing link inertias and centers of mass from the source — no more manual estimation.
+> The next chapter enters mechanical CAD. Chapter 4 automates Onshape MJCF export, computing link inertias and centers of mass from the source — no more manual estimation.
 
 > Experiment log: this run is archived under `experiments/exp01_standup/`; view observation and reward curves in TensorBoard.

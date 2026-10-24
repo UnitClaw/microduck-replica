@@ -1,4 +1,4 @@
-<div style="text-align:center; padding: 2.5rem 1rem 0.5rem; max-width: 46rem; margin: 0 auto;">
+<div style="text-align:center; padding: 2.5rem 0 0.5rem;">
 
   <div style="letter-spacing: 0.22em; color:#8a8f98; font-size: 0.78rem; margin-bottom: 1.3rem;">OPEN-SOURCE ENGINEERING PRACTICE · EMBODIED INTELLIGENCE · SIM2REAL REINFORCEMENT LEARNING</div>
 
@@ -6,7 +6,7 @@
 
   <div style="font-size: 1.05rem; color:#3b4045; font-weight: 600; margin-bottom: 1.5rem;">An Engineering Methodology for Sim2Real Transfer in Bipedal Robots</div>
 
-  <p style="text-align:justify; color:#4a5058; font-size:0.94rem; line-height:1.8; margin:0 0 1.7rem;">
+  <p style="text-align:left; color:#4a5058; font-size:0.94rem; line-height:1.8; margin:0 0 1.7rem;">
     Building on the open-source MicroDuck released by Pollen Robotics, this book presents a <b>reproducible, low-cost</b> bipedal-robot engineering pipeline for China's domestic supply chain: from MJCF reverse engineering and automated Onshape&nbsp;→&nbsp;MJCF dynamic modeling, through bench identification of the HD1910 serial-bus servo using a Bandwidth-Aware Motor (BAM) model, to PPO policy training with extended domain randomization and curriculum learning, and finally to 50&nbsp;Hz on-device inference on the RK3566 and closed-loop iteration on the physical robot. Together, these cover the full-stack engineering loop of CAD → dynamics → actuation → simulation → hardware.
   </p>
 
@@ -35,18 +35,18 @@ Each chapter maps to concrete engineering resources in the repository; click to 
 
 | Book Chapter | Corresponding Repository Resource |
 |---|---|
-| Ch. 2 Parts Store | [PARTS.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/PARTS.md) · [Official Store](https://www.wwntai.com/parts.html) |
-| Ch. 3 Minimal Simulation Demo | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
-| Ch. 4 CAD Model Analysis | [cad/](https://github.com/UnitClaw/microduck-wwduck/tree/master/cad) · [CAD repo](https://github.com/UnitClaw/microduck-replica-cad) |
-| Ch. 5 Onshape → MJCF | [scripts/](https://github.com/UnitClaw/microduck-wwduck/tree/master/scripts) |
-| Ch. 6 3D Printing & Assembly | [print/](https://github.com/UnitClaw/microduck-wwduck/tree/master/print) · [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
-| Ch. 7 Hardware Circuits & Bus | [hardware/](https://github.com/UnitClaw/microduck-wwduck/tree/master/hardware) |
-| Ch. 8 RK3566 Image & Firmware | [software/image/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/image) · [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
-| Ch. 9 Servo / IMU Calibration | [tools/](https://github.com/UnitClaw/microduck-wwduck/tree/master/tools) |
-| Ch. 10–14 Simulation & Training | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
-| Ch. 15 ONNX Deployment | [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
-| Ch. 16 Real-Robot Gait | [software/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software) |
-| Ch. 18 Engineering & Open Source | [NOTICE.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/NOTICE.md) · [LICENSE](https://github.com/UnitClaw/microduck-wwduck/blob/master/LICENSE) |
+| Ch. 19 Parts Store | [PARTS.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/PARTS.md) · [Official Store](https://www.wwntai.com/parts.html) |
+| Ch. 2 Minimal Simulation Demo | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
+| Ch. 3 CAD Model Analysis | [cad/](https://github.com/UnitClaw/microduck-wwduck/tree/master/cad) · [CAD repo](https://github.com/UnitClaw/microduck-replica-cad) |
+| Ch. 4 Onshape → MJCF | [scripts/](https://github.com/UnitClaw/microduck-wwduck/tree/master/scripts) |
+| Ch. 5 3D Printing & Assembly | [print/](https://github.com/UnitClaw/microduck-wwduck/tree/master/print) · [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
+| Ch. 6 Hardware Circuits & Bus | [hardware/](https://github.com/UnitClaw/microduck-wwduck/tree/master/hardware) |
+| Ch. 7 RK3566 Image & Firmware | [software/image/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/image) · [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
+| Ch. 8 Servo / IMU Calibration | [tools/](https://github.com/UnitClaw/microduck-wwduck/tree/master/tools) |
+| Ch. 9–13 Simulation & Training | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
+| Ch. 14 ONNX Deployment | [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
+| Ch. 15 Real-Robot Gait | [software/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software) |
+| Ch. 17 Engineering & Open Source | [NOTICE.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/NOTICE.md) · [LICENSE](https://github.com/UnitClaw/microduck-wwduck/blob/master/LICENSE) |
 | Appendix B BOM | [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
 | Appendix C Troubleshooting | [踩坑记录.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/踩坑记录.md) |
 
@@ -60,37 +60,37 @@ Building on the community `microduck-replica` project, this book completes six e
 
 A complete reproduction of Pollen's original Onshape → MJCF automated workflow: starting from the full-assembly STEP import, the pipeline automatically computes each link's **mass, center of mass, and inertia tensor**, and uses `validate_mjcf.py` to automatically validate the inertia tensor, joint limits, and total mass — **eliminating the Sim2Real bias** introduced by the replica's manual inertia estimation.
 
-> See Chapter 5 · Deliverables: `scripts/cad2mjcf/export_mjcf.py` + `validate_mjcf.py`
+> See Chapter 4 · Deliverables: `scripts/cad2mjcf/export_mjcf.py` + `validate_mjcf.py`
 
 ### Highlight 2 — Bench Identification of the HD1910 Servo Using a BAM Model
 
 Performs **bench-based identification** of the Feetech HD1910 to fit the full BAM (Bandwidth-Aware Motor) parameter set — bandwidth, viscous friction, Coulomb friction, rotor inertia, and backlash — resolving the Sim2Real bias caused by the original replica's use of empirically guessed parameters.
 
-> See Chapters 9 and 11 · Deliverable: `scripts/calibration/hd1910_bench_data_process.py`
+> See Chapters 8 and 10 · Deliverable: `scripts/calibration/hd1910_bench_data_process.py`
 
 ### Highlight 3 — Extended Domain Randomization + Curriculum Learning
 
 Extends the baseline domain randomization with an eight-dimensional parameter set (mass, friction, torque, bandwidth, backlash, IMU noise, ground friction, gravity) combined with **curriculum learning** that progresses from standing to walking, turning, and climbing; **ablation studies** compare the real-robot transfer success of different randomization strategies.
 
-> See Chapters 12 and 13 · Deliverables: the `domain_rand` extended parameter set + curriculum scheduling logic
+> See Chapters 11 and 12 · Deliverables: the `domain_rand` extended parameter set + curriculum scheduling logic
 
 ### Highlight 4 — Automatic Validation Between Simulated Observation Space and On-Device Firmware
 
 Provides an **automatic validation script that cross-checks the simulation observation space against the on-device Rust firmware**, comparing the dimension, scaling, and ordering of observations/actions in one step, thereby eliminating the most common hidden Sim2Real bugs caused by dimension or scaling mismatches.
 
-> See Chapters 8 and 15 · Deliverable: `scripts/validation/check_obs_act_space.py`
+> See Chapters 7 and 14 · Deliverable: `scripts/validation/check_obs_act_space.py`
 
 ### Highlight 5 — A Complete Experiment-Management System (Reproducible)
 
 Establishes a standardized **experiment-management system**: every training run saves `config.yaml`, an MJCF snapshot, BAM parameters, training logs, and TensorBoard curves, so any experiment can be reproduced and traced one-to-one.
 
-> See Chapter 18 · Deliverable: the `experiments/` directory convention (config / mjcf / bam_params / logs / readme)
+> See Chapter 17 · Deliverable: the `experiments/` directory convention (config / mjcf / bam_params / logs / readme)
 
 ### Highlight 6 — Docker-Locked Dependency Versions
 
 Uses Docker to pin CUDA, Python, MuJoCo-Warp, mjlab, and other dependency versions, eliminating the "works locally, fails elsewhere" environment problem and enabling one-command reproduction of the training environment.
 
-> See Chapters 3 and 18 · Deliverables: `Dockerfile` + `requirements-lock.txt`
+> See Chapters 2 and 17 · Deliverables: `Dockerfile` + `requirements-lock.txt`
 
 ---
 
@@ -119,7 +119,7 @@ This book is neither a purely theoretical reinforcement-learning textbook nor a 
 - Developers who want to get started with Sim2Real, MuJoCo-Warp, and low-cost bipedal RL robots.
 
 > Recommended reading path:
-> 1. First run [Chapter 3 — Minimal Simulation Demo], launching the simulation with one Docker command to see the robot duck's simulated gait;
+> 1. First run [Chapter 2 — Minimal Simulation Demo], launching the simulation with one Docker command to see the robot duck's simulated gait;
 > 2. After understanding the overall Sim2Real chain, read the mechanical CAD, 3D printing, and hardware assembly chapters;
 > 3. Advanced readers should go deep into the BAM model, system identification, and domain-randomization ablation experiments.
 

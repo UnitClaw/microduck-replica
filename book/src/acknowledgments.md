@@ -23,6 +23,10 @@
 
 > 需要说明：本项目是 Microduck 的**第三方复刻研究**，与 Pollen Robotics 无隶属关系，未获其背书。
 
+### Hugging Face
+
+感谢 [Hugging Face](https://huggingface.co/) 提供开放平台与机器人生态——MicroDuck 正是其旗下机器人团队 Pollen Robotics 的开源项目，在线仿真（HF Spaces）与相关训练工具链也都依托于 Hugging Face 的开放社区。正是这份开放，让「在云端看机器鸭走路」与「本地复现训练」成为可能。
+
 ### 飞特（Feetech）
 
 感谢 **飞特（Feetech）** 提供 HD-1910 串口总线舵机硬件与官方技术文档。正是这颗高性价比的国产舵机，让 MicroDuck 有了「便宜一半、力矩 2.5 倍」的国产方案，也让本书的 BAM 台架实测辨识有了真实的标定对象。

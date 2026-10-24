@@ -1,4 +1,4 @@
-<div style="text-align:center; padding: 2.5rem 1rem 0.5rem; max-width: 46rem; margin: 0 auto;">
+<div style="text-align:center; padding: 2.5rem 0 0.5rem;">
 
   <div style="letter-spacing: 0.22em; color:#8a8f98; font-size: 0.78rem; margin-bottom: 1.3rem;">开源工程实践 · 具身智能 · SIM2REAL 强化学习</div>
 
@@ -6,7 +6,7 @@
 
   <div style="font-size: 1.05rem; color:#3b4045; font-weight: 600; margin-bottom: 1.5rem;">双足机器人 Sim2Real 迁移的工程方法论</div>
 
-  <p style="text-align:justify; color:#4a5058; font-size:0.94rem; line-height:1.8; margin:0 0 1.7rem;">
+  <p style="text-align:left; color:#4a5058; font-size:0.94rem; line-height:1.8; margin:0 0 1.7rem;">
     本书以 Pollen Robotics 开源的 MicroDuck 为蓝本，系统呈现一条<b>国内可复现、低成本</b>的双足机器人技术路线：从 MJCF 逆向与 Onshape→MJCF 自动化动力学建模、HD1910 串口总线舵机 BAM 台架辨识，到扩展域随机化 + 课程学习的 PPO 策略训练，再到 RK3566 板端 50&nbsp;Hz 实时推理与真机闭环迭代，完整覆盖「CAD → 动力学 → 执行器 → 仿真 → 真机」的全栈工程闭环。
   </p>
 
@@ -35,18 +35,18 @@
 
 | 电子书章节 | 仓库对应资源 |
 |---|---|
-| 第 2 章 配件商城 | [PARTS.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/PARTS.md) · [官网商城](https://www.wwntai.com/parts.html) |
-| 第 3 章 最小仿真 Demo | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
-| 第 4 章 CAD 模型解析 | [cad/](https://github.com/UnitClaw/microduck-wwduck/tree/master/cad) · [CAD 仓库](https://github.com/UnitClaw/microduck-replica-cad) |
-| 第 5 章 Onshape → MJCF | [scripts/](https://github.com/UnitClaw/microduck-wwduck/tree/master/scripts) |
-| 第 6 章 3D 打印与装配 | [print/](https://github.com/UnitClaw/microduck-wwduck/tree/master/print) · [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
-| 第 7 章 硬件电路与总线 | [hardware/](https://github.com/UnitClaw/microduck-wwduck/tree/master/hardware) |
-| 第 8 章 RK3566 镜像与固件 | [software/image/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/image) · [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
-| 第 9 章 舵机 / IMU 标定 | [tools/](https://github.com/UnitClaw/microduck-wwduck/tree/master/tools) |
-| 第 10~14 章 仿真与训练 | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
-| 第 15 章 ONNX 部署 | [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
-| 第 16 章 真机步态 | [software/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software) |
-| 第 18 章 工程化与开源 | [NOTICE.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/NOTICE.md) · [LICENSE](https://github.com/UnitClaw/microduck-wwduck/blob/master/LICENSE) |
+| 第 19 章 配件商城 | [PARTS.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/PARTS.md) · [官网商城](https://www.wwntai.com/parts.html) |
+| 第 2 章 最小仿真 Demo | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
+| 第 3 章 CAD 模型解析 | [cad/](https://github.com/UnitClaw/microduck-wwduck/tree/master/cad) · [CAD 仓库](https://github.com/UnitClaw/microduck-replica-cad) |
+| 第 4 章 Onshape → MJCF | [scripts/](https://github.com/UnitClaw/microduck-wwduck/tree/master/scripts) |
+| 第 5 章 3D 打印与装配 | [print/](https://github.com/UnitClaw/microduck-wwduck/tree/master/print) · [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
+| 第 6 章 硬件电路与总线 | [hardware/](https://github.com/UnitClaw/microduck-wwduck/tree/master/hardware) |
+| 第 7 章 RK3566 镜像与固件 | [software/image/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/image) · [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
+| 第 8 章 舵机 / IMU 标定 | [tools/](https://github.com/UnitClaw/microduck-wwduck/tree/master/tools) |
+| 第 9~13 章 仿真与训练 | [software/training/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/training) |
+| 第 14 章 ONNX 部署 | [software/studio/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software/studio) |
+| 第 15 章 真机步态 | [software/](https://github.com/UnitClaw/microduck-wwduck/tree/master/software) |
+| 第 17 章 工程化与开源 | [NOTICE.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/NOTICE.md) · [LICENSE](https://github.com/UnitClaw/microduck-wwduck/blob/master/LICENSE) |
 | 附录 B BOM 采购清单 | [BOM.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/BOM.md) |
 | 附录 C 故障排查 | [踩坑记录.md](https://github.com/UnitClaw/microduck-wwduck/blob/master/踩坑记录.md) |
 
@@ -60,37 +60,37 @@
 
 完整复刻 Pollen 原厂 Onshape → MJCF 自动化工作流：从整机 STEP 装配导入，自动计算每个连杆的**质量、重心、惯性张量**，配合 `validate_mjcf.py` 自动校验惯性张量、关节限位与整机总质量，**彻底告别 replica 手动估算惯性参数**带来的 Sim2Real 偏差。
 
-> 对应第 5 章 · 交付物：`scripts/cad2mjcf/export_mjcf.py` + `validate_mjcf.py`
+> 对应第 4 章 · 交付物：`scripts/cad2mjcf/export_mjcf.py` + `validate_mjcf.py`
 
 ### 亮点 2｜HD1910 舵机 BAM 台架实测辨识
 
 对飞特 HD1910 做**台架实测辨识**，拟合 BAM（Bandwidth-Aware Motor）模型全套参数——带宽、粘性摩擦、库仑摩擦、转子惯量、齿隙，解决原版 replica 使用经验估算参数导致的 Sim2Real 迁移偏差。
 
-> 对应第 9、11 章 · 交付物：`scripts/calibration/hd1910_bench_data_process.py`
+> 对应第 8、10 章 · 交付物：`scripts/calibration/hd1910_bench_data_process.py`
 
 ### 亮点 3｜扩展域随机化 + 课程学习
 
 在基础域随机化上扩展 8 维参数集（质量、摩擦、扭矩、带宽、齿隙、IMU 噪声、地面摩擦、重力），配合**课程学习**从站立逐步过渡到行走、转向、爬坡；并以**消融实验**对比不同随机策略的真机迁移成功率。
 
-> 对应第 12、13 章 · 交付物：`domain_rand` 扩展参数集 + 课程调度逻辑
+> 对应第 11、12 章 · 交付物：`domain_rand` 扩展参数集 + 课程调度逻辑
 
 ### 亮点 4｜仿真观测空间 ↔ 板端固件自动校验
 
 提供**仿真观测空间 ↔ 板端 Rust 固件自动校验脚本**，一键比对观测/动作的维度、缩放与顺序，杜绝 Sim2Real 最常见的维度/缩放不一致隐性 bug。
 
-> 对应第 8、15 章 · 交付物：`scripts/validation/check_obs_act_space.py`
+> 对应第 7、14 章 · 交付物：`scripts/validation/check_obs_act_space.py`
 
 ### 亮点 5｜完整实验管理体系（可复现）
 
 建立标准化的**实验管理体系**：每一次训练保存 `config.yaml`、MJCF 快照、BAM 参数、训练日志与 TensorBoard 曲线，任一实验可一键复现、可回溯。
 
-> 对应第 18 章 · 交付物：`experiments/` 目录规范（config / mjcf / bam_params / logs / readme）
+> 对应第 17 章 · 交付物：`experiments/` 目录规范（config / mjcf / bam_params / logs / readme）
 
 ### 亮点 6｜Docker 锁定依赖版本
 
 用 Docker 锁定 CUDA、Python、MuJoCo-Warp、mjlab 等依赖版本，消除「本地能跑、别人跑不起来」的环境问题，一键复现训练环境。
 
-> 对应第 3、18 章 · 交付物：`Dockerfile` + `requirements-lock.txt`
+> 对应第 2、17 章 · 交付物：`Dockerfile` + `requirements-lock.txt`
 
 ---
 
@@ -118,7 +118,7 @@
 - 想入门 Sim2Real、MuJoCo-Warp、低成本双足强化学习机器人开发者。
 
 > 阅读路径推荐：
-> 1. 先跑【第3章 最小仿真Demo】，Docker 一键启动仿真，直观看到机器鸭仿真步态；
+> 1. 先跑【第2章 最小仿真Demo】，Docker 一键启动仿真，直观看到机器鸭仿真步态；
 > 2. 理解 Sim2Real 整体链路之后，再阅读机械 CAD、3D 打印、硬件装配章节；
 > 3. 进阶读者深入 BAM 模型、系统辨识、域随机化消融实验。
 
