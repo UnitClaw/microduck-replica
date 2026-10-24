@@ -15,37 +15,37 @@
 
 完整复刻 Pollen 原厂 Onshape → MJCF 自动化工作流：从整机 STEP 装配导入，自动计算每个连杆的**质量、重心、惯性张量**，配合 `validate_mjcf.py` 自动校验惯性张量、关节限位与整机总质量，**彻底告别 replica 手动估算惯性参数**带来的 Sim2Real 偏差。
 
-> 对应第 4 章 · 交付物：`scripts/cad2mjcf/export_mjcf.py` + `validate_mjcf.py`
+> 对应第 5 章 · 交付物：`scripts/cad2mjcf/export_mjcf.py` + `validate_mjcf.py`
 
 ### 亮点 2｜HD1910 舵机 BAM 台架实测辨识
 
 对飞特 HD1910 做**台架实测辨识**，拟合 BAM（Bandwidth-Aware Motor）模型全套参数——带宽、粘性摩擦、库仑摩擦、转子惯量、齿隙，解决原版 replica 使用经验估算参数导致的 Sim2Real 迁移偏差。
 
-> 对应第 8、10 章 · 交付物：`scripts/calibration/hd1910_bench_data_process.py`
+> 对应第 9、11 章 · 交付物：`scripts/calibration/hd1910_bench_data_process.py`
 
 ### 亮点 3｜扩展域随机化 + 课程学习
 
 在基础域随机化上扩展 8 维参数集（质量、摩擦、扭矩、带宽、齿隙、IMU 噪声、地面摩擦、重力），配合**课程学习**从站立逐步过渡到行走、转向、爬坡；并以**消融实验**对比不同随机策略的真机迁移成功率。
 
-> 对应第 11、12 章 · 交付物：`domain_rand` 扩展参数集 + 课程调度逻辑
+> 对应第 12、13 章 · 交付物：`domain_rand` 扩展参数集 + 课程调度逻辑
 
 ### 亮点 4｜仿真观测空间 ↔ 板端固件自动校验
 
 提供**仿真观测空间 ↔ 板端 Rust 固件自动校验脚本**，一键比对观测/动作的维度、缩放与顺序，杜绝 Sim2Real 最常见的维度/缩放不一致隐性 bug。
 
-> 对应第 7、14 章 · 交付物：`scripts/validation/check_obs_act_space.py`
+> 对应第 8、15 章 · 交付物：`scripts/validation/check_obs_act_space.py`
 
 ### 亮点 5｜完整实验管理体系（可复现）
 
 建立标准化的**实验管理体系**：每一次训练保存 `config.yaml`、MJCF 快照、BAM 参数、训练日志与 TensorBoard 曲线，任一实验可一键复现、可回溯。
 
-> 对应第 17 章 · 交付物：`experiments/` 目录规范（config / mjcf / bam_params / logs / readme）
+> 对应第 18 章 · 交付物：`experiments/` 目录规范（config / mjcf / bam_params / logs / readme）
 
 ### 亮点 6｜Docker 锁定依赖版本
 
 用 Docker 锁定 CUDA、Python、MuJoCo-Warp、mjlab 等依赖版本，消除「本地能跑、别人跑不起来」的环境问题，一键复现训练环境。
 
-> 对应第 2、17 章 · 交付物：`Dockerfile` + `requirements-lock.txt`
+> 对应第 3、18 章 · 交付物：`Dockerfile` + `requirements-lock.txt`
 
 ---
 
@@ -73,7 +73,7 @@
 - 想入门 Sim2Real、MuJoCo-Warp、低成本双足强化学习机器人开发者。
 
 > 阅读路径推荐：
-> 1. 先跑【第2章 最小仿真Demo】，Docker 一键启动仿真，直观看到机器鸭仿真步态；
+> 1. 先跑【第3章 最小仿真Demo】，Docker 一键启动仿真，直观看到机器鸭仿真步态；
 > 2. 理解 Sim2Real 整体链路之后，再阅读机械 CAD、3D 打印、硬件装配章节；
 > 3. 进阶读者深入 BAM 模型、系统辨识、域随机化消融实验。
 

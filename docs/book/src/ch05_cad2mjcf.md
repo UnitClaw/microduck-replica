@@ -1,4 +1,4 @@
-# 第4章 Onshape + onshape-to-robot 自动化 MJCF 工作流
+# 第5章 Onshape + onshape-to-robot 自动化 MJCF 工作流
 
 > 本章是本书核心创新章节：替代原始 replica 手动填写惯性参数的方式，复刻 Pollen 原厂 CAD→MJCF 全自动化流水线，自动计算连杆质量、重心、惯性张量。
 > 配套脚本：`scripts/cad2mjcf/export_mjcf.py` + `onshape_config.json`。

@@ -2,7 +2,7 @@
 
 > 本文档与官网配件商城同步：<https://www.wwntai.com/parts.html>
 > 价格与库存以官网实时为准；下文产品图均来自官网商城。
-> 电子书内同步收录于「附录F：配件商城」。
+> 电子书内同步收录于「第2章：配件商城与备料指南」。
 
 ## 现货配件（IN STOCK · 7 天内发货）
 
@@ -65,7 +65,7 @@ IEEE 802.3af/at。PoE 以太网供电扩展板，单根网线同时供电 + 联�
 
 ![HD-1910-C001 串口总线舵机](assets/parts/servo-hd-1910.jpg)
 
-FEETECH 空芯杯串口总线舵机，AI 开源专用，适配 MicroDuck 等仿生机器人关节。6V 12kg·cm 堵转扭矩、12 位磁编码 360° 位置反馈、TTL 总线菊花链串联（详细参数见《MicroDuck 电子书》第 1、8、10 章）。
+FEETECH 空芯杯串口总线舵机，AI 开源专用，适配 MicroDuck 等仿生机器人关节。6V 12kg·cm 堵转扭矩、12 位磁编码 360° 位置反馈、TTL 总线菊花链串联（详细参数见《MicroDuck 电子书》第 1、9、11 章）。
 
 **¥1380** · [立即购买](https://www.wwntai.com/microduck-shop.html?item=HD-1910-C001%20%E4%B8%B2%E5%8F%A3%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA%2015%20%E4%B8%AA%E5%A5%97%E8%A3%85&price=1380)
 

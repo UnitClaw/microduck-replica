@@ -1,9 +1,11 @@
-# 附录F 配件商城（MicroDuck 散件与配件）
+# 第2章 配件商城与备料指南（散件与配件）
 
 > 本章与官网配件商城同步：<https://www.wwntai.com/parts.html>
 > 价格与库存以官网实时为准；下文产品图均来自官网商城。
+>
+> 复刻 MicroDuck 前先备料：本章把官网配件商城的散件与配件（舵机、主控、电池、摄像头等）图文并茂收录进来，方便读者对照 BOM 一站式采购。
 
-## F.1 现货配件（IN STOCK · 7 天内发货）
+## 2.1 现货配件（IN STOCK · 7 天内发货）
 
 ### Radxa ZERO 3W 主板
 
@@ -64,7 +66,7 @@ IEEE 802.3af/at。PoE 以太网供电扩展板，单根网线同时供电 + 联�
 
 ![HD-1910-C001 串口总线舵机](assets/parts/servo-hd-1910.jpg)
 
-FEETECH 空芯杯串口总线舵机，AI 开源专用，适配 MicroDuck 等仿生机器人关节。6V 12kg·cm 堵转扭矩、12 位磁编码 360° 位置反馈、TTL 总线菊花链串联（详细参数见第 1、8、10 章）。
+FEETECH 空芯杯串口总线舵机，AI 开源专用，适配 MicroDuck 等仿生机器人关节。6V 12kg·cm 堵转扭矩、12 位磁编码 360° 位置反馈、TTL 总线菊花链串联（详细参数见第 1、9、11 章）。
 
 **¥1380** · [立即购买](https://www.wwntai.com/microduck-shop.html?item=HD-1910-C001%20%E4%B8%B2%E5%8F%A3%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA%2015%20%E4%B8%AA%E5%A5%97%E8%A3%85&price=1380)
 
@@ -131,7 +133,7 @@ ST 8×8 多区域 ToF 测距传感器，64 分区同步探测、65° 视角、�
 
 **¥699** · [立即购买](https://www.wwntai.com/microduck-shop.html?item=%E4%BB%A3%E8%A3%85%E6%95%B4%E6%9C%BA%E6%9C%8D%E5%8A%A1&price=699)
 
-## F.2 MicroDuck 国产版配件（即将上线）
+## 2.2 MicroDuck 国产版配件（即将上线）
 
 开源双足机器鸭的散件与扩展配件，个人开发者友好。
 
@@ -170,7 +172,7 @@ MicroDuck 全部零件一次配齐：3D 打印结构件、电子件、15 颗 HD-
 - **imu_to_dxl 电路板**：IMU 转 Dynamixel 协议桥接板，microduck-replica 开源方案的姿态数据转换。价格待定。
 - **Banana PCB + 香蕉插头 PCB（铜镀金）**：2.5mm 香蕉插头 PCB（铜镀金）× 2 + banana PCB（嘉立创）× 1。价格待定。
 
-## F.3 待上线（COMING SOON）
+## 2.3 待上线（COMING SOON）
 
 | 产品 | 状态 |
 |---|---|
@@ -179,7 +181,7 @@ MicroDuck 全部零件一次配齐：3D 打印结构件、电子件、15 颗 HD-
 | Radxa ZERO 3W 8GB 版 | 待上线 |
 | Radxa ZERO 3E（千兆网口版） | 待上线 |
 
-## F.4 如何购买
+## 2.4 如何购买
 
 1. **点击购买**：在官网商城卡片上点「立即购买」，自动带入所选配件；
 2. **支付宝扫码付款**：核对金额后扫码付款，记下转账单号；

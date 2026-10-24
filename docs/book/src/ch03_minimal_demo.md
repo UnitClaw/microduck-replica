@@ -1,4 +1,4 @@
-# 第2章 最小仿真 Demo：一键启动飞特版 MicroDuck 仿真
+# 第3章 最小仿真 Demo：一键启动飞特版 MicroDuck 仿真
 
 > 本章目标：无需 3D 打印、无需硬件、无需焊接，在 GPU 电脑上一键跑通飞特 HD1910 版 MicroDuck 仿真环境，理解 Sim2Real 完整链路全貌。
 > 前置：Docker + NVIDIA GPU 驱动（CUDA 支持）；仓库已切换至 `book-dev` 分支。
@@ -93,8 +93,8 @@ domain_randomization: false
 3. 仿真无大量数值爆炸警告。
 
 > 常见故障排查（本章踩坑实录）
-> 1. 启动立刻倒地：大概率 MJCF 重心/惯性参数错误；回到第 4 章 CAD→MJCF 流程复核；
-> 2. 关节剧烈抖动：BAM 舵机参数不匹配，需要第 8 章台架标定；
+> 1. 启动立刻倒地：大概率 MJCF 重心/惯性参数错误；回到第 5 章 CAD→MJCF 流程复核；
+> 2. 关节剧烈抖动：BAM 舵机参数不匹配，需要第 9 章台架标定；
 > 3. CUDA out of memory：减小 `num_envs`。
 
 ## 2.6 本章小结
@@ -102,6 +102,6 @@ domain_randomization: false
 你已经验证了整套仿真软件栈：MJCF 模型、BAM 舵机模型、MuJoCo-Warp、PPO 策略加载。
 
 > 仿真只是数字世界，仿真的动力学参数是否贴近真实机器人，决定后续真机迁移成败。
-> 下一章进入机械 CAD，第 4 章：Onshape 自动化导出 MJCF，从源头计算连杆惯性、重心，告别手动估算。
+> 下一章进入机械 CAD，第 5 章：Onshape 自动化导出 MJCF，从源头计算连杆惯性、重心，告别手动估算。
 
 > 实验记录：本次实验归档于 `experiments/exp01_standup/`，可在 TensorBoard 查看观测、奖励曲线。

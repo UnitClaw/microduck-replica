@@ -1,4 +1,4 @@
-# 第12章 PPO 多任务策略训练
+# 第13章 PPO 多任务策略训练
 
 > 本章目标：理解 PPO 在机器人运动中的角色，学会设计多任务奖励函数，实现"一个 ONNX 支持多种步态"的单策略方案，并掌握训练调参与导出。
 
@@ -96,7 +96,7 @@ torch.onnx.export(
 
 产物 `microduck_feetech_multitask.onnx` 放入 `software/training/pretrained/`。
 
-> 大文件管理：ONNX 模型体积大，建议用 **Git LFS** 管理，不直接提交 git 主仓库（见第 17 章）。
+> 大文件管理：ONNX 模型体积大，建议用 **Git LFS** 管理，不直接提交 git 主仓库（见第 18 章）。
 
 ## 12.6 预训练权重开箱即用
 

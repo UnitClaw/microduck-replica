@@ -1,4 +1,4 @@
-# 第10章 BAM 舵机执行器模型与 HD1910 参数辨识
+# 第11章 BAM 舵机执行器模型与 HD1910 参数辨识
 
 > 本章是本书最重要的技术章节之一。目标：理解 BAM（Bandwidth-Aware Motor）模型为什么是 Sim2Real 成败的核心，学会用台架实测数据拟合 HD1910 的 BAM 参数，并正确实现齿隙模型。
 
@@ -38,7 +38,7 @@ BAM 模型包含五个关键参数：
 
 ## 10.4 HD1910 参数拟合（实测 vs 估算）
 
-第 8 章做了台架数据采集。这里用 `scripts/calibration/hd1910_bench_data_process.py` 拟合。
+第 9 章做了台架数据采集。这里用 `scripts/calibration/hd1910_bench_data_process.py` 拟合。
 
 ### 10.4.1 拟合脚本代码详解
 
@@ -127,7 +127,7 @@ class FeetechHD1910BAMActuator(FrictionDRBamActuator):
 
 原版实现了 `BacklashEncoderBamActuator`，这是 Sim2Real 成功最核心的设计。**复刻时必须完整实现，否则来回摆动、抖动、跟随误差都会失配。**
 
-> ⚠️ 齿隙 `backlash` 是 Sim2Real 最大影响项之一。真机上来回摆动基本就是齿隙不准导致的。拟合后建议在域随机化里给它加扰动（见第 11 章）。
+> ⚠️ 齿隙 `backlash` 是 Sim2Real 最大影响项之一。真机上来回摆动基本就是齿隙不准导致的。拟合后建议在域随机化里给它加扰动（见第 12 章）。
 
 ## 10.6 消融实验：估算 vs 实测
 
