@@ -1,3 +1,28 @@
+<div style="text-align:center; padding: 2.5rem 1rem 0.5rem; max-width: 46rem; margin: 0 auto;">
+
+  <div style="letter-spacing: 0.22em; color:#8a8f98; font-size: 0.78rem; margin-bottom: 1.3rem;">开源工程实践 · 具身智能 · SIM2REAL 强化学习</div>
+
+  <h1 style="margin:0 0 0.7rem; font-size: 2.05rem; line-height: 1.3; font-weight: 800;">MicroDuck 国产飞特 HD1910 复刻</h1>
+
+  <div style="font-size: 1.05rem; color:#3b4045; font-weight: 600; margin-bottom: 1.5rem;">双足机器人 Sim2Real 迁移的工程方法论</div>
+
+  <p style="text-align:justify; color:#4a5058; font-size:0.94rem; line-height:1.8; margin:0 0 1.7rem;">
+    本书以 Pollen Robotics 开源的 MicroDuck 为蓝本，系统呈现一条<b>国内可复现、低成本</b>的双足机器人技术路线：从 MJCF 逆向与 Onshape→MJCF 自动化动力学建模、HD1910 串口总线舵机 BAM 台架辨识，到扩展域随机化 + 课程学习的 PPO 策略训练，再到 RK3566 板端 50&nbsp;Hz 实时推理与真机闭环迭代，完整覆盖「CAD → 动力学 → 执行器 → 仿真 → 真机」的全栈工程闭环。
+  </p>
+
+  <div style="color:#3b4045; font-size:0.95rem; margin-bottom: 1.8rem;">
+    万物拟态机器人（WWNT Robotics）<span style="color:#c2c6cc;">·</span> 开源生态 GitHub <a href="https://github.com/UnitClaw" target="_blank" rel="noopener">UnitClaw</a>
+  </div>
+
+  <div style="display:inline-block; padding: 1rem 1.5rem 1.1rem; border:1px solid #e6e8eb; border-radius: 12px; background:#fafbfc;">
+    <img src="assets/wechat-group-2.png" alt="微信交流群二维码" width="132" style="display:block; margin:0 auto; border-radius:6px;">
+    <div style="font-size:0.8rem; color:#6a7078; margin-top:0.6rem; line-height:1.6;">小鸭子的配件（主板，舵机群 2）<br>扫码入群 · 有效期至 2026-10-31</div>
+  </div>
+
+</div>
+
+---
+
 # 前言
 
 ## 配套图书阅读入口
