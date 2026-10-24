@@ -119,4 +119,6 @@
 
 感谢 Pollen Robotics 开源 MicroDuck、mjlab 与 microduck_rl；感谢 fanhao375 开源 microduck-replica 与 microduck-replica-cad；感谢飞特提供 HD1910 舵机硬件与技术文档；感谢所有开源社区开发者。
 
+> 完整的公司介绍与致谢（Pollen、飞特、fanhao375、机械行者Robo、kissqy、LuwuDynamics、Rhoban 等）见书末 **【致谢】** 章节。
+
 > 本书持续迭代，工程实验会持续更新；勘误、改进建议欢迎提交 GitHub Issue。
