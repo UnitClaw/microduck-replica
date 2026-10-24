@@ -32,7 +32,8 @@
 ## 配套图书阅读入口
 
 - **在线电子书（GitHub Pages 自动编译）**：<https://unitclaw.github.io/microduck-wwduck/>
-- **书稿源码仓库**：<https://github.com/UnitClaw/microduck-wwduck>（`book/` 目录，mdbook 编写，随提交自动编译部署为网页电子书）
+- **英文版（American academic English edition）**：<https://unitclaw.github.io/microduck-wwduck/en/>
+- **书稿源码仓库**：<https://github.com/UnitClaw/microduck-wwduck>（`book/` 中文版、`book-en/` 英文版，mdbook 编写，随提交自动编译部署为网页电子书）
 
 > 本书每一章书稿都与配套工程仓库的 commit hash 一一绑定，读者可 checkout 到对应版本，完整复现书中每一步实验。
 > 电子书每个章节**右上角**都有两个入口：📝「编辑」图标直达该章源文件、Octocat 图标直达仓库首页。
